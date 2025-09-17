@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnamnet Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Top Header Bar -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="container max-w-[1140px] mx-auto px-4">
+            <div class="flex items-center justify-between h-12">
+                <!-- Left Side - Logo and Date -->
+                <div class="flex items-center space-x-4">
+                    <!-- Vietnamnet Logo -->
+                    <div class="flex items-center space-x-2">
+                        <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+
+                    </div>
+
+                    <!-- Date -->
+                    <div class="text-sm text-gray-600 font-medium">
+                        Thứ ba, 16/09/2025
+                    </div>
+                </div>
+
+                <!-- Right Side - Links and Login -->
+                <div class="flex items-center space-x-4">
+                    <!-- Navigation Links -->
+                    <div class="hidden md:flex items-center space-x-4 text-sm">
+                        <a href="/podcast" class="text-gray-700 hover:text-blue-600">Podcast</a>
+                        <div class="w-px h-4 bg-gray-300"></div>
+                        <a href="/tuan-viet-nam" class="text-gray-700 hover:text-blue-600">Tuần Việt Nam</a>
+                        <div class="w-px h-4 bg-gray-300"></div>
+                        <a href="/premium" class="text-orange-500 hover:text-orange-600 font-medium flex items-center">
+                            <span class="text-red-500 mr-1">★</span>
+                            PREMIUM
+                        </a>
+                        <div class="w-px h-4 bg-gray-300"></div>
+                        <a href="/en" class="text-gray-700 hover:text-blue-600 flex items-center">
+                            <img class="w-[70px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+
+                        </a>
+                    </div>
+
+                    <!-- Login and Search -->
+                    <div class="flex items-center space-x-3">
+                        <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                            <span class="text-sm">Đăng nhập</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="text-gray-700 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="">
+            <div class="flex items-center justify-center h-14">
+                <!-- Left Side - Home Icon and Navigation -->
+                <div class="flex items-center space-x-6">
+                    <!-- Home Icon -->
+                    <a href="/" class="text-blue-600 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
+                        <a href="/chinh-tri" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Chính trị</a>
+                        <a href="/thoi-su" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thời sự</a>
+                        <a href="/kinh-doanh" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Kinh doanh</a>
+                        <a href="/dan-toc-va-ton-giao" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Dân tộc và Tôn giáo</a>
+                        <a href="/the-thao" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thể thao</a>
+                        <a href="/giao-duc" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Giáo dục</a>
+                        <a href="/the-gioi" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thế giới</a>
+                        <a href="/doi-song" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Đời sống</a>
+                        <a href="/van-hoa-giai-tri" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Văn hóa - Giải trí</a>
+                        <a href="/suc-khoe" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sức khỏe</a>
+                        <a href="/cong-nghe" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Công nghệ</a>
+                        <a href="/phap-luat" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Pháp luật</a>
+                        <a href="/xe" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Xe</a>
+                        <a href="/bat-dong-san" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Bất động sản</a>
+                        <a href="/du-lich" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Du lịch</a>
+                        <a href="/ban-doc" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Bạn đọc</a>
+                    </nav>
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Right Side - Mobile Menu -->
+                <div class="lg:hidden">
+                    <button class="text-gray-700 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="mainHamburger hidden fixed inset-0 bg-white z-50" style="height: calc(-1px + 100vh);">
+        <div class="mainHamburger__head p-4 border-b">
+            <div class="vnn-logo flex items-center justify-between">
+                <button type="button" class="btn-hamburger-close">
+                    <span class="icon-hamburger">×</span>
+                </button>
+                <a href="/en" title="Vietnamnet global">
+                    <img src="https://static.vnncdn.net/v1/icon/VietnamNet_bridge.svg" alt="VietNamNet Global" class="h-8">
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Search -->
+        <div class="main-search p-4 border-b">
+            <form action="/tim-kiem" method="get">
+                <div class="relative">
+                    <input name="q" type="text" placeholder="Type keywords...." class="w-full px-4 py-2 border border-gray-300 rounded">
+                    <button class="btn-search absolute right-2 top-2" type="submit">
+                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search icon" class="w-5 h-5">
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="main-menu p-4">
+            <div class="hamburger__left mb-6">
+                <div class="header_submenu-main">
+                    <div class="header_submenu-search mb-4">
+                        <form target="_top" action="/tim-kiem">
+                            <div class="relative">
+                                <input type="text" name="q" placeholder="Tìm kiếm..." class="w-full px-4 py-2 border border-gray-300 rounded">
+                                <button type="submit" class="absolute right-2 top-2">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search.png" class="w-5 h-5">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="header_submenu-button text-xs text-gray-600 space-y-1">
+                        <ul>
+                            <li>© Copyright of Vietnamnet Global.</li>
+                            <li>Tel: 024 3772 7988 Fax: (024) 37722734</li>
+                            <li>Email: evnn@vietnamnet.vn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hamburger__right">
+                <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
+                    <li><a href="/talkshow" class="text-gray-700 hover:text-red-600">Talkshow</a></li>
+                    <li><a href="/ho-so" class="text-gray-700 hover:text-red-600">Hồ sơ</a></li>
+                    <li><a href="/anh" class="text-gray-700 hover:text-red-600">Ảnh</a></li>
+                    <li><a href="/video" class="text-gray-700 hover:text-red-600">Video</a></li>
+                    <li><a href="/multimedia" class="text-gray-700 hover:text-red-600">Multimedia</a></li>
+                    <li class="item-podcast">
+                        <a href="/podcast" title="podcast" class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
+                            <img src="https://static.vnncdn.net/v1/icon/podcast-icon.svg" alt="podcast icon" class="w-5 h-5">
+                            <span>Podcast</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
+                    <li><a href="/tuyen-bai" class="text-gray-700 hover:text-red-600">Tuyến bài</a></li>
+                    <li><a href="/su-kien" class="text-gray-700 hover:text-red-600">Sự kiện nóng</a></li>
+                </ul>
+
+                <ul class="hamburger__list-right space-y-3 mb-6">
+                    <li><a title="Tuyển dụng" href="/tuyen-dung" class="text-gray-700 hover:text-red-600">Tuyển dụng</a></li>
+                    <li><a title="Liên hệ tòa soạn" href="/thong-tin-toa-soan" class="text-gray-700 hover:text-red-600">Liên hệ tòa soạn</a></li>
+                    <li><a title="Liên hệ quảng cáo" target="_blank" href="https://vads.vn/" class="text-gray-700 hover:text-red-600">Liên hệ quảng cáo</a></li>
+                </ul>
+
+                <a class="download-app flex items-center space-x-2 text-gray-700 hover:text-red-600" href="/download-app">
+                    <img src="https://static.vnncdn.net/v1/icon/tai-app.svg" alt="download app" class="w-5 h-5">
+                    <span>Download app</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container max-w-[1140px] mx-auto py-6">
+
+        <!-- Breadcrumb Section -->
+        <section class="bg-white border-b border-gray-200 py-4">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <!-- Left Side - Home Icon and Title -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Home Icon -->
+                        <div class="breadcrumb__title-home">
+                            <a href="/" title="VietNamNet" class="text-blue-600 hover:text-blue-700">
+                                <img src="https://static.vnncdn.net/v1/icon/home.svg" alt="home" class="w-5 h-5">
+                            </a>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="breadcrumb__heading">
+                            <h1 class="text-2xl font-bold" style="color: #2d67ad; font-family: notosans-bold; font-size: 32px;">
+                                <a href="/en" title="Vietnamnet Global" class="hover:text-blue-700">Vietnamnet Global</a>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Search Form -->
+                    <div class="search-small">
+                        <form class="search-small__form relative" action="/en/tim-kiem">
+                            <input class="search-small__form-input w-80 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
+                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Main News Section -->
+        <section class="bg-white py-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex gap-8">
+                    <!-- Left Column - Main Content -->
+                    <div class="flex-1">
+                        <!-- Top Section: Large Article + Two Stacked Articles -->
+                        <div class="flex gap-6 mb-8">
+                            <!-- Large Featured Article -->
+                            <div class="flex-1 w-[500px]">
+                                <a href="/en/free-checkups-hospital-care-by-2030-vietnam-s-bold-new-healthcare-vision-2443276.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/free-checkups-hospital-care-by-2030-vietnams-bold-new-healthcare-vision-551ef314a29b4800b5625e3e87070fd7-44.jpg?width=550&s=H7rye5Abl2PKSon-r0oqtQ" alt="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="w-full h-80 object-cover mb-4">
+                                </a>
+                                <h1 class="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                                    <a href="/en/free-checkups-hospital-care-by-2030-vietnam-s-bold-new-healthcare-vision-2443276.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="hover:text-blue-600">
+                                        Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision
+                                    </a>
+                                </h1>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Deputy Prime Minister Le Thanh Long outlines a groundbreaking healthcare plan that will see the national insurance fund cover $5.6 billion annually.
+                                </p>
+                            </div>
+
+                            <!-- Two Stacked Articles -->
+                            <div class="w-[240px] flex-shrink-0 space-y-6">
+                                <!-- Article 1 -->
+                                <div>
+                                    <a href="/en/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-2443277.html" title="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-bb0763974f9c4f0daf96e7eb1665aba6-52.png?width=360&s=g-RuxjAOe5ay9qlQYhkzNA" alt="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi" class="w-full h-40 object-cover mb-3">
+                                    </a>
+                                    <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                                        <a href="/en/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-2443277.html" title="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi" class="hover:text-blue-600">
+                                            Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <!-- Article 2 -->
+                                <div>
+                                    <a href="/en/experts-urge-legal-clarity-to-protect-vietnam-s-private-sector-2443262.html" title="VPSF 2025: Reform needed to protect private sector from legal risks">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vpsf-2025-reform-needed-to-protect-private-sector-from-legal-risks-e9f0329470194120914f703d526253f6-3124.jpg?width=360&s=YSvU9pNHOvvPWFhkZsrO4g" alt="VPSF 2025: Reform needed to protect private sector from legal risks" class="w-full h-40 object-cover mb-3">
+                                    </a>
+                                    <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                                        <a href="/en/experts-urge-legal-clarity-to-protect-vietnam-s-private-sector-2443262.html" title="VPSF 2025: Reform needed to protect private sector from legal risks" class="hover:text-blue-600">
+                                            VPSF 2025: Reform needed to protect private sector from legal risks
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Section: Three Horizontal Articles -->
+                        <div class="grid grid-cols-3 gap-6">
+                            <!-- Article 3 -->
+                            <div>
+                                <a href="/en/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-2443289.html" title="Vietnamese dance duo wins world bronze in Latin Showdance debut">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-f90b4100f4734b28a7bd6a64bd89b804-98.gif?width=360&s=R3gNXmh-f4G_2fNK9Yri_A" alt="Vietnamese dance duo wins world bronze in Latin Showdance debut" class="w-full h-40 object-cover mb-3">
+                                </a>
+                                <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                                    <a href="/en/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-2443289.html" title="Vietnamese dance duo wins world bronze in Latin Showdance debut" class="hover:text-blue-600">
+                                        Vietnamese dance duo wins world bronze in Latin Showdance debut
+                                    </a>
+                                </h3>
+                            </div>
+
+                            <!-- Article 4 -->
+                            <div>
+                                <a href="/en/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-2443270.html" title="Son Tra Peninsula reopens to visitors after landslide-related closure">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-9f817f4cece24dac82731fbdfdf47fee-3155.jpg?width=360&s=Vsw74mgQZoYOtfCB_fcoIQ" alt="Son Tra Peninsula reopens to visitors after landslide-related closure" class="w-full h-40 object-cover mb-3">
+                                </a>
+                                <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                                    <a href="/en/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-2443270.html" title="Son Tra Peninsula reopens to visitors after landslide-related closure" class="hover:text-blue-600">
+                                        Son Tra Peninsula reopens to visitors after landslide-related closure
+                                    </a>
+                                </h3>
+                            </div>
+
+                            <!-- Article 5 -->
+                            <div>
+                                <a href="/en/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-2443280.html" title="Vietnam to reform energy market for fairness, innovation, and security">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-c4ffadda7925445db63a637ddb6b18d6-63.jpg?width=360&s=QDoHcs_2scNw2jCoDK6QhA" alt="Vietnam to reform energy market for fairness, innovation, and security" class="w-full h-40 object-cover mb-3">
+                                </a>
+                                <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                                    <a href="/en/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-2443280.html" title="Vietnam to reform energy market for fairness, innovation, and security" class="hover:text-blue-600">
+                                        Vietnam to reform energy market for fairness, innovation, and security
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar - TOP STORIES -->
+                    <div class="w-[300px] flex-shrink-0">
+                        <!-- TOP STORIES -->
+                        <div class="bg-white border border-gray-200 p-6 mb-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-4 text-center" style="color: #2d67ad;">TOP STORIES</h3>
+                            <ul class="space-y-3">
+                                <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">
+                                    <a href="/en/apple-releases-ios-26-with-biggest-iphone-redesign-in-a-decade-2443034.html" class="text-sm text-gray-700 hover:text-blue-600 leading-relaxed">
+                                        Apple releases iOS 26 with biggest iPhone redesign in a decade
+                                    </a>
+                                </li>
+                                <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">
+                                    <a href="/en/vietnamese-parents-divided-over-school-timetable-chaos-2443091.html" class="text-sm text-gray-700 hover:text-blue-600 leading-relaxed">
+                                        Vietnamese parents divided over school timetable chaos
+                                    </a>
+                                </li>
+                                <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">
+                                    <a href="/en/vietnam-braces-for-more-storms-and-strong-cold-waves-in-late-2025-2443023.html" class="text-sm text-gray-700 hover:text-blue-600 leading-relaxed">
+                                        Vietnam braces for more storms and strong cold waves in late 2025
+                                    </a>
+                                </li>
+                                <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">
+                                    <a href="/en/vietnam-urges-u-s-to-reconsider-seafood-import-ban-2443103.html" class="text-sm text-gray-700 hover:text-blue-600 leading-relaxed">
+                                        Vietnam urges U.S. to reconsider seafood import ban
+                                    </a>
+                                </li>
+                                <li class="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0">
+                                    <a href="/en/free-healthcare-for-all-a-promise-of-national-well-being-2442684.html" class="text-sm text-gray-700 hover:text-blue-600 leading-relaxed">
+                                        Free healthcare for all: A promise of national well-being
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="topStory-15nd seeMoreArticle" websiteid="00000Q" categoryid="000048" pageid="a67d402c72b94b4ea5f4fba08b924218" componentid="COMPONENT002607" toparticleinpageone="6" pagesize="5" pageindex="4">
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/to-lich-river-park-plan-must-prioritize-quality-of-life-experts-say-2443095.html" title="To Lich River park plan must prioritize quality of life, experts say" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin1">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/to-lich-river-park-plan-must-prioritize-quality-of-life-experts-say-5d95731b03974876a238930b6134de23-1508.jpg?width=360&amp;s=Rxqhkxf__tvw6le_fhc9uw" alt="To Lich River park plan must prioritize quality of life, experts say" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/to-lich-river-park-plan-must-prioritize-quality-of-life-experts-say-5d95731b03974876a238930b6134de23-1508.jpg?width=360&amp;s=Rxqhkxf__tvw6le_fhc9uw">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443095" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/to-lich-river-park-plan-must-prioritize-quality-of-life-experts-say-2443095.html" title="To Lich River park plan must prioritize quality of life, experts say" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin1" data-limit="">
+
+                            To Lich River park plan must prioritize quality of life, experts say
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Hanoi’s plan to build a riverside park along To Lich River must focus on enhancing local quality of life and honor historical relevance, experts advise.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/a-new-chapter-for-vietnam-s-volleyball-star-in-japan-2443269.html" title="A new chapter for Vietnam's volleyball star in Japan" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin2">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/a-new-chapter-for-vietnams-volleyball-star-in-japan-42b66fcbda734054a1647f042050af9c-3151.jpg?width=360&amp;s=nJaIT1_iocfat4Gq6yZXhg" alt="A new chapter for Vietnam's volleyball star in Japan" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/a-new-chapter-for-vietnams-volleyball-star-in-japan-42b66fcbda734054a1647f042050af9c-3151.jpg?width=360&amp;s=nJaIT1_iocfat4Gq6yZXhg">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443269" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/a-new-chapter-for-vietnam-s-volleyball-star-in-japan-2443269.html" title="A new chapter for Vietnam's volleyball star in Japan" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin2" data-limit="">
+
+                            A new chapter for Vietnam's volleyball star in Japan
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Vietnam’s top middle blocker Bich Thuy is likely heading to Japan for the 2025-26 volleyball season after a successful stint in South Korea.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html" title="Two TikTokers arrested in HCM City for staging offensive livestreams" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin3">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" ls-is-cached lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/two-tiktokers-arrested-in-hcm-city-for-staging-offensive-livestreams-3b53f60a389a464aa7b50d307a31d81a-94.png?width=360&amp;s=HzyBbElIc-cePtrOPTt0VQ" alt="Two TikTokers arrested in HCM City for staging offensive livestreams" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/two-tiktokers-arrested-in-hcm-city-for-staging-offensive-livestreams-3b53f60a389a464aa7b50d307a31d81a-94.png?width=360&amp;s=HzyBbElIc-cePtrOPTt0VQ">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443285" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html" title="Two TikTokers arrested in HCM City for staging offensive livestreams" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin3" data-limit="">
+
+                            Two TikTokers arrested in HCM City for staging offensive livestreams
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Ho Chi Minh City police have arrested two TikTokers for producing and spreading offensive, staged videos online aimed at attracting views.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin4">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" ls-is-cached lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-bd447a73097246e587ddb895220b10d0-1351.png?width=360&amp;s=s9mCvu2ANl4bdiUuSJ1mkg" alt="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-bd447a73097246e587ddb895220b10d0-1351.png?width=360&amp;s=s9mCvu2ANl4bdiUuSJ1mkg">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443073" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin4" data-limit="">
+
+                            iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>iPhone 18 rumors say Apple will refine the notch design, but under-display Face ID won’t arrive until 2026.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <div class="mb-20">
+                <!-- BEGIN COMPONENT:: COMPONENT001208 -->
+
+
+                <!-- END COMPONENT:: COMPONENT001208 -->
+            </div>
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html" title="$6.3 billion proposed to widen 18 North-South expressway segments" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin5">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" ls-is-cached lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/63-billion-proposed-to-widen-18-north-south-expressway-segments-4f4ac77654ae4d91aff82c39e5621652-3149.png?width=360&amp;s=16x9sWRJH_f5qPmHMcS6VA" alt="$6.3 billion proposed to widen 18 North-South expressway segments" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/63-billion-proposed-to-widen-18-north-south-expressway-segments-4f4ac77654ae4d91aff82c39e5621652-3149.png?width=360&amp;s=16x9sWRJH_f5qPmHMcS6VA">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443268" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html" title="$6.3 billion proposed to widen 18 North-South expressway segments" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin5" data-limit="">
+
+                            $6.3 billion proposed to widen 18 North-South expressway segments
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The Ministry of Construction has proposed widening 18 expressway sections to six lanes, aiming to ease traffic and boost economic connectivity.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html" title="Hanoi CDC shuts fanpage comments amid child abuse scandal" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin6">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" ls-is-cached lazy-loaded" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-70a3b59bfac54a7d9ed02f03d302d1ce-3147.jpg?width=360&amp;s=ZUQktaRVicGeRgG9jDgckg" alt="Hanoi CDC shuts fanpage comments amid child abuse scandal" srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-70a3b59bfac54a7d9ed02f03d302d1ce-3147.jpg?width=360&amp;s=ZUQktaRVicGeRgG9jDgckg">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443267" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html" title="Hanoi CDC shuts fanpage comments amid child abuse scandal" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin6" data-limit="">
+
+                            Hanoi CDC shuts fanpage comments amid child abuse scandal
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Hanoi CDC has disabled comments on its Facebook page after a staff member was accused of violently abusing her stepson, sparking public outrage.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html" title="FPT CEO: Vietnamese businesses must unite to succeed" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin7">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-af2be71520fb4280adcacdb5fb0639a0-3137.jpg?width=360&amp;s=W4KZRT6rDusoQIi73OwVcg" alt="FPT CEO: Vietnamese businesses must unite to succeed">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443266" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html" title="FPT CEO: Vietnamese businesses must unite to succeed" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin7" data-limit="">
+
+                            FPT CEO: Vietnamese businesses must unite to succeed
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>At the Vietnam Private Sector Forum 2025, FPT CEO called for unity, collaboration, and digital skills to drive national transformation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-a-shining-star-in-global-fdi-flows-2443049.html" title="Vietnam – a ‘shining star’ in global fdi flows" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin8">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnam-a-shining-star-in-global-fdi-flows-ddab43a8ba4d4e87b72b95bd081aec84-1235.jpg?width=360&amp;s=1jKXHzoIeXVRiY3nwzm2fQ" alt="Vietnam – a ‘shining star’ in global fdi flows">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443049" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-a-shining-star-in-global-fdi-flows-2443049.html" title="Vietnam – a ‘shining star’ in global fdi flows" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin8" data-limit="">
+
+                            Vietnam – a ‘shining star’ in global fdi flows
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Eighty years after the August Revolution of 1945, Vietnam is emerging as a “shining star” in attracting foreign direct investment (FDI).</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <div class="mb-20">
+                <!-- BEGIN COMPONENT:: COMPONENT001209 -->
+
+                <!-- END COMPONENT:: COMPONENT001209 -->
+            </div>
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-s-national-assembly-chairman-begins-malaysia-visit-joins-aipa-46-2443290.html" title="Vietnam’s National Assembly Chairman begins Malaysia visit, joins AIPA-46" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin9">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnams-national-assembly-chairman-begins-malaysia-visit-joins-aipa-46-deafad5d5f25439fbd1ca2f3dd7c7d8d-99.jpg?width=360&amp;s=wdbFriC-HYrViiVA4reIUQ" alt="Vietnam’s National Assembly Chairman begins Malaysia visit, joins AIPA-46">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443290" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-s-national-assembly-chairman-begins-malaysia-visit-joins-aipa-46-2443290.html" title="Vietnam’s National Assembly Chairman begins Malaysia visit, joins AIPA-46" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin9" data-limit="">
+
+                            Vietnam’s National Assembly Chairman begins Malaysia visit, joins AIPA-46
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The visit strengthens Vietnam-Malaysia ties and reinforces Vietnam’s ASEAN leadership on its 30th AIPA anniversary.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/former-agriculture-minister-le-huy-ngo-passes-away-at-88-2443291.html" title="Former agriculture minister Le Huy Ngo passes away at 88" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin10">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/former-agriculture-minister-le-huy-ngo-passes-away-at-88-aeaff9bb2db3479fba9cf499a27cc932-105.jpg?width=360&amp;s=93aPa4yJGym6nCeJ9afcDg" alt="Former agriculture minister Le Huy Ngo passes away at 88">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443291" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/former-agriculture-minister-le-huy-ngo-passes-away-at-88-2443291.html" title="Former agriculture minister Le Huy Ngo passes away at 88" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin10" data-limit="">
+
+                            Former agriculture minister Le Huy Ngo passes away at 88
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Former Minister of Agriculture and Rural Development Le Huy Ngo passed away at 3:56 a.m. on September 16, 2025 (25th day of the 7th lunar month, Year of the Snake), at his private residence, aged 88.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-to-finalize-structure-of-next-national-assembly-by-mid-november-2443078.html" title="Tropical depression likely to strengthen into storm and enter East Sea" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin11">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/tropical-depression-likely-to-strengthen-into-storm-and-enter-east-sea-2ac604710e4d4f65b88cd88441302d5d-103.jpg?width=360&amp;s=OUI9_zFbbNcdC9PvEpmlLg" alt="Tropical depression likely to strengthen into storm and enter East Sea">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443078" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-to-finalize-structure-of-next-national-assembly-by-mid-november-2443078.html" title="Tropical depression likely to strengthen into storm and enter East Sea" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin11" data-limit="">
+
+                            Tropical depression likely to strengthen into storm and enter East Sea
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>A tropical depression forming east of Luzon may intensify into a storm and enter the East Sea within 48 hours.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/top-mental-health-institute-chief-requests-to-return-labor-medal-2443288.html" title="Top mental health institute chief requests to return labor medal" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin12">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/top-mental-health-institute-chief-requests-to-return-labor-medal-863c8af729e34236b726e25ff8970e43-96.png?width=360&amp;s=iiRoM1XFiN08dC8EM73juQ" alt="Top mental health institute chief requests to return labor medal">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443288" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/top-mental-health-institute-chief-requests-to-return-labor-medal-2443288.html" title="Top mental health institute chief requests to return labor medal" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin12" data-limit="">
+
+                            Top mental health institute chief requests to return labor medal
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The Ministry of Health has submitted a request to revoke the Third-class Labor Order awarded to a prominent mental health director, following his own request.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/tiktoker-faces-backlash-for-insulting-hue-and-quang-tri-women-2443271.html" title="TikToker faces backlash for insulting Hue and Quang Tri women" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin13">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/tiktoker-faces-backlash-for-insulting-hue-and-quang-tri-women-7b79091220c540908bdd7223e85f2608-3160.jpg?width=360&amp;s=jOwdKd4uUobjmLX7jz5O3Q" alt="TikToker faces backlash for insulting Hue and Quang Tri women">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443271" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/tiktoker-faces-backlash-for-insulting-hue-and-quang-tri-women-2443271.html" title="TikToker faces backlash for insulting Hue and Quang Tri women" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin13" data-limit="">
+
+                            TikToker faces backlash for insulting Hue and Quang Tri women
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>A viral video criticizing women from central Vietnam has sparked outrage and prompted official action.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnamese-parents-divided-over-school-timetable-chaos-2443091.html" title="Vietnamese parents divided over school timetable chaos" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin14">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnamese-parents-divided-over-school-timetable-chaos-ed0fdd7def0a4336a9df6d1ab79b8313-1437.jpg?width=360&amp;s=uj8fRTUkmZPEA_4J4Bm8bg" alt="Vietnamese parents divided over school timetable chaos">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443091" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnamese-parents-divided-over-school-timetable-chaos-2443091.html" title="Vietnamese parents divided over school timetable chaos" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin14" data-limit="">
+
+                            Vietnamese parents divided over school timetable chaos
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Parents across Vietnam are clashing over new school timetables, with many expressing frustration about Saturday classes and inconsistent dismissal times.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/google-gemini-tops-app-store-in-vietnam-dethroning-chatgpt-2443101.html" title="Google Gemini tops App Store in Vietnam, dethroning ChatGPT" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin15">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/google-gemini-tops-app-store-in-vietnam-dethroning-chatgpt-368e2d7212ac4554a1dae7936e9d5f8b-1528.jpg?width=360&amp;s=Vy6718bs5SZLrNy5vP42-g" alt="Google Gemini tops App Store in Vietnam, dethroning ChatGPT">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443101" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/google-gemini-tops-app-store-in-vietnam-dethroning-chatgpt-2443101.html" title="Google Gemini tops App Store in Vietnam, dethroning ChatGPT" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin15" data-limit="">
+
+                            Google Gemini tops App Store in Vietnam, dethroning ChatGPT
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Fueled by the viral Nano Banana feature, Google Gemini has surged past ChatGPT to become Vietnam’s most downloaded free iPhone app.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/mountain-market-in-phu-tho-amazes-with-forest-rat-meat-and-wild-herbs-2443092.html" title="Mountain market in Phu Tho amazes with forest rat meat and wild herbs" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin16">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/mountain-market-in-phu-tho-amazes-with-forest-rat-meat-and-wild-herbs-d9100eaaf5e64b40b1ba0c8a26cd4514-1452.jpg?width=360&amp;s=imVfIMVyojkVDvAI-VdPng" alt="Mountain market in Phu Tho amazes with forest rat meat and wild herbs">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443092" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/mountain-market-in-phu-tho-amazes-with-forest-rat-meat-and-wild-herbs-2443092.html" title="Mountain market in Phu Tho amazes with forest rat meat and wild herbs" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin16" data-limit="">
+
+                            Mountain market in Phu Tho amazes with forest rat meat and wild herbs
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Tourists are flocking to Lung Van Market for its rare, seasonal delicacies and cultural charm.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-launches-roadmap-to-upgrade-stock-market-to-emerging-status-2443082.html" title="Vietnam launches roadmap to upgrade stock market to emerging status" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin17">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnam-launches-roadmap-to-upgrade-stock-market-to-emerging-status-1394.jpg?width=360&amp;s=2N2gm6_9oirUyuzPp6BO-A" alt="Vietnam launches roadmap to upgrade stock market to emerging status">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443082" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-launches-roadmap-to-upgrade-stock-market-to-emerging-status-2443082.html" title="Vietnam launches roadmap to upgrade stock market to emerging status" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin17" data-limit="">
+
+                            Vietnam launches roadmap to upgrade stock market to emerging status
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The government’s new plan sets clear goals to lift Vietnam’s stock market from frontier to emerging market by 2025, targeting international benchmarks.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/who-will-cover-evn-s-1-8-billion-loss-2442709.html" title="Who will cover EVN’s $1.8 billion loss?" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin18">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/15/who-will-cover-evns-18-billion-loss-44be66123e56416cb39ddb25b48bdc7b-2073.jpg?width=360&amp;s=i9xpeDgQIgPzwdZXMw6j7A" alt="Who will cover EVN’s $1.8 billion loss?">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2442709" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/who-will-cover-evn-s-1-8-billion-loss-2442709.html" title="Who will cover EVN’s $1.8 billion loss?" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin18" data-limit="">
+
+                            Who will cover EVN’s $1.8 billion loss?
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The state utility’s unresolved deficit raises the question: how can the burden be distributed transparently and fairly among consumers?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/deputy-pm-demands-urgent-action-on-delayed-power-projects-2443099.html" title="Deputy PM demands urgent action on delayed power projects" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin19">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/deputy-pm-demands-urgent-action-on-delayed-power-projects-821e383fe9fa4130ba31f2fcdc9f3874-1522.png?width=360&amp;s=V9JgrOouG2NM5FYKJXg4Zw" alt="Deputy PM demands urgent action on delayed power projects">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443099" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/deputy-pm-demands-urgent-action-on-delayed-power-projects-2443099.html" title="Deputy PM demands urgent action on delayed power projects" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin19" data-limit="">
+
+                            Deputy PM demands urgent action on delayed power projects
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Deputy Prime Minister Bui Thanh Son has delivered a strong message to authorities and investors, urging immediate action to accelerate the implementation of power projects and warning of strict measures against delays.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-urges-u-s-to-reconsider-seafood-import-ban-2443103.html" title="Vietnam urges U.S. to reconsider seafood import ban" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin20">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnam-urges-us-to-reconsider-seafood-import-ban-52f94cc65c6f492b8f5d7af6d716c7ec-1550.png?width=360&amp;s=cINGfW9yQXws5bWlH3ocgQ" alt="Vietnam urges U.S. to reconsider seafood import ban">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443103" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-urges-u-s-to-reconsider-seafood-import-ban-2443103.html" title="Vietnam urges U.S. to reconsider seafood import ban" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin20" data-limit="">
+
+                            Vietnam urges U.S. to reconsider seafood import ban
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>Vietnam’s trade minister has appealed to the U.S. to fairly reassess its rejection of 12 Vietnamese fishing methods, citing major economic risks.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-targets-stock-market-as-capital-flees-overheated-assets-2443075.html" title="Vietnam targets stock market as capital flees overheated assets" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin21">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnam-targets-stock-market-as-capital-flees-overheated-assets-af6a9e6d5bb847f0b69505c98743284d-1371.jpg?width=360&amp;s=3Uxp4UnrRDFAsDvk3YJO3Q" alt="Vietnam targets stock market as capital flees overheated assets">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443075" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-targets-stock-market-as-capital-flees-overheated-assets-2443075.html" title="Vietnam targets stock market as capital flees overheated assets" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin21" data-limit="">
+
+                            Vietnam targets stock market as capital flees overheated assets
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>As gold and real estate soar to risky heights, major reforms aim to redirect capital into securities, stabilizing the economy.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/investors-propose-monorail-and-scenic-boulevard-along-hanoi-s-red-river-2443077.html" title="Investors propose monorail and scenic boulevard along Hanoi's Red River" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin22">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/investors-propose-monorail-and-scenic-boulevard-along-hanois-red-river-1381.webp?width=360&amp;s=wWpw11VRCyhmnh0eIU_9Qg" alt="Investors propose monorail and scenic boulevard along Hanoi's Red River">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443077" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/investors-propose-monorail-and-scenic-boulevard-along-hanoi-s-red-river-2443077.html" title="Investors propose monorail and scenic boulevard along Hanoi's Red River" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin22" data-limit="">
+
+                            Investors propose monorail and scenic boulevard along Hanoi's Red River
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>An ambitious proposal aims to reshape Hanoi’s riverfront with a monorail and landscape corridor running 84 kilometers along the Red River.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/vietnam-set-to-pass-ai-law-and-updated-strategy-by-year-end-2443080.html" title="Vietnam set to pass AI law and updated strategy by year-end" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin23">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vietnam-set-to-pass-ai-law-and-updated-strategy-by-year-end-670a6a6e75ca44398ff9ce2e1ba1eb55-1386.webp?width=360&amp;s=Sw3X-NrHk1-dIP-AUZ0jHA" alt="Vietnam set to pass AI law and updated strategy by year-end">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443080" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/vietnam-set-to-pass-ai-law-and-updated-strategy-by-year-end-2443080.html" title="Vietnam set to pass AI law and updated strategy by year-end" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin23" data-limit="">
+
+                            Vietnam set to pass AI law and updated strategy by year-end
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The Ministry of Science and Technology confirms Vietnam will update its AI strategy and enact a new AI law by the end of 2025.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/duc-phuc-to-represent-vietnam-at-prestigious-intervision-2025-competition-2443088.html" title="Duc Phuc to represent Vietnam at prestigious Intervision 2025 competition" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin24">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/duc-phuc-to-represent-vietnam-at-prestigious-intervision-2025-competition-84e31642bf9d4bad85dcc1e36e82547f-1415.webp?width=360&amp;s=XAnVfo8f9uYKivfXNtacXQ" alt="Duc Phuc to represent Vietnam at prestigious Intervision 2025 competition">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2443088" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/duc-phuc-to-represent-vietnam-at-prestigious-intervision-2025-competition-2443088.html" title="Duc Phuc to represent Vietnam at prestigious Intervision 2025 competition" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin24" data-limit="">
+
+                            Duc Phuc to represent Vietnam at prestigious Intervision 2025 competition
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The Vietnamese artist joins 22 other international contestants in Moscow, highlighting the role of music in cultural diplomacy.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+            <!-- BEGIN COMPONENT:: COMPONENT002605 -->
+
+
+
+            <div class="horizontalPost sm:lineSeparates version-news mb-20">
+                <div class="horizontalPost__avt avt-240">
+                    <a href="/en/free-healthcare-for-all-a-promise-of-national-well-being-2442684.html" title="Free healthcare for all: A promise of national well-being" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin25">
+
+                        <picture>
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/15/free-healthcare-for-all-a-promise-of-national-well-being-58ab8037d01b4172a8970d4f4b30532c-1995.jpg?width=360&amp;s=b2Gk79U4jxGpFF9dhDvCBw" alt="Free healthcare for all: A promise of national well-being">
+                        </picture>
+
+                    </a>
+                </div>
+                <div class="horizontalPost__main">
+                    <div class="horizontalPost__main-cate show">
+                        <a href="/en" title="Vietnamnet global">Vietnamnet global</a>
+                    </div>
+                    <h3 data-id="2442684" class="horizontalPost__main-title  vnn-title title-bold" ispr="False">
+                        <a href="/en/free-healthcare-for-all-a-promise-of-national-well-being-2442684.html" title="Free healthcare for all: A promise of national well-being" data-utm-source="#vnn_source=news&amp;vnn_medium=listtin25" data-limit="">
+
+                            Free healthcare for all: A promise of national well-being
+
+                        </a>
+                    </h3>
+                    <div class="horizontalPost__main-desc" data-limit="">
+                        <p>The policy of free medical care is not just a humanitarian initiative - it is a profound commitment to a future where people live joyfully, healthily, and happily.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT002605 -->
+            <!-- ads mobile -->
+        </div>
+
+        <!-- BEGIN COMPONENT:: COMPONENT002606 -->
+
+
+        <div class="flex justify-between items-center w-full mb-20">
+            <div class="pagination md:mx-auto">
+                <ul class="pagination__list">
+                    <li class="pagination__list-item active">
+                        <a href="/en-page0">1</a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a href="/en-page1">2</a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a href="/en-page2">3</a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a href="/en-page3">4</a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a href="/en-page4">5</a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a href="/en-page5">6</a>
+                    </li>
+                    <li class="pagination__list-item pagination-next block">
+                        <a href="/en-page1">
+                            <img src="https://static.vnncdn.net/v1/icon/icon-pagination.svg" alt="icon next">
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="btnSeeMoreArticle bg-[#ffffff] border-1 border-[#676767] font-bold px-20 py-8 rounded-25 text-[#0a569d] uppercase text-12 flex items-center mx-auto gap-5">
+                    See more
+                    <img class="w-10 h-10 icon-loading hidden" src="https://static-images.vnncdn.net/files/loading.svg" alt="icon loading">
+                </button>
+            </div>
+
+            <div class="panination__calendar hidden">
+                <a href="/tin-tuc-24h?cate=">
+                    <span>Xem tin theo ngày</span>
+                    <span><img src="https://static.vnncdn.net/v1/icon/calendar.svg"></span>
+                </a>
+            </div>
+        </div>
+        <!-- END COMPONENT:: COMPONENT002606 -->
+
+        </div>
+        <div style="height:100%;" class="container__right">
+
+            <!-- top stories -->
+            <div class="mb-20 mt-20">
+                <!-- BEGIN COMPONENT:: COMPONENT001183 -->
+                <input type="hidden" id="infoConfigTopStories" data-websiteid="00000Q" data-pageid="a67d402c72b94b4ea5f4fba08b924218" data-componentid="COMPONENT001183" data-vip="">
+                <div class="hotNews">
+                    <h3 class="hotNews_title text-lg font-bold text-gray-900 mb-4 text-center text-[#2d67ad]"">
+                        <a>TOP STORIES</a>
+                    </h3>
+                    <div class=" hotNews_content">
+                        <ul id="top-stories">
+                            <li>
+                                <a href="/en/apple-releases-ios-26-with-biggest-iphone-redesign-in-a-decade-2443034.html" title="Apple releases iOS 26 with biggest iPhone redesign in a decade">
+                                    Apple releases iOS 26 with biggest iPhone redesign in a decade
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/en/vietnamese-parents-divided-over-school-timetable-chaos-2443091.html" title="Vietnamese parents divided over school timetable chaos">
+                                    Vietnamese parents divided over school timetable chaos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/en/vietnam-braces-for-more-storms-and-strong-cold-waves-in-late-2025-2443023.html" title="Vietnam braces for more storms and strong cold waves in late 2025">
+                                    Vietnam braces for more storms and strong cold waves in late 2025
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/en/vietnam-urges-u-s-to-reconsider-seafood-import-ban-2443103.html" title="Vietnam urges U.S. to reconsider seafood import ban">
+                                    Vietnam urges U.S. to reconsider seafood import ban
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/en/free-healthcare-for-all-a-promise-of-national-well-being-2442684.html" title="Free healthcare for all: A promise of national well-being">
+                                    Free healthcare for all: A promise of national well-being
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <!-- END COMPONENT:: COMPONENT001183 -->
+
+        </div>
+
+        <!-- END COMPONENT:: COMPONENT001171 -->
+
+        </div>
+        </div>
+        </section>
+        <!-- Main Content Section -->
+        <section id="sectionTopstory">
+            <div class="flex" id="sectionTopstory">
+                <!-- Left Column - News List -->
+                <div class="w-[320px] News-List border-r border-gray-200 pr-4 mr-4">
+                    <!-- News Item 1 -->
+                    <div class="flex gap-3 mb-4 pb-4 border-b border-gray-200">
+                        <div class="w-[140px] h-[93px] flex-shrink-0">
+                            <a href="/bo-dan-toc-va-ton-giao-duoc-giai-thuong-khong-gian-trung-bay-tieu-bieu-2442957.html" title="Bộ Dân tộc và Tôn giáo được tặng bằng khen và giải thưởng 'Không gian trưng bày tiêu biểu'">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/bo-dan-toc-va-ton-giao-duoc-tang-bang-khen-va-giai-thuong-khong-gian-trung-bay-tieu-bieu-754.jpg?width=260&s=Xf77v40gM6-BD1mD-Ndh2Q" alt="Bộ Dân tộc và Tôn giáo được tặng bằng khen và giải thưởng 'Không gian trưng bày tiêu biểu'" class="w-full h-full object-cover">
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/bo-dan-toc-va-ton-giao-duoc-giai-thuong-khong-gian-trung-bay-tieu-bieu-2442957.html" title="Bộ Dân tộc và Tôn giáo được tặng bằng khen và giải thưởng 'Không gian trưng bày tiêu biểu'">
+                                    Bộ Dân tộc và Tôn giáo được tặng bằng khen và giải thưởng 'Không gian trưng bày tiêu biểu'
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div class="flex gap-3 mb-4 pb-4 border-b border-gray-200">
+                        <div class="w-[140px] h-[93px] flex-shrink-0">
+                            <a href="/chuyen-doi-san-bay-long-thanh-hy-sinh-loi-ich-quoc-noi-vi-van-hoi-quoc-gia-2435081.html" title="Chuyển đổi sân bay Long Thành: Hy sinh lợi ích quốc nội vì vận hội quốc gia">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/15/chuyen-doi-san-bay-long-thanh-hy-sinh-loi-ich-quoc-noi-vi-van-hoi-quoc-gia-3654.jpg?width=260&s=Qx8JZvB84DDRlPGTZbpMrg" alt="Chuyển đổi sân bay Long Thành: Hy sinh lợi ích quốc nội vì vận hội quốc gia" class="w-full h-full object-cover">
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/chuyen-doi-san-bay-long-thanh-hy-sinh-loi-ich-quoc-noi-vi-van-hoi-quoc-gia-2435081.html" title="Chuyển đổi sân bay Long Thành: Hy sinh lợi ích quốc nội vì vận hội quốc gia">
+                                    Chuyển đổi sân bay Long Thành: Hy sinh lợi ích quốc nội vì vận hội quốc gia
+                                </a>
+                            </h3>
+                            <div class="flex items-center mt-1">
+                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                <span class="text-xs text-gray-500">30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div class="flex gap-3 mb-4 pb-4 border-b border-gray-200">
+                        <div class="w-[140px] h-[93px] flex-shrink-0">
+                            <a href="/truoc-gio-fed-ra-quyet-dinh-thi-truong-toan-cau-bien-dong-2442877.html" title="Trước giờ Fed ra quyết định, thị trường toàn cầu biến động">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/truoc-gio-fed-ra-quyet-dinh-thi-truong-toan-cau-bien-dong-315.jpg?width=260&s=Md01flJmenFiBI-_-2vwvw" alt="Trước giờ Fed ra quyết định, thị trường toàn cầu biến động" class="w-full h-full object-cover">
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/truoc-gio-fed-ra-quyet-dinh-thi-truong-toan-cau-bien-dong-2442877.html" title="Trước giờ Fed ra quyết định, thị trường toàn cầu biến động">
+                                    Trước giờ Fed ra quyết định, thị trường toàn cầu biến động
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- News Item 4 -->
+                    <div class="flex gap-3 mb-4 pb-4 border-b border-gray-200">
+                        <div class="w-[140px] h-[93px] flex-shrink-0 relative">
+                            <a href="/canh-o-to-dan-hang-chen-ep-xe-may-den-kho-tin-tren-nhieu-tuyen-duong-ha-noi-2442543.html" title="Cảnh ô tô dàn hàng 'chèn ép' xe máy đến khó tin trên nhiều tuyến đường Hà Nội">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/15/o-to-dan-hang-ngang-duong-hnanoi-3678.jpg?width=260&s=nknC5yAN_eYfgzkou6kGog" alt="Cảnh ô tô dàn hàng 'chèn ép' xe máy đến khó tin trên nhiều tuyến đường Hà Nội" class="w-full h-full object-cover">
+                                <div class="absolute bottom-1 left-1">
+                                    <img src="https://static-images.vnncdn.net/files/2023/4/8/photo-icon.svg" alt="photo icon" class="w-3 h-3">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/canh-o-to-dan-hang-chen-ep-xe-may-den-kho-tin-tren-nhieu-tuyen-duong-ha-noi-2442543.html" title="Cảnh ô tô dàn hàng 'chèn ép' xe máy đến khó tin trên nhiều tuyến đường Hà Nội">
+                                    Cảnh ô tô dàn hàng 'chèn ép' xe máy đến khó tin trên nhiều tuyến đường Hà Nội
+                                </a>
+                            </h3>
+                            <div class="flex items-center mt-1">
+                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                <span class="text-xs text-gray-500">20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 5 -->
+                    <div class="flex gap-3 mb-4 pb-4 border-b border-gray-200">
+                        <div class="w-[140px] h-[93px] flex-shrink-0">
+                            <a href="/quan-doi-my-pha-huy-tau-thu-2-khoi-hanh-tu-venezuela-tieu-diet-3-doi-tuong-2442878.html" title="Quân đội Mỹ phá hủy tàu thứ 2 khởi hành từ Venezuela, tiêu diệt 3 đối tượng">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/quan-doi-my-pha-huy-tau-thu-2-khoi-hanh-tu-venezuela-tieu-diet-3-doi-tuong-115.gif?width=260&s=pIjTio9PAP-Vlb4QtIjppQ" alt="Quân đội Mỹ phá hủy tàu thứ 2 khởi hành từ Venezuela, tiêu diệt 3 đối tượng" class="w-full h-full object-cover">
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/quan-doi-my-pha-huy-tau-thu-2-khoi-hanh-tu-venezuela-tieu-diet-3-doi-tuong-2442878.html" title="Quân đội Mỹ phá hủy tàu thứ 2 khởi hành từ Venezuela, tiêu diệt 3 đối tượng">
+                                    Quân đội Mỹ phá hủy tàu thứ 2 khởi hành từ Venezuela, tiêu diệt 3 đối tượng
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- News Item 6 -->
+                    <div class="flex gap-3 mb-4">
+                        <div class="w-[140px] h-[93px] flex-shrink-0 relative">
+                            <a href="/cu-ong-u100-chong-gay-dat-vo-tung-buoc-tinh-yeu-gan-70-nam-gay-xuc-dong-2442621.html" title="Cụ ông U100 chống gậy dắt vợ từng bước, tình yêu gần 70 năm gây xúc động">
+                                <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/15/cu-ong-u100-chong-gay-dat-vo-tung-buoc-tinh-yeu-gan-70-nam-gay-xuc-dong-3695.gif?width=260&s=nIimA_bH8AsUvZ8CeWTjuQ" alt="Cụ ông U100 chống gậy dắt vợ từng bước, tình yêu gần 70 năm gây xúc động" class="w-full h-full object-cover">
+                                <div class="absolute bottom-1 left-1">
+                                    <img src="https://static-images.vnncdn.net/files/2023/4/8/video-icon-avt.svg" alt="video icon" class="w-3 h-3">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                <a href="/cu-ong-u100-chong-gay-dat-vo-tung-buoc-tinh-yeu-gan-70-nam-gay-xuc-dong-2442621.html" title="Cụ ông U100 chống gậy dắt vợ từng bước, tình yêu gần 70 năm gây xúc động">
+                                    Cụ ông U100 chống gậy dắt vợ từng bước, tình yêu gần 70 năm gây xúc động
+                                </a>
+                            </h3>
+                            <div class="flex items-center mt-1">
+                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                <span class="text-xs text-gray-500">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Column - Main Article -->
+                <div class="w-[480px] Main-Article border-r border-gray-200 pr-4 mr-4">
+                    <!-- Main Article -->
+                    <div class="mb-6">
+                        <!-- <div class="mb-3">
+                            <a href="/thoi-su" title="Thời sự" class="text-blue-600 text-sm font-medium hover:text-blue-800">Thời sự</a>
+                        </div> -->
+                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Bộ trưởng Y tế nói về chính sách miễn viện phí" class="w-full h-64 object-cover mb-4">
+
+                        <h3 class="text-2xl font-bold text-gray-900 hover:text-blue-600 mb-3 leading-tight">
+                            <a href="/bo-truong-y-te-noi-ve-chinh-sach-mien-vien-phi-2442967.html" title="Bộ trưởng Y tế nói về chính sách miễn viện phí, tăng độ bao phủ BHYT">
+                                Bộ trưởng Y tế nói về chính sách miễn viện phí, tăng độ bao phủ BHYT
+                            </a>
+                        </h3>
+                        <div class="flex items-center mb-4">
+                            <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-4 h-4 mr-2">
+                            <span class="text-sm text-gray-500">11</span>
+                        </div>
+                        <!-- Related News List -->
+                        <div class="space-y-2 mb-4 border-t  border-gray-200 pt-4">
+                            <div class="flex items-start">
+                                <span class="text-blue-600 mr-2 mt-1">•</span>
+                                <a href="/tong-bi-thu-goi-y-mo-hinh-chong-co-don-cho-nguoi-cao-tuoi-2442899.html" class="text-sm hover:text-[#447ec5] text-gray-700">
+                                    Tổng Bí thư gợi ý mô hình chống cô đơn cho người cao tuổi: Sáng đón đi, chiều đưa về
+                                </a>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-blue-600 mr-2 mt-1">•</span>
+                                <a href="/bo-truong-y-te-noi-ve-chinh-sach-mien-vien-phi-2442967.html" class="text-sm hover:text-[#447ec5] text-gray-700">
+                                    Bộ trưởng Y tế nói về chính sách miễn viện phí, tăng độ bao phủ BHYT
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Sub-articles -->
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <!-- Sub Article 1 -->
+                            <div class="flex flex-col">
+                                <div class="relative mb-2">
+                                    <a href="/ong-nguyen-thanh-nghi-gia-dien-minh-bach-tang-quyen-lua-chon-noi-cung-cap-2442898.html" title="Ông Nguyễn Thanh Nghị: Giá điện minh bạch, tăng quyền lựa chọn nơi cung cấp">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Ông Nguyễn Thanh Nghị" class="w-full h-32 object-cover">
+                                        <!-- Video icon -->
+                                        <div class="absolute bottom-2 left-2">
+                                            <img src="https://static-images.vnncdn.net/files/2023/4/8/video-icon-avt.svg" alt="video icon" class="w-4 h-4">
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                    <a href="/ong-nguyen-thanh-nghi-gia-dien-minh-bach-tang-quyen-lua-chon-noi-cung-cap-2442898.html" title="Ông Nguyễn Thanh Nghị: Giá điện minh bạch, tăng quyền lựa chọn nơi cung cấp">
+                                        Ông Nguyễn Thanh Nghị: Giá điện minh bạch, tăng quyền lựa chọn nơi cung cấp
+                                    </a>
+                                </h3>
+                            </div>
+
+                            <!-- Sub Article 2 -->
+                            <div class="flex flex-col">
+                                <div class="relative mb-2">
+                                    <a href="/cung-cap-mot-bo-sach-giao-khoa-toan-quoc-tu-nam-hoc-2026-2027-2442897.html" title="Cung cấp một bộ sách giáo khoa toàn quốc từ năm học 2026-2027, miễn phí từ năm 2030">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Sách giáo khoa" class="w-full h-32 object-cover">
+                                    </a>
+
+                                </div>
+                                <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight">
+                                    <a href="/cung-cap-mot-bo-sach-giao-khoa-toan-quoc-tu-nam-hoc-2026-2027-2442897.html" title="Cung cấp một bộ sách giáo khoa toàn quốc từ năm học 2026-2027, miễn phí từ năm 2030">
+                                        Cung cấp một bộ sách giáo khoa toàn quốc từ năm học 2026-2027, miễn phí từ năm 2030
+                                    </a>
+
+                                </h3>
+                                <div class="flex items-center mt-1">
+                                    <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                    <span class="text-xs text-gray-500">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column - Advertisement and News -->
+                <div class="w-[300px] Advertisement-and-News">
+                    <!-- Advertisement Section -->
+                    <div class="">
+                        <img src="./images/Screenshot 2025-09-15 at 11.49.20 PM.png" alt="Electricity bill" class="w-full  object-cover mb-4">
+                    </div>
+
+                    <!-- News Item with Slide -->
+                    <div class="bg-white border-t border-gray-600 pt-4">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-sm font-bold text-blue-600">HOÁ ĐƠN TIỀN ĐIỆN TĂNG CAO</h3>
+                        </div>
+
+                        <!-- Slide Container -->
+                        <div class="relative overflow-hidden">
+                            <div class="flex transition-transform duration-300 ease-in-out" id="newsSlide">
+                                <!-- Slide 1 -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="flex gap-3">
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-700 mb-3">Ghi sai 79 số điện của khách hàng, công ty kinh doanh điện ở Thanh Hóa nói gì?</p>
+                                            <div class="flex items-center">
+                                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                                <span class="text-xs text-gray-500">7</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-24 h-16 flex-shrink-0">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Electricity bill" class="w-[140px]  object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="flex gap-3">
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-700 mb-3">Tiền điện tháng 8 tăng vọt, dân hỏi 'mưa nhiều, mất điện sao hoá đơn vẫn cao'</p>
+                                            <div class="flex items-center">
+                                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                                <span class="text-xs text-gray-500">45</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-24 h-16 flex-shrink-0">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Electricity bill 2" class="w-[140px]  object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="flex gap-3">
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-700 mb-3">Chính sách giá điện mới có thể ảnh hưởng đến người dân</p>
+                                            <div class="flex items-center">
+                                                <img src="https://static.vnncdn.net/v1/icon/binh-luan.svg" alt="comment" class="w-3 h-3 mr-1">
+                                                <span class="text-xs text-gray-500">23</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-24 h-16 flex-shrink-0">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/z7016259340547-9dbcb94bc53265b706860937adad5c12-309.jpg" alt="Electricity bill 3" class="w-[140px]  object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Controls -->
+                        <div class="flex items-center justify-center mt-3">
+                            <div class="flex space-x-1">
+                                <button class="w-2 h-2 bg-blue-600 rounded-full slide-dot active" data-slide="0"></button>
+                                <button class="w-2 h-2 bg-gray-300 rounded-full slide-dot" data-slide="1"></button>
+                                <button class="w-2 h-2 bg-gray-300 rounded-full slide-dot" data-slide="2"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid Section -->
+        <section class="bg-gray-100 py-3 mt-3">
+            <div class="container mx-auto px-4 relative">
+                <div class="grid grid-cols-5">
+                    <!-- News Item 1 -->
+                    <div class=" border-r pr-3 pl-3 last:pr-0 first:pl-0 border-r-gray-200 last:border-r-0">
+                        <div class="relative">
+                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/mondo-duplantis-lap-ky-luc-nhay-sao-630-met-vi-than-cua-the-thao-454.jpg?width=260&s=t0gZ017W06k9nxI_w5AFzA" alt="Mondo Duplantis lập kỷ lục nhảy sào 6,30 mét: Vị thần của thể thao" class="w-full h-48 object-cover">
+                            <div class="absolute bottom-2 left-2 bg-black bg-opacity-50 rounded px-2 py-1">
+                                <img src="https://static-images.vnncdn.net/files/2023/4/8/video-icon-avt.svg" alt="icon avatar" class="w-4 h-4">
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight mb-2">
+                                <a href="/mondo-duplantis-lap-ky-luc-nhay-sao-6-30m-vi-anh-la-mot-vi-than-2442911.html" title="Mondo Duplantis lập kỷ lục nhảy sào 6,30 mét: Vị thần của thể thao">
+                                    Mondo Duplantis lập kỷ lục nhảy sào 6,30 mét: Vị thần của thể thao
+                                </a>
+                            </h3>
+                            <div class="text-xs font-bold text-blue-600">Thể thao</div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div class=" border-r pr-3 pl-3 last:pr-0 first:pl-0 border-r-gray-200 last:border-r-0">
+                        <div class="relative">
+                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/ha-kieu-anh-my-linh-va-chuyen-sao-viet-pha-vo-dinh-kien-me-ke-con-chong-913.jpg?width=260&s=tgg5xDpTPbyy7E4_YTzXdQ" alt="Vụ bạo hành chấn động và chuyện sao Việt phá vỡ định kiến 'mẹ kế con chồng'" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight mb-2">
+                                <a href="/ha-kieu-anh-my-linh-va-chuyen-sao-viet-pha-vo-dinh-kien-me-ke-con-chong-2442580.html" title="Vụ bạo hành chấn động và chuyện sao Việt phá vỡ định kiến 'mẹ kế con chồng'">
+                                    Vụ bạo hành chấn động và chuyện sao Việt phá vỡ định kiến 'mẹ kế con chồng'
+                                </a>
+                            </h3>
+                            <div class="text-xs font-bold text-blue-600">Văn hóa - Giải trí</div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div class=" border-r pr-3 pl-3 last:pr-0 first:pl-0 border-r-gray-200 last:border-r-0">
+                        <div class="relative">
+                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/15/hang-thu-cong-duoc-nguoi-my-nhat-ban-yeu-thich-viet-nam-thu-ve-gan-600-trieu-usd-3601.jpg?width=260&s=VR8byUDcpUoLkb2-EvS_AA" alt="Hàng thủ công được người Mỹ, Nhật Bản yêu thích, Việt Nam thu về gần 600 triệu USD" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight mb-2">
+                                <a href="/hang-thu-cong-duoc-nguoi-my-nhat-yeu-thich-viet-nam-thu-ve-gan-600-trieu-usd-2442773.html" title="Hàng thủ công được người Mỹ, Nhật Bản yêu thích, Việt Nam thu về gần 600 triệu USD">
+                                    Hàng thủ công được người Mỹ, Nhật Bản yêu thích, Việt Nam thu về gần 600 triệu USD
+                                </a>
+                            </h3>
+                            <div class="text-xs font-bold text-blue-600">Kinh doanh</div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 4 -->
+                    <div class=" border-r pr-3 pl-3 last:pr-0 first:pl-0 border-r-gray-200 last:border-r-0">
+                        <div class="relative">
+                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/cong-an-tphcm-bat-2-tiktoker-dan-dung-quay-clip-phan-cam-1326.png?width=260&s=5GJxZ-lbq4PItdCu42ZWKw" alt="Công an TPHCM bắt 2 Tiktoker dàn dựng quay clip phản cảm" class="w-full h-48 object-cover">
+                            <div class="absolute bottom-2 left-2 bg-black bg-opacity-50 rounded px-2 py-1">
+                                <img src="https://static-images.vnncdn.net/files/2023/4/8/video-icon-avt.svg" alt="icon avatar" class="w-4 h-4">
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight mb-2">
+                                <a href="/cong-an-tphcm-bat-2-tiktoker-dan-dung-quay-clip-phan-cam-2443037.html" title="Công an TPHCM bắt 2 Tiktoker dàn dựng quay clip phản cảm">
+                                    Công an TPHCM bắt 2 Tiktoker dàn dựng quay clip phản cảm
+                                </a>
+                            </h3>
+                            <div class="text-xs font-bold text-blue-600">Thời sự</div>
+                        </div>
+                    </div>
+
+                    <!-- News Item 5 - Tuần Việt Nam -->
+                    <div class=" border-r pr-3 pl-3 last:pr-0 first:pl-0 border-r-gray-200 last:border-r-0">
+                        <div class="relative">
+                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/15/thuong-hieu-cua-bao-chi-1880.jpeg?width=0&s=bzV8QVZCinhVcd-hf_okZQ" alt="Thương hiệu của báo chí" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 leading-tight mb-2">
+                                <a href="/thuong-hieu-cua-bao-chi-2442674.html" title="Thương hiệu của báo chí">
+                                    Thương hiệu của báo chí
+                                </a>
+                            </h3>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="week-top-news absolute bottom-4 right-4 flex items-center justify-between">
+                    <div class="text-xs font-bold text-red-600">Tuần Việt Nam</div>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <img src="https://static.vnncdn.net/v1/icon/menu_category.svg" alt="menu" class="w-4 h-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="footer-en bg-gray-100 py-8 mt-8" style="font-family: 'Noto Sans', sans-serif;">
+        <div class="footer-en__bottom max-w-7xl mx-auto px-4">
+            <div class="flex items-start justify-between">
+                <!-- Left Side - Logo and Copyright -->
+                <div class="footer-en__bottom-left flex items-start space-x-8">
+                    <a class="footer-en__bottom-logo flex-shrink-0" href="/en">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet Global" class="h-16">
+                    </a>
+                    <div class="footer-en__bottom-list text-sm text-gray-600 space-y-2">
+                        <div class="footer-en__bottom-item font-medium">© Copyright of VietNamNet Global</div>
+                        <div class="footer-en__bottom-item text-xs leading-relaxed">
+                            <span>Tel: 024 3772 7988 Fax: (024) 37722734</span>
+                            <span>, </span>
+                            <span>Email: evnn@vietnamnet.vn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Follow Us and Social Media -->
+                <div class="footer-en__bottom-follow flex flex-col items-end space-y-4">
+                    <div class="text-right">
+                        <div class="text-sm font-medium text-gray-700 mb-3">Follow us on</div>
+                        <div class="footer-en__bottom-social flex items-center space-x-2">
+                            <a title="facebook vietnamnet" target="_blank" href="https://www.facebook.com/vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/facebook-black.svg" alt="Facebook" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="youtube vietnamnet" target="_blank" href="https://www.youtube.com/c/B%C3%A1oVietNamNetTV" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/youtube-black.svg" alt="YouTube" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="tiktok vietnamnet" target="_blank" href="https://www.tiktok.com/@vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/tiktok-black.svg" alt="TikTok" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="twitter vietnamnet" target="_blank" href="https://twitter.com/vietnamnetvn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/twitter-black.svg" alt="Twitter" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="zalo vietnamnet" target="_blank" href="http://zalo.me/660139855964186242?src=qr" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/zalo-black.svg" alt="Zalo" class="w-4 h-4 filter invert">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="footer-en__bottom-send bg-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-300 shadow-sm" href="/">Send to editor</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Footer -->
+        <div class="footer-en__bottom-mb md:hidden mt-6 pt-4 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4">
+                <ul class="flex justify-center space-x-6 text-sm">
+                    <li><a href="/download-app" class="text-gray-600 hover:text-blue-600">Download app</a></li>
+                    <li><a href="/doc-gia-gui-bai" class="text-gray-600 hover:text-blue-600">Send to editor</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // News Slide Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideContainer = document.getElementById('newsSlide');
+            const slideDots = document.querySelectorAll('.slide-dot');
+
+            if (!slideContainer || slideDots.length === 0) {
+                console.log('Slide elements not found');
+                return;
+            }
+
+            let currentSlide = 0;
+            const totalSlides = 3;
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            let startTransform = 0;
+            let autoSlideInterval;
+
+            // Function to update slide
+            function updateSlide(slideIndex) {
+                if (!slideContainer) return;
+
+                slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
+                // Update active dot
+                slideDots.forEach((dot, index) => {
+                    if (index === slideIndex) {
+                        dot.classList.add('active');
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-blue-600');
+                    } else {
+                        dot.classList.remove('active');
+                        dot.classList.remove('bg-blue-600');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            }
+
+            // Function to start auto slide
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    if (!isDragging) {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateSlide(currentSlide);
+                        console.log('Auto slide to:', currentSlide);
+                    }
+                }, 3000);
+            }
+
+            // Function to stop auto slide
+            function stopAutoSlide() {
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                }
+            }
+
+            // Touch/Mouse events for dragging
+            slideContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                startTransform = -currentSlide * 100;
+                stopAutoSlide();
+                slideContainer.style.cursor = 'grabbing';
+            });
+
+            slideContainer.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                currentX = e.clientX;
+                const diffX = currentX - startX;
+                const percentage = (diffX / slideContainer.offsetWidth) * 100;
+                const newTransform = startTransform + percentage;
+                slideContainer.style.transform = `translateX(${newTransform}%)`;
+            });
+
+            slideContainer.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                isDragging = false;
+                slideContainer.style.cursor = 'grab';
+
+                const diffX = currentX - startX;
+                const threshold = slideContainer.offsetWidth * 0.1; // 10% threshold
+
+                if (Math.abs(diffX) > threshold) {
+                    if (diffX > 0 && currentSlide > 0) {
+                        // Swipe right - go to previous
+                        currentSlide--;
+                    } else if (diffX < 0 && currentSlide < totalSlides - 1) {
+                        // Swipe left - go to next
+                        currentSlide++;
+                    }
+                }
+
+                updateSlide(currentSlide);
+                startAutoSlide();
+            });
+
+            // Touch events for mobile
+            slideContainer.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startTransform = -currentSlide * 100;
+                stopAutoSlide();
+            });
+
+            slideContainer.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                currentX = e.touches[0].clientX;
+                const diffX = currentX - startX;
+                const percentage = (diffX / slideContainer.offsetWidth) * 100;
+                const newTransform = startTransform + percentage;
+                slideContainer.style.transform = `translateX(${newTransform}%)`;
+            });
+
+            slideContainer.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                isDragging = false;
+
+                const diffX = currentX - startX;
+                const threshold = slideContainer.offsetWidth * 0.1;
+
+                if (Math.abs(diffX) > threshold) {
+                    if (diffX > 0 && currentSlide > 0) {
+                        currentSlide--;
+                    } else if (diffX < 0 && currentSlide < totalSlides - 1) {
+                        currentSlide++;
+                    }
+                }
+
+                updateSlide(currentSlide);
+                startAutoSlide();
+            });
+
+            // Add click event to dots
+            slideDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlide(currentSlide);
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+            });
+
+            // Add cursor style
+            slideContainer.style.cursor = 'grab';
+
+            // Start auto slide
+            startAutoSlide();
+
+            console.log('News slide initialized with drag support');
+        });
+    </script>
+</body>
+
+</html>
