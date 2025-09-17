@@ -30,7 +30,7 @@
                     <div class="text-sm text-gray-600 font-medium">
                         <a class="goback inline-flex items-center gap-2 px-2 py-0 border border-gray-300 rounded-full " href="/">
                             <img src="https://static.vnncdn.net/v1/icon/return.png" class="w-4 h-4" alt="return icon">
-                            Vietnamnet.vn
+                            <span class="hidden sm:inline">Vietnamnet.vn</span>
                         </a>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                     <!-- Login and Search -->
                     <div class="flex items-center space-x-3">
                         <button class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
-                            <span class="text-sm">Đăng nhập</span>
+                            <span class="text-sm hidden sm:inline">Đăng nhập</span>
                             <img src="https://static.vnncdn.net/v1/icon/login.svg" class="w-4 h-4" alt="login icon">
                         </button>
 
@@ -59,7 +59,7 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="bg-white border-b border-gray-200">
+    <header class="bg-white border-b border-gray-200 hidden sm:inline">
         <div class="">
             <div class="flex items-center justify-center h-14">
                 <!-- Left Side - Home Icon and Navigation -->
@@ -107,97 +107,97 @@
                 </div>
             </div>
         </div>
-    </header>
 
-    <!-- Mobile Hamburger Menu -->
-    <div class="mainHamburger hidden fixed inset-0 bg-white z-50" style="height: calc(-1px + 100vh);">
-        <div class="mainHamburger__head p-4 border-b">
-            <div class="vnn-logo flex items-center justify-between">
-                <button type="button" class="btn-hamburger-close">
-                    <span class="icon-hamburger">×</span>
-                </button>
-                <a href="/en" title="Vietnamnet global">
-                    <img src="https://static.vnncdn.net/v1/icon/VietnamNet_bridge.svg" alt="VietNamNet Global" class="h-8">
-                </a>
-            </div>
-        </div>
 
-        <!-- Mobile Search -->
-        <div class="main-search p-4 border-b">
-            <form action="/tim-kiem" method="get">
-                <div class="relative">
-                    <input name="q" type="text" placeholder="Type keywords...." class="w-full px-4 py-2 border border-gray-300 rounded">
-                    <button class="btn-search absolute right-2 top-2" type="submit">
-                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search icon" class="w-5 h-5">
+        <!-- Mobile Hamburger Menu -->
+        <div class="mainHamburger hidden fixed inset-0 bg-white z-50" style="height: calc(-1px + 100vh);">
+            <div class="mainHamburger__head p-4 border-b">
+                <div class="vnn-logo flex items-center justify-between">
+                    <button type="button" class="btn-hamburger-close">
+                        <span class="icon-hamburger">×</span>
                     </button>
-                </div>
-            </form>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="main-menu p-4">
-            <div class="hamburger__left mb-6">
-                <div class="header_submenu-main">
-                    <div class="header_submenu-search mb-4">
-                        <form target="_top" action="/tim-kiem">
-                            <div class="relative">
-                                <input type="text" name="q" placeholder="Tìm kiếm..." class="w-full px-4 py-2 border border-gray-300 rounded">
-                                <button type="submit" class="absolute right-2 top-2">
-                                    <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search.png" class="w-5 h-5">
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="header_submenu-button text-xs text-gray-600 space-y-1">
-                        <ul>
-                            <li>© Copyright of Vietnamnet Global.</li>
-                            <li>Tel: 024 3772 7988 Fax: (024) 37722734</li>
-                            <li>Email: evnn@vietnamnet.vn</li>
-                        </ul>
-                    </div>
+                    <a href="/en" title="Vietnamnet global">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet_bridge.svg" alt="VietNamNet Global" class="h-8">
+                    </a>
                 </div>
             </div>
 
-            <div class="hamburger__right">
-                <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
-                    <li><a href="/talkshow" class="text-gray-700 hover:text-red-600">Talkshow</a></li>
-                    <li><a href="/ho-so" class="text-gray-700 hover:text-red-600">Hồ sơ</a></li>
-                    <li><a href="/anh" class="text-gray-700 hover:text-red-600">Ảnh</a></li>
-                    <li><a href="/video" class="text-gray-700 hover:text-red-600">Video</a></li>
-                    <li><a href="/multimedia" class="text-gray-700 hover:text-red-600">Multimedia</a></li>
-                    <li class="item-podcast">
-                        <a href="/podcast" title="podcast" class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
-                            <img src="https://static.vnncdn.net/v1/icon/podcast-icon.svg" alt="podcast icon" class="w-5 h-5">
-                            <span>Podcast</span>
-                        </a>
-                    </li>
-                </ul>
+            <!-- Mobile Search -->
+            <div class="main-search p-4 border-b">
+                <form action="/tim-kiem" method="get">
+                    <div class="relative">
+                        <input name="q" type="text" placeholder="Type keywords...." class="w-full px-4 py-2 border border-gray-300 rounded">
+                        <button class="btn-search absolute right-2 top-2" type="submit">
+                            <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search icon" class="w-5 h-5">
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-                <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
-                    <li><a href="/tuyen-bai" class="text-gray-700 hover:text-red-600">Tuyến bài</a></li>
-                    <li><a href="/su-kien" class="text-gray-700 hover:text-red-600">Sự kiện nóng</a></li>
-                </ul>
+            <!-- Mobile Menu -->
+            <div class="main-menu p-4">
+                <div class="hamburger__left mb-6">
+                    <div class="header_submenu-main">
+                        <div class="header_submenu-search mb-4">
+                            <form target="_top" action="/tim-kiem">
+                                <div class="relative">
+                                    <input type="text" name="q" placeholder="Tìm kiếm..." class="w-full px-4 py-2 border border-gray-300 rounded">
+                                    <button type="submit" class="absolute right-2 top-2">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="search.png" class="w-5 h-5">
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="header_submenu-button text-xs text-gray-600 space-y-1">
+                            <ul>
+                                <li>© Copyright of Vietnamnet Global.</li>
+                                <li>Tel: 024 3772 7988 Fax: (024) 37722734</li>
+                                <li>Email: evnn@vietnamnet.vn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                <ul class="hamburger__list-right space-y-3 mb-6">
-                    <li><a title="Tuyển dụng" href="/tuyen-dung" class="text-gray-700 hover:text-red-600">Tuyển dụng</a></li>
-                    <li><a title="Liên hệ tòa soạn" href="/thong-tin-toa-soan" class="text-gray-700 hover:text-red-600">Liên hệ tòa soạn</a></li>
-                    <li><a title="Liên hệ quảng cáo" target="_blank" href="https://vads.vn/" class="text-gray-700 hover:text-red-600">Liên hệ quảng cáo</a></li>
-                </ul>
+                <div class="hamburger__right">
+                    <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
+                        <li><a href="/talkshow" class="text-gray-700 hover:text-red-600">Talkshow</a></li>
+                        <li><a href="/ho-so" class="text-gray-700 hover:text-red-600">Hồ sơ</a></li>
+                        <li><a href="/anh" class="text-gray-700 hover:text-red-600">Ảnh</a></li>
+                        <li><a href="/video" class="text-gray-700 hover:text-red-600">Video</a></li>
+                        <li><a href="/multimedia" class="text-gray-700 hover:text-red-600">Multimedia</a></li>
+                        <li class="item-podcast">
+                            <a href="/podcast" title="podcast" class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
+                                <img src="https://static.vnncdn.net/v1/icon/podcast-icon.svg" alt="podcast icon" class="w-5 h-5">
+                                <span>Podcast</span>
+                            </a>
+                        </li>
+                    </ul>
 
-                <a class="download-app flex items-center space-x-2 text-gray-700 hover:text-red-600" href="/download-app">
-                    <img src="https://static.vnncdn.net/v1/icon/tai-app.svg" alt="download app" class="w-5 h-5">
-                    <span>Download app</span>
-                </a>
+                    <ul class="hamburger__list-right notosans-bold space-y-3 mb-4">
+                        <li><a href="/tuyen-bai" class="text-gray-700 hover:text-red-600">Tuyến bài</a></li>
+                        <li><a href="/su-kien" class="text-gray-700 hover:text-red-600">Sự kiện nóng</a></li>
+                    </ul>
+
+                    <ul class="hamburger__list-right space-y-3 mb-6">
+                        <li><a title="Tuyển dụng" href="/tuyen-dung" class="text-gray-700 hover:text-red-600">Tuyển dụng</a></li>
+                        <li><a title="Liên hệ tòa soạn" href="/thong-tin-toa-soan" class="text-gray-700 hover:text-red-600">Liên hệ tòa soạn</a></li>
+                        <li><a title="Liên hệ quảng cáo" target="_blank" href="https://vads.vn/" class="text-gray-700 hover:text-red-600">Liên hệ quảng cáo</a></li>
+                    </ul>
+
+                    <a class="download-app flex items-center space-x-2 text-gray-700 hover:text-red-600" href="/download-app">
+                        <img src="https://static.vnncdn.net/v1/icon/tai-app.svg" alt="download app" class="w-5 h-5">
+                        <span>Download app</span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     </header>
 
     <!-- Main Content -->
     <main class="container max-w-[1140px] mx-auto py-6 px-5">
 
         <!-- Breadcrumb Section -->
-        <section class=" bg-white border-b border-gray-200 py-4">
+        <section class=" bg-white border-b border-gray-200 py-4 hidden sm:block">
             <div class="max-w-7xl mx-auto">
                 <div class="flex items-center justify-between">
                     <!-- Left Side - Home Icon and Title -->
@@ -225,34 +225,34 @@
             </div>
         </section>
         <!-- Main News Section -->
-        <section class=" bg-white py-6">
-            <div class="max-w-7xl mx-auto ">
-                <div class="flex gap-8">
+        <section class="bg-white">
+            <div class="max-w-7xl mx-auto pt-4 ">
+                <div class="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
                     <!-- Left Column - Main Content -->
                     <div class="flex-1">
                         <!-- Top Section: Large Article + Two Stacked Articles -->
-                        <div class="flex gap-5 mb-8">
+                        <div class="flex flex-col md:flex-row gap-4 sm:gap-5 mb-6 sm:mb-8">
                             <!-- Large Featured Article -->
-                            <div class="flex-1 w-[500px]">
+                            <div class="flex-1 w-full md:w-[500px]">
                                 <a href="/en/free-checkups-hospital-care-by-2030-vietnam-s-bold-new-healthcare-vision-2443276.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/free-checkups-hospital-care-by-2030-vietnams-bold-new-healthcare-vision-551ef314a29b4800b5625e3e87070fd7-44.jpg?width=550&s=H7rye5Abl2PKSon-r0oqtQ" alt="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="w-full h-80 object-cover mb-4">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/free-checkups-hospital-care-by-2030-vietnams-bold-new-healthcare-vision-551ef314a29b4800b5625e3e87070fd7-44.jpg?width=550&s=H7rye5Abl2PKSon-r0oqtQ" alt="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="w-full h-48 sm:h-64 md:h-80 object-cover mb-4">
                                 </a>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
                                     <a href="/en/free-checkups-hospital-care-by-2030-vietnam-s-bold-new-healthcare-vision-2443276.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="hover:text-[#2d67ad]">
                                         Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision
                                     </a>
                                 </h3>
-                                <p class="text-gray-700 leading-relaxed">
+                                <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                                     Deputy Prime Minister Le Thanh Long outlines a groundbreaking healthcare plan that will see the national insurance fund cover $5.6 billion annually.
                                 </p>
                             </div>
 
                             <!-- Two Stacked Articles -->
-                            <div class="w-[240px] flex-shrink-0 space-y-6">
+                            <div class="w-full md:w-[240px] flex-shrink-0 space-y-4 sm:space-y-6">
                                 <!-- Article 1 -->
                                 <div>
                                     <a href="/en/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-2443277.html" title="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi">
-                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-bb0763974f9c4f0daf96e7eb1665aba6-52.png?width=360&s=g-RuxjAOe5ay9qlQYhkzNA" alt="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi" class="w-full h-40 object-cover mb-3">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-bb0763974f9c4f0daf96e7eb1665aba6-52.png?width=360&s=g-RuxjAOe5ay9qlQYhkzNA" alt="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi" class="w-full h-32 sm:h-40 object-cover mb-3">
                                     </a>
                                     <h3 class="text-base font-bold text-gray-900 leading-tight">
                                         <a href="/en/classical-stars-unite-for-vivaldi-beethoven-concert-in-hanoi-2443277.html" title="Classical stars unite for 'Vivaldi & Beethoven' concert in Hanoi" class="hover:text-[#2d67ad]">
@@ -264,7 +264,7 @@
                                 <!-- Article 2 -->
                                 <div>
                                     <a href="/en/experts-urge-legal-clarity-to-protect-vietnam-s-private-sector-2443262.html" title="VPSF 2025: Reform needed to protect private sector from legal risks">
-                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vpsf-2025-reform-needed-to-protect-private-sector-from-legal-risks-e9f0329470194120914f703d526253f6-3124.jpg?width=360&s=YSvU9pNHOvvPWFhkZsrO4g" alt="VPSF 2025: Reform needed to protect private sector from legal risks" class="w-full h-40 object-cover mb-3">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/vpsf-2025-reform-needed-to-protect-private-sector-from-legal-risks-e9f0329470194120914f703d526253f6-3124.jpg?width=360&s=YSvU9pNHOvvPWFhkZsrO4g" alt="VPSF 2025: Reform needed to protect private sector from legal risks" class="w-full h-32 sm:h-40 object-cover mb-3">
                                     </a>
                                     <h3 class="text-base font-bold text-gray-900 leading-tight">
                                         <a href="/en/experts-urge-legal-clarity-to-protect-vietnam-s-private-sector-2443262.html" title="VPSF 2025: Reform needed to protect private sector from legal risks" class="hover:text-[#2d67ad]">
@@ -276,11 +276,11 @@
                         </div>
 
                         <!-- Bottom Section: Three Horizontal Articles -->
-                        <div class="grid grid-cols-3 gap-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                             <!-- Article 3 -->
                             <div>
                                 <a href="/en/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-2443289.html" title="Vietnamese dance duo wins world bronze in Latin Showdance debut">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-f90b4100f4734b28a7bd6a64bd89b804-98.gif?width=360&s=R3gNXmh-f4G_2fNK9Yri_A" alt="Vietnamese dance duo wins world bronze in Latin Showdance debut" class="w-[240px] h-40 object-cover mb-3">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-f90b4100f4734b28a7bd6a64bd89b804-98.gif?width=360&s=R3gNXmh-f4G_2fNK9Yri_A" alt="Vietnamese dance duo wins world bronze in Latin Showdance debut" class="w-full h-32 sm:h-40 object-cover mb-3">
                                 </a>
                                 <h3 class="text-base font-bold text-gray-900 leading-tight">
                                     <a href="/en/vietnamese-dance-duo-wins-world-bronze-in-latin-showdance-debut-2443289.html" title="Vietnamese dance duo wins world bronze in Latin Showdance debut" class="hover:text-[#2d67ad]">
@@ -292,7 +292,7 @@
                             <!-- Article 4 -->
                             <div>
                                 <a href="/en/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-2443270.html" title="Son Tra Peninsula reopens to visitors after landslide-related closure">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-9f817f4cece24dac82731fbdfdf47fee-3155.jpg?width=360&s=Vsw74mgQZoYOtfCB_fcoIQ" alt="Son Tra Peninsula reopens to visitors after landslide-related closure" class="w-[240px] h-40 object-cover mb-3">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-9f817f4cece24dac82731fbdfdf47fee-3155.jpg?width=360&s=Vsw74mgQZoYOtfCB_fcoIQ" alt="Son Tra Peninsula reopens to visitors after landslide-related closure" class="w-full h-32 sm:h-40 object-cover mb-3">
                                 </a>
                                 <h3 class="text-base font-bold text-gray-900 leading-tight">
                                     <a href="/en/son-tra-peninsula-reopens-to-visitors-after-landslide-related-closure-2443270.html" title="Son Tra Peninsula reopens to visitors after landslide-related closure" class="hover:text-[#2d67ad]">
@@ -304,7 +304,7 @@
                             <!-- Article 5 -->
                             <div>
                                 <a href="/en/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-2443280.html" title="Vietnam to reform energy market for fairness, innovation, and security">
-                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-c4ffadda7925445db63a637ddb6b18d6-63.jpg?width=360&s=QDoHcs_2scNw2jCoDK6QhA" alt="Vietnam to reform energy market for fairness, innovation, and security" class="w-[240px] h-40 object-cover mb-3">
+                                    <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-c4ffadda7925445db63a637ddb6b18d6-63.jpg?width=360&s=QDoHcs_2scNw2jCoDK6QhA" alt="Vietnam to reform energy market for fairness, innovation, and security" class="w-full h-32 sm:h-40 object-cover mb-3">
                                 </a>
                                 <h3 class="text-base font-bold text-gray-900 leading-tight">
                                     <a href="/en/vietnam-to-reform-energy-market-for-fairness-innovation-and-security-2443280.html" title="Vietnam to reform energy market for fairness, innovation, and security" class="hover:text-[#2d67ad]">
@@ -313,103 +313,103 @@
                                 </h3>
                             </div>
                         </div>
-                        <div class="max-w-7xl mx-auto border-t border-gray-200 mt-6 pt-5">
-                            <div class="space-y-6">
+                        <div class="max-w-7xl mx-auto border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-5">
+                            <div class="space-y-4 sm:space-y-6">
                                 <!-- Article 3 -->
-                                <div class="flex gap-4  last:pb-0">
-                                    <div class="w-[240px] h-40 flex-shrink-0">
+                                <div class="flex flex-col sm:flex-row gap-4 last:pb-0">
+                                    <div class="w-full sm:w-[240px] h-32 sm:h-40 flex-shrink-0">
                                         <a href="/en/two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html" title="Two TikTokers arrested in HCM City for staging offensive livestreams">
-                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/two-tiktokers-arrested-in-hcm-city-for-staging-offensive-livestreams-3b53f60a389a464aa7b50d307a31d81a-94.png?width=360&s=HzyBbElIc-cePtrOPTt0VQ" alt="Two TikTokers arrested in HCM City for staging offensive livestreams" class="w-[240px] h-40 object-cover">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/two-tiktokers-arrested-in-hcm-city-for-staging-offensive-livestreams-3b53f60a389a464aa7b50d307a31d81a-94.png?width=360&s=HzyBbElIc-cePtrOPTt0VQ" alt="Two TikTokers arrested in HCM City for staging offensive livestreams" class="w-full h-32 sm:h-40 object-cover">
                                         </a>
                                     </div>
                                     <div class="flex-1">
                                         <div class="text-sm font-bold mb-2 text-[#2d67ad]">VIETNAMNET GLOBAL</div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">
                                             <a href="/en/two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html" title="Two TikTokers arrested in HCM City for staging offensive livestreams" class="hover:text-[#2d67ad]">
                                                 Two TikTokers arrested in HCM City for staging offensive livestreams
                                             </a>
                                         </h3>
-                                        <p class="text-gray-600 leading-relaxed">
+                                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                                             Ho Chi Minh City police have arrested two TikTokers for producing and spreading offensive, staged videos online aimed at attracting views.
                                         </p>
                                     </div>
                                 </div>
 
                                 <!-- Article 4 -->
-                                <div class="flex gap-4  last:pb-0">
-                                    <div class="w-[240px] h-40 flex-shrink-0">
+                                <div class="flex flex-col sm:flex-row gap-4 last:pb-0">
+                                    <div class="w-full sm:w-[240px] h-32 sm:h-40 flex-shrink-0">
                                         <a href="/en/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID">
-                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-bd447a73097246e587ddb895220b10d0-1351.png?width=360&s=s9mCvu2ANl4bdiUuSJ1mkg" alt="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" class="w-[240px] h-40 object-cover">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-bd447a73097246e587ddb895220b10d0-1351.png?width=360&s=s9mCvu2ANl4bdiUuSJ1mkg" alt="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" class="w-full h-32 sm:h-40 object-cover">
                                         </a>
                                     </div>
                                     <div class="flex-1">
                                         <div class="text-sm font-bold mb-2 text-[#2d67ad]">VIETNAMNET GLOBAL</div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">
                                             <a href="/en/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" class="hover:text-[#2d67ad]">
                                                 iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID
                                             </a>
                                         </h3>
-                                        <p class="text-gray-600 leading-relaxed">
+                                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                                             iPhone 18 rumors say Apple will refine the notch design, but under-display Face ID won't arrive until 2026.
                                         </p>
                                     </div>
                                 </div>
 
                                 <!-- Article 5 -->
-                                <div class="flex gap-4  last:pb-0">
-                                    <div class="w-[240px] h-40 flex-shrink-0">
+                                <div class="flex flex-col sm:flex-row gap-4 last:pb-0">
+                                    <div class="w-full sm:w-[240px] h-32 sm:h-40 flex-shrink-0">
                                         <a href="/en/vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html" title="$6.3 billion proposed to widen 18 North-South expressway segments">
-                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/63-billion-proposed-to-widen-18-north-south-expressway-segments-4f4ac77654ae4d91aff82c39e5621652-3149.png?width=360&s=16x9sWRJH_f5qPmHMcS6VA" alt="$6.3 billion proposed to widen 18 North-South expressway segments" class="w-[240px] h-40 object-cover">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/63-billion-proposed-to-widen-18-north-south-expressway-segments-4f4ac77654ae4d91aff82c39e5621652-3149.png?width=360&s=16x9sWRJH_f5qPmHMcS6VA" alt="$6.3 billion proposed to widen 18 North-South expressway segments" class="w-full h-32 sm:h-40 object-cover">
                                         </a>
                                     </div>
                                     <div class="flex-1">
                                         <div class="text-sm font-bold mb-2 text-[#2d67ad]">VIETNAMNET GLOBAL</div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">
                                             <a href="/en/vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html" title="$6.3 billion proposed to widen 18 North-South expressway segments" class="hover:text-[#2d67ad]">
                                                 $6.3 billion proposed to widen 18 North-South expressway segments
                                             </a>
                                         </h3>
-                                        <p class="text-gray-600 leading-relaxed">
+                                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                                             The Ministry of Construction has proposed widening 18 expressway sections to six lanes, aiming to ease traffic and boost economic connectivity.
                                         </p>
                                     </div>
                                 </div>
 
                                 <!-- Article 6 -->
-                                <div class="flex gap-4  last:pb-0">
-                                    <div class="w-[240px] h-40 flex-shrink-0">
+                                <div class="flex flex-col sm:flex-row gap-4 last:pb-0">
+                                    <div class="w-full sm:w-[240px] h-32 sm:h-40 flex-shrink-0">
                                         <a href="/en/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html" title="Hanoi CDC shuts fanpage comments amid child abuse scandal">
-                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-70a3b59bfac54a7d9ed02f03d302d1ce-3147.jpg?width=360&s=ZUQktaRVicGeRgG9jDgckg" alt="Hanoi CDC shuts fanpage comments amid child abuse scandal" class="w-[240px] h-40 object-cover">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-70a3b59bfac54a7d9ed02f03d302d1ce-3147.jpg?width=360&s=ZUQktaRVicGeRgG9jDgckg" alt="Hanoi CDC shuts fanpage comments amid child abuse scandal" class="w-full h-32 sm:h-40 object-cover">
                                         </a>
                                     </div>
                                     <div class="flex-1">
                                         <div class="text-sm font-bold mb-2 text-[#2d67ad]">VIETNAMNET GLOBAL</div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">
                                             <a href="/en/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html" title="Hanoi CDC shuts fanpage comments amid child abuse scandal" class="hover:text-[#2d67ad]">
                                                 Hanoi CDC shuts fanpage comments amid child abuse scandal
                                             </a>
                                         </h3>
-                                        <p class="text-gray-600 leading-relaxed">
+                                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                                             Hanoi CDC has disabled comments on its Facebook page after a staff member was accused of violently abusing her stepson, sparking public outrage.
                                         </p>
                                     </div>
                                 </div>
 
                                 <!-- Article 7 -->
-                                <div class="flex gap-4  last:pb-0">
-                                    <div class="w-[240px] h-40 flex-shrink-0">
+                                <div class="flex flex-col sm:flex-row gap-4 last:pb-0">
+                                    <div class="w-full sm:w-[240px] h-32 sm:h-40 flex-shrink-0">
                                         <a href="/en/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html" title="FPT CEO: Vietnamese businesses must unite to succeed">
-                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-af2be71520fb4280adcacdb5fb0639a0-3137.jpg?width=360&s=W4KZRT6rDusoQIi73OwVcg" alt="FPT CEO: Vietnamese businesses must unite to succeed" class="w-[240px] h-40 object-cover">
+                                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-af2be71520fb4280adcacdb5fb0639a0-3137.jpg?width=360&s=W4KZRT6rDusoQIi73OwVcg" alt="FPT CEO: Vietnamese businesses must unite to succeed" class="w-full h-32 sm:h-40 object-cover">
                                         </a>
                                     </div>
                                     <div class="flex-1">
                                         <div class="text-sm font-bold mb-2 text-[#2d67ad]">VIETNAMNET GLOBAL</div>
-                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 leading-tight">
                                             <a href="/en/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html" title="FPT CEO: Vietnamese businesses must unite to succeed" class="hover:text-[#2d67ad]">
                                                 FPT CEO: Vietnamese businesses must unite to succeed
                                             </a>
                                         </h3>
-                                        <p class="text-gray-600 leading-relaxed">
+                                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                                             At the Vietnam Private Sector Forum 2025, FPT CEO called for unity, collaboration, and digital skills to drive national transformation.
                                         </p>
                                     </div>
@@ -419,7 +419,7 @@
                     </div>
 
                     <!-- Right Sidebar - TOP STORIES -->
-                    <div class="w-[300px] flex-shrink-0">
+                    <div class="hidden lg:block w-[300px] flex-shrink-0">
                         <!-- TOP STORIES -->
                         <div class="bg-white border border-gray-200 p-6 mb-6">
                             <h3 class="text-lg font-bold  mb-4 text-center text-[#2d67ad]">TOP STORIES</h3>
