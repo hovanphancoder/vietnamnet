@@ -92,6 +92,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize tooltips
     initializeTooltips();
+
+    // Search dropdown toggle (common functionality)
+    initializeSearchDropdown();
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const popup = document.getElementById('mobileMenuPopup');
+        const sidebar = document.getElementById('mobileMenuSidebar');
+
+        if (popup && !popup.classList.contains('hidden') &&
+            !sidebar.contains(event.target) &&
+            !event.target.closest('button[onclick="toggleMobileMenu()"]')) {
+            closeMobileMenu();
+        }
+    });
 });
 
 // Search function
@@ -313,3 +328,119 @@ function addScrollToTopButton() {
 
 // Initialize scroll to top button
 addScrollToTopButton();
+
+// Mobile Menu Toggle Function
+function toggleMobileMenu() {
+    const popup = document.getElementById('mobileMenuPopup');
+    const sidebar = document.getElementById('mobileMenuSidebar');
+
+    if (popup && sidebar) {
+        popup.classList.remove('hidden');
+        // Trigger animation after a small delay
+        setTimeout(() => {
+            sidebar.classList.remove('-translate-x-full');
+        }, 10);
+    }
+}
+
+// Close Mobile Menu Function
+function closeMobileMenu() {
+    const popup = document.getElementById('mobileMenuPopup');
+    const sidebar = document.getElementById('mobileMenuSidebar');
+
+    if (popup && sidebar) {
+        sidebar.classList.add('-translate-x-full');
+        // Hide popup after animation completes
+        setTimeout(() => {
+            popup.classList.add('hidden');
+        }, 300);
+    }
+}
+
+// Search dropdown functionality (mobile only)
+function initializeSearchDropdown() {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchDropdown = document.getElementById('searchDropdown');
+
+    // Only initialize on mobile devices
+    if (searchToggle && searchDropdown && window.innerWidth < 768) {
+        searchToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            searchDropdown.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchToggle.contains(e.target) && !searchDropdown.contains(e.target)) {
+                searchDropdown.classList.add('hidden');
+            }
+        });
+    }
+}
+
+// News Register Page Specific JavaScript (only run on news_register.html)
+if (window.location.pathname.includes('news_register.html')) {
+    document.addEventListener('DOMContentLoaded', function() {
+        // File upload handler
+        const fileInput = document.getElementById('file-input');
+        const fileText = document.getElementById('file-text');
+
+        if (fileInput && fileText) {
+            fileInput.addEventListener('change', function(e) {
+                const files = e.target.files;
+                if (files.length > 0) {
+                    if (files.length === 1) {
+                        fileText.textContent = files[0].name;
+                    } else {
+                        fileText.textContent = `${files.length} files selected`;
+                    }
+                    fileText.classList.remove('text-gray-500');
+                    fileText.classList.add('text-gray-900', 'font-medium');
+                } else {
+                    fileText.textContent = 'Chọn file';
+                    fileText.classList.remove('text-gray-900', 'font-medium');
+                    fileText.classList.add('text-gray-500');
+                }
+            });
+        }
+
+        // Form validation
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const title = formData.get('title');
+                const content = formData.get('content');
+
+                // Basic validation
+                if (!name || !email || !title || !content) {
+                    alert('Vui lòng điền đầy đủ thông tin bắt buộc');
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Vui lòng nhập email hợp lệ');
+                    return;
+                }
+
+                // Show success message
+                alert('Bài viết đã được gửi thành công! Chúng tôi sẽ liên hệ lại sớm nhất.');
+                form.reset();
+
+                // Reset file text
+                if (fileText) {
+                    fileText.textContent = 'Chọn file';
+                    fileText.classList.remove('text-gray-900', 'font-medium');
+                    fileText.classList.add('text-gray-500');
+                }
+            });
+        }
+    });
+}

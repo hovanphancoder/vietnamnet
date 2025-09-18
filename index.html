@@ -24,7 +24,7 @@
     <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
         <!-- Top Header Bar -->
         <div class="bg-white border-b border-gray-200  ">
-            <div class="mx-auto px-4">
+            <div class="container max-w-[1140px] mx-auto px-4">
                 <div class="flex items-center justify-between h-12">
                     <!-- Left Side - Logo and Date -->
                     <div class="flex items-center space-x-4">
@@ -57,13 +57,34 @@
                     <!-- Right Side - Links and Login -->
                     <div class="flex items-center space-x-4">
 
-                        <!-- Login and Search -->
-                        <div class="flex items-center space-x-3">
-                            <button class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
-                                <span class="text-sm hidden sm:inline">Đăng nhập</span>
-                                <img src="https://static.vnncdn.net/v1/icon/login.svg" class="w-6 h-6" alt="login icon">
-                            </button>
+                        <!-- Search -->
+                        <div class="flex items-center space-x-3 relative">
+                            <!-- Desktop: Always show search form -->
+                            <form class="search-small__form relative hidden md:block" action="/search.html">
+                                <input class="search-small__form-input w-60 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                </button>
+                            </form>
 
+                            <!-- Mobile: Search icon with dropdown -->
+                            <div class="md:hidden">
+                                <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.svg" class="w-6 h-6" alt="search icon">
+                                </button>
+
+                                <!-- Search Dropdown -->
+                                <div id="searchDropdown" class="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                    <form class="p-4" action="/search.html">
+                                        <div class="relative">
+                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -690,159 +711,9 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle Function
-        function toggleMobileMenu() {
-            const popup = document.getElementById('mobileMenuPopup');
-            const sidebar = document.getElementById('mobileMenuSidebar');
-
-            if (popup && sidebar) {
-                popup.classList.remove('hidden');
-                // Trigger animation after a small delay
-                setTimeout(() => {
-                    sidebar.classList.remove('-translate-x-full');
-                }, 10);
-            }
-        }
-
-        // Close Mobile Menu Function
-        function closeMobileMenu() {
-            const popup = document.getElementById('mobileMenuPopup');
-            const sidebar = document.getElementById('mobileMenuSidebar');
-
-            if (popup && sidebar) {
-                sidebar.classList.add('-translate-x-full');
-                // Hide popup after animation completes
-                setTimeout(() => {
-                    popup.classList.add('hidden');
-                }, 300);
-            }
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const popup = document.getElementById('mobileMenuPopup');
-            const sidebar = document.getElementById('mobileMenuSidebar');
-
-            if (popup && !popup.classList.contains('hidden') &&
-                !sidebar.contains(event.target) &&
-                !event.target.closest('button[onclick="toggleMobileMenu()"]')) {
-                closeMobileMenu();
-            }
-        });
-
-        // News Slide Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const slideContainer = document.getElementById('newsSlide');
-            const slideDots = document.querySelectorAll('.slide-dot');
-            let currentSlide = 0;
-            let slideInterval;
-
-            if (slideContainer && slideDots.length > 0) {
-                const slides = slideContainer.querySelectorAll('.slide-item');
-                const totalSlides = slides.length;
-
-                function showSlide(index) {
-                    slides.forEach((slide, i) => {
-                        slide.style.display = i === index ? 'block' : 'none';
-                    });
-
-                    slideDots.forEach((dot, i) => {
-                        dot.classList.toggle('bg-blue-600', i === index);
-                        dot.classList.toggle('bg-gray-300', i !== index);
-                    });
-                }
-
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    showSlide(currentSlide);
-                }
-
-                function startSlideShow() {
-                    slideInterval = setInterval(nextSlide, 3000);
-                }
-
-                function stopSlideShow() {
-                    clearInterval(slideInterval);
-                }
-
-                // Initialize
-                showSlide(0);
-                startSlideShow();
-
-                // Dot navigation
-                slideDots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => {
-                        currentSlide = index;
-                        showSlide(currentSlide);
-                        stopSlideShow();
-                        startSlideShow();
-                    });
-                });
-
-                // Pause on hover
-                slideContainer.addEventListener('mouseenter', stopSlideShow);
-                slideContainer.addEventListener('mouseleave', startSlideShow);
-
-                // Touch/Drag functionality
-                let startX = 0;
-                let isDragging = false;
-
-                slideContainer.addEventListener('mousedown', (e) => {
-                    startX = e.clientX;
-                    isDragging = true;
-                    stopSlideShow();
-                });
-
-                slideContainer.addEventListener('mousemove', (e) => {
-                    if (isDragging) {
-                        e.preventDefault();
-                    }
-                });
-
-                slideContainer.addEventListener('mouseup', (e) => {
-                    if (isDragging) {
-                        const endX = e.clientX;
-                        const diffX = startX - endX;
-
-                        if (Math.abs(diffX) > 50) {
-                            if (diffX > 0) {
-                                nextSlide();
-                            } else {
-                                currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
-                                showSlide(currentSlide);
-                            }
-                        }
-
-                        isDragging = false;
-                        startSlideShow();
-                    }
-                });
-
-                // Touch events for mobile
-                slideContainer.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                    stopSlideShow();
-                });
-
-                slideContainer.addEventListener('touchend', (e) => {
-                    const endX = e.changedTouches[0].clientX;
-                    const diffX = startX - endX;
-
-                    if (Math.abs(diffX) > 50) {
-                        if (diffX > 0) {
-                            nextSlide();
-                        } else {
-                            currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
-                            showSlide(currentSlide);
-                        }
-                    }
-
-                    startSlideShow();
-                });
-            }
-        });
-    </script>
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
