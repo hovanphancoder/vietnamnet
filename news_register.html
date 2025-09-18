@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnamnet Global - Latest News from Vietnam</title>
+    <meta name="description" content="Stay updated with the latest news from Vietnam. Vietnamnet Global brings you breaking news, politics, business, and culture from Vietnam.">
+    <meta name="keywords" content="Vietnam news, Vietnamnet, Vietnamese news, politics, business, culture">
+    <meta property="og:title" content="Vietnamnet Global - Latest News from Vietnam">
+    <meta property="og:description" content="Stay updated with the latest news from Vietnam">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vietnamnet.vn/en">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
+        <!-- Top Header Bar -->
+        <div class="bg-white border-b border-gray-200  ">
+            <div class="mx-auto px-4">
+                <div class="flex items-center justify-between h-12">
+                    <!-- Left Side - Logo and Date -->
+                    <div class="flex items-center space-x-4">
+
+
+                        <!-- Date -->
+                        <div class="text-sm text-gray-600 font-medium">
+                            <!-- Desktop: Goback link -->
+                            <a class="goback hidden lg:inline-flex items-center gap-2 px-2 py-0 border border-gray-300 rounded-full" href="/">
+                                <img src="https://static.vnncdn.net/v1/icon/return.png" class="w-4 h-4" alt="return icon">
+                                <span class="hidden sm:inline">Vietnamnet.vn</span>
+                            </a>
+
+                            <!-- Mobile: Hamburger menu icon -->
+                            <button class="lg:hidden inline-flex items-center justify-center w-8 h-8 text-gray-600 hover:text-gray-900" onclick="toggleMobileMenu()">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <!-- Vietnamnet Logo -->
+                        <div class="flex items-center space-x-2">
+                            <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Links and Login -->
+                    <div class="flex items-center space-x-4">
+
+                        <!-- Login and Search -->
+                        <div class="flex items-center space-x-3">
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                <span class="text-sm hidden sm:inline">Đăng nhập</span>
+                                <img src="https://static.vnncdn.net/v1/icon/login.svg" class="w-6 h-6" alt="login icon">
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block" id="mainBar">
+            <div class="flex items-center justify-center h-14">
+                <!-- Left Side - Home Icon and Navigation -->
+                <div class="flex items-center space-x-6">
+                    <!-- Home Icon -->
+                    <a href="/" class="text-blue-600 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Chính trị</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thời sự</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Kinh doanh</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Dân tộc và Tôn giáo</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thể thao</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Giáo dục</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Thế giới</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Đời sống</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Văn hóa - Giải trí</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sức khỏe</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Công nghệ</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Pháp luật</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Xe</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Bất động sản</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Du lịch</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Bạn đọc</a>
+                    </nav>
+                    <!-- <button class="text-gray-700 hover:text-[#2d67ad]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button> -->
+                </div>
+
+                <!-- Right Side - Mobile Menu -->
+                <!-- <div class="lg:hidden">
+                    <button class="text-gray-700 hover:text-[#2d67ad]">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container max-w-[1140px] mx-auto py-6 px-5 mt-12 lg:mt-24">
+
+
+        <!-- Article Submission Section -->
+        <section class="bg-white py-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <!-- Left Section: Article Submission Form -->
+                    <div class="lg:w-[760px] space-y-8">
+                        <!-- Title -->
+                        <div class="mb-6">
+                            <h1 class="text-2xl font-bold text-[#2d67ad] mb-4">GỬI BÀI VIẾT ĐẾN BÁO VIETNAMNET</h1>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                Báo VietNamNet mong nhận được những bài viết đóng góp của quý độc giả khắp nơi gửi cho chúng tôi. Nội dung gửi về sẽ được xác minh, chọn lọc biên tập và đăng tải nếu phù hợp với định hướng và tiêu chí của báo. VietNamNet giữ quyền biên tập và xuất bản bài viết của quý độc giả gửi tới. Mọi thắc mắc vui lòng liên hệ hotline <span class="font-semibold text-[#2d67ad]">0923 457 788</span>.
+                            </p>
+                        </div>
+
+                        <!-- Form -->
+                        <form class="space-y-4">
+                            <!-- Full Name -->
+                            <div class="flex items-center gap-4">
+                                <label class="w-20 sm:w-32 text-sm font-medium text-gray-700">
+                                    <span class="hidden sm:inline">Họ và tên</span>
+                                    <span class="sm:hidden">Họ tên</span>
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <label class="w-20 sm:w-32 text-sm font-medium text-gray-700">
+                                    <span class="hidden sm:inline">Nhập email</span>
+                                    <span class="sm:hidden">Email</span>
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Title -->
+                            <div class="flex items-center gap-4">
+                                <label class="w-20 sm:w-32 text-sm font-medium text-gray-700">
+                                    <span class="hidden sm:inline">Tiêu đề</span>
+                                    <span class="sm:hidden">Tiêu đề</span>
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- File Upload -->
+                            <div class="flex items-center gap-4">
+                                <label class="w-20 sm:w-32 text-sm font-medium text-gray-700">
+                                    <span class="hidden sm:inline">File đính kèm</span>
+                                    <span class="sm:hidden">File</span>
+                                </label>
+                                <div class="flex-1 relative">
+                                    <input type="file" id="file-input" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" multiple>
+                                    <div class="px-3 py-2 border-2 border-dashed border-blue-300 bg-blue-50 rounded focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 hover:border-blue-400 transition-colors w-fit">
+                                        <div class="flex items-center justify-between gap-3">
+                                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                            </svg>
+                                            <span class="text-gray-500 text-sm" id="file-text">Chọn file</span>
+
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">jpg, jpeg, png, gif, doc, docx, pdf, txt</p>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="flex items-start gap-4">
+                                <label class="w-20 sm:w-32 text-sm font-medium text-gray-700 mt-2">
+                                    <span class="hidden sm:inline">Nội dung</span>
+                                    <span class="sm:hidden">Nội dung</span>
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <textarea rows="8" class="flex-1 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 resize-vertical"></textarea>
+                            </div>
+
+                            <!-- Required Field Note -->
+                            <p class="text-xs text-gray-500">
+                                Phần có dấu (*) là thông tin bắt buộc
+                            </p>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="bg-[#2d67ad] text-white py-2 px-6 rounded font-medium hover:bg-[#1e4a7a] transition-colors">
+                                Gửi
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Section: Editorial Office Information -->
+                    <div class="lg:w-[300px]">
+                        <!-- Title -->
+                        <div class="mb-6">
+                            <h2 class="text-2xl font-bold text-[#2d67ad] mb-4">Thông tin tòa soạn</h2>
+                        </div>
+
+                        <!-- Editorial Office Illustration -->
+                        <div class="mb-6">
+                            <div class="">
+                                <img src="https://static.vnncdn.net/v1/pictures/lien-he-toa-soan/lien-he-toa-soan.jpg" alt="Thông tin tòa soạn" class="w-full h-auto rounded">
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="space-y-3 text-sm">
+                            <!-- Hanoi Office -->
+                            <div>
+                                <span class="font-bold text-gray-900">Tòa soạn:</span>
+                                <p class="text-gray-700 mt-1">
+                                    Tầng 18, Toà nhà Cục Viễn thông (VNTA),<br>
+                                    68 Dương Đình Nghệ, phường Cầu Giấy, TP. Hà Nội.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Đường dây nóng:</span>
+                                <span class="text-gray-700 ml-2">0923 457 788</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Điện thoại:</span>
+                                <span class="text-gray-700 ml-2">(024) 39369898</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Fax:</span>
+                                <span class="text-gray-700 ml-2">(024) 39369696</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Email:</span>
+                                <span class="text-gray-700 ml-2">vietnamnet@vietnamnet.vn</span>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="border-t border-gray-300 my-4"></div>
+
+                            <!-- Ho Chi Minh City Office -->
+                            <div>
+                                <span class="font-bold text-gray-900">Văn phòng đại diện tại TP.HCM:</span>
+                                <p class="text-gray-700 mt-1">
+                                    27 Nguyễn Bỉnh Khiêm, Phường Sài Gòn, TP.HCM
+                                </p>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Điện thoại:</span>
+                                <span class="text-gray-700 ml-2">028.38181436</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900">Fax:</span>
+                                <span class="text-gray-700 ml-2">028.38181433</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Mobile Menu Popup -->
+    <div id="mobileMenuPopup" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="fixed left-0 top-0 h-full w-full  bg-[#f4f4f4] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="mobileMenuSidebar">
+            <!-- Header - Fixed -->
+            <div class="bg-white flex items-center justify-between h-12 px-4 border-b border-gray-200 flex-shrink-0">
+                <button onclick="closeMobileMenu()" class="p-1 hover:bg-gray-100 rounded-full">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="flex-1 flex justify-center">
+                    <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet" class="h-10">
+                </div>
+                <div class="w-6"></div>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto">
+                <!-- Search Bar -->
+                <div class="p-4 border-b border-gray-200">
+                    <form action="/search.html" method="get">
+                        <div class="relative">
+                            <input name="q" type="text" placeholder="Type keywords...." class="w-full px-4 py-2 pl-4 pr-10 bg-white border border-gray-300 rounded-[999px] text-sm focus:outline-none">
+                            <button class="btn-search absolute right-2 top-1/2 transform -translate-y-1/2" type="submit">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="p-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Left Column -->
+                        <div class="space-y-2">
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Chính trị</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Kinh doanh</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Thể thao</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Thế giới</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Văn hóa – Giải trí</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Công nghệ</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Ô tô xe máy</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Bất động sản</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Tuần Việt Nam</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Công nghiệp hỗ trợ</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Thị trường tiêu dùng</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Nông thôn mới</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Nội dung chuyên đề</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Talks</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Hồ sơ</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Video</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Podcast</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Lịch vạn niên</a>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="space-y-2">
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Thời sự</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Dân tộc và Tôn giáo</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Giáo dục</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Đời sống</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Sức khỏe</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Pháp luật</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Du lịch</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Bạn đọc</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Toàn văn</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Bảo vệ người tiêu dùng</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Giảm nghèo bền vững</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Dân tộc thiểu số và miền núi</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">English</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Đính chính</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Ảnh</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">Multimedia</a>
+                            <a href="/category.html" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">24h qua</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="p-4 border-t border-gray-200">
+                    <div class="text-center text-sm text-gray-600 space-y-1">
+                        <div class="font-medium">© Copyright of Vietnamnet Global.</div>
+                        <div class="text-xs">Tel: 024 3772 7988 Fax: (024) 37722734</div>
+                        <div class="text-xs">Email: evnn@vietnamnet.vn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-en bg-gray-100 py-6 sm:py-8 mt-6 sm:mt-8" style="font-family: 'Noto Sans', sans-serif;">
+        <div class="footer-en__bottom max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
+                <!-- Left Side - Logo and Copyright -->
+                <div class="footer-en__bottom-left flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-8 w-full lg:w-auto">
+                    <a class="footer-en__bottom-logo flex-shrink-0" href="/en">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet Global" class="h-12 sm:h-16">
+                    </a>
+                    <div class="footer-en__bottom-list text-sm text-gray-600 space-y-2">
+                        <div class="footer-en__bottom-item font-medium">© Copyright of VietNamNet Global</div>
+                        <div class="footer-en__bottom-item text-xs leading-relaxed">
+                            <span>Tel: 024 3772 7988 Fax: (024) 37722734</span>
+                            <span>, </span>
+                            <span>Email: evnn@vietnamnet.vn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Follow Us and Social Media -->
+                <div class="footer-en__bottom-follow flex flex-col items-end space-y-4">
+                    <div class="text-right">
+                        <div class="text-sm font-medium text-gray-700 mb-3">Follow us on</div>
+                        <div class="footer-en__bottom-social flex items-center space-x-2">
+                            <a title="facebook vietnamnet" target="_blank" href="https://www.facebook.com/vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/facebook-black.svg" alt="Facebook" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="youtube vietnamnet" target="_blank" href="https://www.youtube.com/c/B%C3%A1oVietNamNetTV" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/youtube-black.svg" alt="YouTube" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="tiktok vietnamnet" target="_blank" href="https://www.tiktok.com/@vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/tiktok-black.svg" alt="TikTok" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="twitter vietnamnet" target="_blank" href="https://twitter.com/vietnamnetvn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/twitter-black.svg" alt="Twitter" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="zalo vietnamnet" target="_blank" href="http://zalo.me/660139855964186242?src=qr" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/zalo-black.svg" alt="Zalo" class="w-4 h-4 filter invert">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="footer-en__bottom-send bg-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors border border-gray-300 shadow-sm" href="/">Send to editor</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Footer -->
+        <div class="footer-en__bottom-mb md:hidden mt-6 pt-4 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4">
+                <ul class="flex justify-center space-x-6 text-sm">
+                    <li><a href="/download-app" class="text-gray-600 hover:text-[#2d67ad]">Download app</a></li>
+                    <li><a href="/doc-gia-gui-bai" class="text-gray-600 hover:text-[#2d67ad]">Send to editor</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Function
+        function toggleMobileMenu() {
+            const popup = document.getElementById('mobileMenuPopup');
+            const sidebar = document.getElementById('mobileMenuSidebar');
+
+            if (popup && sidebar) {
+                popup.classList.remove('hidden');
+                // Trigger animation after a small delay
+                setTimeout(() => {
+                    sidebar.classList.remove('-translate-x-full');
+                }, 10);
+            }
+        }
+
+        // Close Mobile Menu Function
+        function closeMobileMenu() {
+            const popup = document.getElementById('mobileMenuPopup');
+            const sidebar = document.getElementById('mobileMenuSidebar');
+
+            if (popup && sidebar) {
+                sidebar.classList.add('-translate-x-full');
+                // Hide popup after animation completes
+                setTimeout(() => {
+                    popup.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const popup = document.getElementById('mobileMenuPopup');
+            const sidebar = document.getElementById('mobileMenuSidebar');
+
+            if (popup && !popup.classList.contains('hidden') &&
+                !sidebar.contains(event.target) &&
+                !event.target.closest('button[onclick="toggleMobileMenu()"]')) {
+                closeMobileMenu();
+            }
+        });
+
+        // News Slide Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slideContainer = document.getElementById('newsSlide');
+            const slideDots = document.querySelectorAll('.slide-dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            if (slideContainer && slideDots.length > 0) {
+                const slides = slideContainer.querySelectorAll('.slide-item');
+                const totalSlides = slides.length;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+
+                    slideDots.forEach((dot, i) => {
+                        dot.classList.toggle('bg-blue-600', i === index);
+                        dot.classList.toggle('bg-gray-300', i !== index);
+                    });
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    showSlide(currentSlide);
+                }
+
+                function startSlideShow() {
+                    slideInterval = setInterval(nextSlide, 3000);
+                }
+
+                function stopSlideShow() {
+                    clearInterval(slideInterval);
+                }
+
+                // Initialize
+                showSlide(0);
+                startSlideShow();
+
+                // Dot navigation
+                slideDots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = index;
+                        showSlide(currentSlide);
+                        stopSlideShow();
+                        startSlideShow();
+                    });
+                });
+
+                // Pause on hover
+                slideContainer.addEventListener('mouseenter', stopSlideShow);
+                slideContainer.addEventListener('mouseleave', startSlideShow);
+
+                // Touch/Drag functionality
+                let startX = 0;
+                let isDragging = false;
+
+                slideContainer.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    isDragging = true;
+                    stopSlideShow();
+                });
+
+                slideContainer.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        e.preventDefault();
+                    }
+                });
+
+                slideContainer.addEventListener('mouseup', (e) => {
+                    if (isDragging) {
+                        const endX = e.clientX;
+                        const diffX = startX - endX;
+
+                        if (Math.abs(diffX) > 50) {
+                            if (diffX > 0) {
+                                nextSlide();
+                            } else {
+                                currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+                                showSlide(currentSlide);
+                            }
+                        }
+
+                        isDragging = false;
+                        startSlideShow();
+                    }
+                });
+
+                // Touch events for mobile
+                slideContainer.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    stopSlideShow();
+                });
+
+                slideContainer.addEventListener('touchend', (e) => {
+                    const endX = e.changedTouches[0].clientX;
+                    const diffX = startX - endX;
+
+                    if (Math.abs(diffX) > 50) {
+                        if (diffX > 0) {
+                            nextSlide();
+                        } else {
+                            currentSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+                            showSlide(currentSlide);
+                        }
+                    }
+
+                    startSlideShow();
+                });
+            }
+        });
+
+        // File upload handler
+        const fileInput = document.getElementById('file-input');
+        const fileText = document.getElementById('file-text');
+
+        if (fileInput && fileText) {
+            fileInput.addEventListener('change', function(e) {
+                const files = e.target.files;
+                if (files.length > 0) {
+                    if (files.length === 1) {
+                        fileText.textContent = files[0].name;
+                    } else {
+                        fileText.textContent = `${files.length} files selected`;
+                    }
+                    fileText.classList.remove('text-gray-500');
+                    fileText.classList.add('text-gray-900', 'font-medium');
+                } else {
+                    fileText.textContent = 'Chọn file';
+                    fileText.classList.remove('text-gray-900', 'font-medium');
+                    fileText.classList.add('text-gray-500');
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
