@@ -357,13 +357,13 @@ function closeMobileMenu() {
     }
 }
 
-// Search dropdown functionality (mobile only)
+// Search functionality
 function initializeSearchDropdown() {
+    // Mobile dropdown functionality
     const searchToggle = document.getElementById('searchToggle');
     const searchDropdown = document.getElementById('searchDropdown');
 
-    // Only initialize on mobile devices
-    if (searchToggle && searchDropdown && window.innerWidth < 768) {
+    if (searchToggle && searchDropdown) {
         searchToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             searchDropdown.classList.toggle('hidden');
@@ -373,6 +373,53 @@ function initializeSearchDropdown() {
         document.addEventListener('click', function(e) {
             if (!searchToggle.contains(e.target) && !searchDropdown.contains(e.target)) {
                 searchDropdown.classList.add('hidden');
+            }
+        });
+    }
+
+    // Desktop expandable input functionality
+    const searchToggleDesktop = document.getElementById('searchToggleDesktop');
+    const searchInput = document.getElementById('searchInput');
+
+    if (searchToggleDesktop && searchInput) {
+        let isExpanded = false;
+
+        searchToggleDesktop.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (!isExpanded) {
+                // Expand input
+                searchInput.classList.remove('w-0', 'px-0');
+                searchInput.classList.add('w-60', 'px-4');
+                searchInput.focus();
+                isExpanded = true;
+            } else {
+                // Collapse input
+                searchInput.classList.remove('w-60', 'px-4');
+                searchInput.classList.add('w-0', 'px-0');
+                searchInput.value = '';
+                isExpanded = false;
+            }
+        });
+
+        // Collapse when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchToggleDesktop.contains(e.target) && !searchInput.contains(e.target)) {
+                if (isExpanded) {
+                    searchInput.classList.remove('w-60', 'px-4');
+                    searchInput.classList.add('w-0', 'px-0');
+                    searchInput.value = '';
+                    isExpanded = false;
+                }
+            }
+        });
+
+        // Submit form on Enter key
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                if (searchInput.value.trim()) {
+                    searchInput.closest('form').submit();
+                }
             }
         });
     }
