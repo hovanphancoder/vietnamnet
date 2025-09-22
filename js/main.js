@@ -317,14 +317,14 @@ function scrollToTop() {
 }
 
 // Add scroll to top button
-function addScrollToTopButton() {
-    const scrollBtn = document.createElement('button');
-    scrollBtn.className = 'fixed bottom-4 right-4 bg-red-600 text-white p-3 rounded-full hover:bg-red-700 z-40';
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollBtn.addEventListener('click', scrollToTop);
+// function addScrollToTopButton() {
+//     const scrollBtn = document.createElement('button');
+//     scrollBtn.className = 'fixed bottom-4 right-4 bg-red-600 text-white p-3 rounded-full hover:bg-red-700 z-40';
+//     scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+//     scrollBtn.addEventListener('click', scrollToTop);
 
-    document.body.appendChild(scrollBtn);
-}
+//     document.body.appendChild(scrollBtn);
+// }
 
 // Initialize scroll to top button
 addScrollToTopButton();
