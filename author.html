@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="vi" translate="no">
+<html lang="en" translate="no">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
     <meta name="language" content="vietnamese" />
-    <meta name="google" content="notranslate"/>
+    <meta name="google" content="notranslate" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,11 +32,120 @@
     </script>
     <link rel="stylesheet" href="../css/initial-font-277.css">
     <link rel="stylesheet" href="../css/tailwind-custom.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body >
+<body>
+    <!-- Main Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
+        <!-- Top Header Bar -->
+        <div class="bg-white border-b border-gray-200  ">
+            <div class="container max-w-[1140px] mx-auto px-4">
+                <div class="flex items-center justify-between h-12">
+                    <!-- Left Side - Logo and Date -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Date -->
+                        <div class="text-sm text-gray-600 font-medium">
+                            <!-- Desktop: Goback link -->
+                            <a class="goback hidden lg:inline-flex items-center gap-2 px-2 py-0 border border-gray-300 rounded-full" href="/">
+                                <img src="https://static.vnncdn.net/v1/icon/return.png" class="w-4 h-4" alt="return icon">
+                                <span class="hidden sm:inline">Vietnamnet.vn</span>
+                            </a>
+
+                            <!-- Mobile: Hamburger menu icon -->
+                            <button class="lg:hidden inline-flex items-center justify-center w-8 h-8 text-gray-600 hover:text-gray-900" onclick="toggleMobileMenu()">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <!-- Vietnamnet Logo -->
+                        <div class="flex items-center space-x-2">
+                            <a href="index.html">
+                                <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Links and Login -->
+                    <div class="flex items-center space-x-4 md:w-[200px] justify-end">
+                        <!-- Search -->
+                        <div class="flex items-center space-x-3 relative">
+                            <!-- Desktop: Expandable search form -->
+                            <div class="hidden md:block relative">
+                                <form class="search-small__form  flex items-center" action="/search.html">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Mobile: Search icon with dropdown -->
+                            <div class="md:hidden">
+                                <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.svg" class="w-5 h-5" alt="search icon">
+                                </button>
+
+                                <!-- Search Dropdown -->
+                                <div id="searchDropdown" class="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                    <form class="p-4" action="/search.html">
+                                        <div class="relative">
+                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block" id="mainBar">
+            <div class="flex items-center justify-center h-14">
+                <!-- Left Side - Home Icon and Navigation -->
+                <div class="flex items-center space-x-6">
+                    <!-- Home Icon -->
+                    <a href="/" class="text-blue-600 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Politics</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Current Affairs</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Business</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Ethnic & Religion</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sports</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Education</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">World</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Lifestyle</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Culture & Entertainment</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Health</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Technology</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Legal</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Automotive</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Real Estate</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Main content -->
-    <div class="main bg-white mx-auto max-w-1140">
+    <div class="main bg-white mx-auto max-w-1140 pt-20 mt-10">
         <div class="container flex flex-col lg:flex-row gap-5 px-4 lg:px-0">
             <!-- Left Column -->
             <div class="container__left flex-1">
@@ -49,14 +159,14 @@
                         </li>
                         <li class="text-gray-500">|</li>
                         <li>
-                            <a href="/tac-gia" title="Tác giả" class="text-vnn-gray hover:text-vnn-blue">
-                                Tác giả
+                            <a href="/tac-gia" title="Author" class="text-vnn-gray hover:text-vnn-blue">
+                                Author
                             </a>
                         </li>
                         <li class="text-gray-500">|</li>
                         <li>
-                            <a href="/tac-gia/bao-anh-0008UK.html" title="Bảo Anh" class="text-vnn-gray hover:text-vnn-blue">
-                                Bảo Anh
+                            <a href="/tac-gia/tuan-nguyen-00092D.html" title="Tuân Nguyễn" class="text-vnn-gray hover:text-vnn-blue">
+                                Tuân Nguyễn
                             </a>
                         </li>
                     </ul>
@@ -66,20 +176,17 @@
                 <div class="info-author mb-2.5 px-0 sm:px-4">
                     <div class="flex flex-col sm:flex-row items-start sm:items-start">
                         <div class="info-author__image float-left mb-5 sm:mb-0 mr-5 relative">
-                            <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" 
-                                 alt="Bảo Anh" 
-                                 class="w-42 h-42 sm:w-25 sm:h-25 rounded-full object-cover block">
-                            
+                            <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tuân Nguyễn" class="w-42 h-42 sm:w-25 sm:h-25 rounded-full object-cover block">
+
                             <button class="info-author__btn absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-vnn-bg-gray border border-vnn-light-gray rounded-lg text-gray-700 cursor-pointer h-7 w-25 sm:w-22.5 z-100 flex items-center justify-center">
-                                <span class="icon w-2.5 h-2.5 bg-center bg-no-repeat bg-cover mr-1" 
-                                      style="background-image: url('https://static.vnncdn.net/v1/pictures/cay-but/add_v2.svg');"></span>
-                                <span class="text text-xs">Quan tâm</span>
+                                <span class="icon w-2.5 h-2.5 bg-center bg-no-repeat bg-cover mr-1" style="background-image: url('https://static.vnncdn.net/v1/pictures/cay-but/add_v2.svg');"></span>
+                                <span class="text text-xs">Follow</span>
                             </button>
                         </div>
 
                         <div class="info-author__text flex-1">
-                            <h1 class="info-author__name text-2xl sm:text-xl font-bold text-black mb-2" title="Bảo Anh">
-                                Bảo Anh
+                            <h1 class="info-author__name text-2xl sm:text-xl font-bold text-black mb-2" title="Tuân Nguyễn">
+                                Tuân Nguyễn
                             </h1>
 
                             <div class="info-author__position mb-2">
@@ -96,42 +203,33 @@
                 <!-- Article Author Heading -->
                 <div class="article-author flex justify-between items-center border-b border-vnn-light-gray mb-5 pb-1.5 px-0 sm:px-4">
                     <div class="article-author__heading text-vnn-blue font-bold text-xl leading-8 sm:text-base sm:leading-6 sm:text-vnn-dark-blue sm:font-bold">
-                        1903 bài viết của tác giả Bảo Anh
+                        1822 articles by author Tuân Nguyễn
                     </div>
                 </div>
 
                 <!-- Articles List -->
                 <div class="seeMoreArticle" websiteid="000003" pageid="09447377614048138e1b64bd324f1aed" componentid="COMPONENT002570" pseudonymid="0008UK" pagesize="5" pageindex="1">
-                    
+
                     <!-- Article 1 -->
                     <div class="horizontalPost mb-5 flex flex-col sm:flex-row gap-4">
                         <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/du-bao-thoi-tiet-18-9-2025-ha-noi-nang-gian-doan-tphcm-nhieu-may-co-mua-2441993.html" 
-                               title="Dự báo thời tiết 18/9/2025: Điểm tên nhiều nơi mưa giông, Hà Nội nắng gián đoạn" 
-                               data-utm-source="">
+                            <a href="https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-2441993.html" title="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" data-utm-source="">
                                 <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                                         class="lazy absolute inset-0 w-full h-full object-cover" 
-                                         data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/2025-diem-ten-nhieu-noi-mua-giong-ha-noi-nang-gian-doan-3039.jpg?width=550&s=uZEz28QCzGn80CLWL7x-Rg" 
-                                         alt="Dự báo thời tiết 18/9/2025: Điểm tên nhiều nơi mưa giông, Hà Nội nắng gián đoạn" />
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-3039.jpg?width=550&s=uZEz28QCzGn80CLWL7x-Rg" alt="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" />
                                 </picture>
                             </a>
                         </div>
                         <div class="horizontalPost__main flex-1">
                             <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/thoi-su" title="Thời sự" class="text-vnn-blue font-bold text-sm">Thời sự</a>
+                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
                             </div>
                             <h3 data-id="2441993" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/du-bao-thoi-tiet-18-9-2025-ha-noi-nang-gian-doan-tphcm-nhieu-may-co-mua-2441993.html" 
-                                   title="Dự báo thời tiết 18/9/2025: Điểm tên nhiều nơi mưa giông, Hà Nội nắng gián đoạn" 
-                                   data-utm-source="" 
-                                   data-limit=""
-                                   class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Dự báo thời tiết 18/9/2025: Điểm tên nhiều nơi mưa giông, Hà Nội nắng gián đoạn
+                                <a href="https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-2441993.html" title="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
+                                    Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%
                                 </a>
                             </h3>
                             <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Dự báo thời tiết 18/9/2025, nhiều vùng trên cả nước có mưa giông, trong đó Hà Nội nắng gián đoạn với mức nhiệt cao nhất 33 độ. Riêng TPHCM và Nam Bộ mưa giông liên tiếp vào chiều tối, cục bộ mưa rất to.</p>
+                                <p>Lãi suất ngân hàng hôm nay 22/9/2025, nhiều ngân hàng tiếp tục duy trì mức lãi suất huy động cao, trong đó có ngân hàng trả lãi suất lên đến 6,5%/năm cho kỳ hạn 12 tháng, trở thành một kênh đầu tư an toàn và dài hạn cho các nhà đầu tư.</p>
                             </div>
                         </div>
                     </div>
@@ -139,32 +237,23 @@
                     <!-- Article 2 -->
                     <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
                         <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/ap-thap-nhiet-doi-tien-vao-bien-dong-sap-manh-len-thanh-bao-so-8-2440809.html" 
-                               title="Áp thấp nhiệt đới tiến vào Biển Đông, sắp mạnh lên thành bão số 8" 
-                               data-utm-source="">
+                            <a href="https://vietnamnet.vn/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-2440809.html" title="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" data-utm-source="">
                                 <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                                         class="lazy absolute inset-0 w-full h-full object-cover" 
-                                         data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/18/ap-thap-nhiet-doi-tien-vao-bien-dong-sap-manh-len-thanh-bao-so-8-195.gif?width=550&s=EuWE_s5MugA95qv2EycGow" 
-                                         alt="Áp thấp nhiệt đới tiến vào Biển Đông, sắp mạnh lên thành bão số 8" />
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/18/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-195.jpg?width=550&s=EuWE_s5MugA95qv2EycGow" alt="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" />
                                 </picture>
                             </a>
                         </div>
                         <div class="horizontalPost__main flex-1">
                             <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/thoi-su" title="Thời sự" class="text-vnn-blue font-bold text-sm">Thời sự</a>
+                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
                             </div>
                             <h3 data-id="2440809" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/ap-thap-nhiet-doi-tien-vao-bien-dong-sap-manh-len-thanh-bao-so-8-2440809.html" 
-                                   title="Áp thấp nhiệt đới tiến vào Biển Đông, sắp mạnh lên thành bão số 8" 
-                                   data-utm-source="" 
-                                   data-limit=""
-                                   class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Áp thấp nhiệt đới tiến vào Biển Đông, sắp mạnh lên thành bão số 8
+                                <a href="https://vietnamnet.vn/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-2440809.html" title="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
+                                    'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng
                                 </a>
                             </h3>
                             <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Áp thấp nhiệt đới đã đi vào Biển Đông và khả năng mạnh lên thành bão số 8 trong ít giờ tới; gây thời tiết nguy hiểm trên nhiều khu vực.</p>
+                                <p>Từng là tên tuổi lớn trong ngành vận tải đường biển, CTCP Vận tải biển và thương mại Phương Đông - đơn vị mà Tổng công ty Hàng hải Việt Nam nắm 49% vốn giờ đây ngập trong thua lỗ. Kiểm toán viên cũng nghi ngờ khả năng hoạt động liên tục.</p>
                             </div>
                         </div>
                     </div>
@@ -172,32 +261,23 @@
                     <!-- Article 3 -->
                     <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
                         <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/mien-bac-sap-co-dot-mua-lon-xoi-xa-bien-dong-kha-nang-don-2-con-bao-lien-tiep-2441998.html" 
-                               title="Miền Bắc sắp có đợt mưa lớn xối xả, Biển Đông khả năng đón 2 cơn bão liên tiếp" 
-                               data-utm-source="">
+                            <a href="https://vietnamnet.vn/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2441998.html" title="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" data-utm-source="">
                                 <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                                         class="lazy absolute inset-0 w-full h-full object-cover" 
-                                         data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/mien-bac-sap-co-dot-mua-lon-xoi-xa-bien-dong-kha-nang-don-2-con-bao-lien-tiep-2630.jpg?width=550&s=NybOf2FyFrd4c0lYGcQzlg" 
-                                         alt="Miền Bắc sắp có đợt mưa lớn xối xả, Biển Đông khả năng đón 2 cơn bão liên tiếp" />
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2630.jpg?width=550&s=NybOf2FyFrd4c0lYGcQzlg" alt="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" />
                                 </picture>
                             </a>
                         </div>
                         <div class="horizontalPost__main flex-1">
                             <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/thoi-su" title="Thời sự" class="text-vnn-blue font-bold text-sm">Thời sự</a>
+                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
                             </div>
                             <h3 data-id="2441998" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/mien-bac-sap-co-dot-mua-lon-xoi-xa-bien-dong-kha-nang-don-2-con-bao-lien-tiep-2441998.html" 
-                                   title="Miền Bắc sắp có đợt mưa lớn xối xả, Biển Đông khả năng đón 2 cơn bão liên tiếp" 
-                                   data-utm-source="" 
-                                   data-limit=""
-                                   class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Miền Bắc sắp có đợt mưa lớn xối xả, Biển Đông khả năng đón 2 cơn bão liên tiếp
+                                <a href="https://vietnamnet.vn/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2441998.html" title="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
+                                    Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã
                                 </a>
                             </h3>
                             <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Miền Bắc mưa rải rác, cục bộ có nơi mưa rất to những ngày tới, trước khi đón đợt mưa lớn diện rộng vào khoảng 24-25/9. Biển Đông khả năng đón bão số 8 và có thể 1 cơn bão nối tiếp sau đó.</p>
+                                <p>Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam (Agribank) vừa chính thức lên tiếng về việc ông Nguyễn Thế Bình, cựu Chủ tịch HĐTV Agribank bị cơ quan công an phát lệnh truy nã.</p>
                             </div>
                         </div>
                     </div>
@@ -205,32 +285,23 @@
                     <!-- Article 4 -->
                     <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
                         <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/ap-thap-nhiet-doi-sap-vao-bien-dong-thoi-diem-co-the-manh-len-thanh-bao-so-8-2441997.html" 
-                               title="Áp thấp nhiệt đới sắp vào Biển Đông, thời điểm có thể mạnh lên thành bão số 8" 
-                               data-utm-source="">
+                            <a href="https://vietnamnet.vn/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-2441997.html" title="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" data-utm-source="">
                                 <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                                         class="lazy absolute inset-0 w-full h-full object-cover" 
-                                         data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/ap-thap-nhiet-doi-sap-vao-bien-dong-thoi-diem-co-the-manh-len-thanh-bao-so-8-1728.jpg?width=550&s=uYtybL4rKRvbuaSHtKGkaA" 
-                                         alt="Áp thấp nhiệt đới sắp vào Biển Đông, thời điểm có thể mạnh lên thành bão số 8" />
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-1728.jpg?width=550&s=uYtybL4rKRvbuaSHtKGkaA" alt="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" />
                                 </picture>
                             </a>
                         </div>
                         <div class="horizontalPost__main flex-1">
                             <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/thoi-su" title="Thời sự" class="text-vnn-blue font-bold text-sm">Thời sự</a>
+                                <a href="/kinh-doanh" title="Tư vấn tài chính" class="text-vnn-blue font-bold text-sm">Tư vấn tài chính</a>
                             </div>
                             <h3 data-id="2441997" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/ap-thap-nhiet-doi-sap-vao-bien-dong-thoi-diem-co-the-manh-len-thanh-bao-so-8-2441997.html" 
-                                   title="Áp thấp nhiệt đới sắp vào Biển Đông, thời điểm có thể mạnh lên thành bão số 8" 
-                                   data-utm-source="" 
-                                   data-limit=""
-                                   class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Áp thấp nhiệt đới sắp vào Biển Đông, thời điểm có thể mạnh lên thành bão số 8
+                                <a href="https://vietnamnet.vn/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-2441997.html" title="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
+                                    Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?
                                 </a>
                             </h3>
                             <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Áp thấp nhiệt đới đang trên khu vực đảo Lu-Dông (Philippines), di chuyển nhanh theo hướng Tây Bắc; dự báo, trong chiều nay vào Biển Đông và nhiều khả năng mạnh lên thành bão số 8 trong tối và đêm nay.</p>
+                                <p>Bên cạnh sản phẩm tiết kiệm thông thường, các ngân hàng còn đa dạng hoá các sản phẩm tiết kiệm, trong đó có tiết kiệm tích luỹ nhằm hướng đến những cá nhân có nhu cầu tiết kiệm đều đặn theo định kỳ.</p>
                             </div>
                         </div>
                     </div>
@@ -238,32 +309,23 @@
                     <!-- Article 5 -->
                     <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
                         <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/tin-moi-ve-ap-thap-nhiet-doi-doi-huong-lien-tuc-bien-dong-co-the-don-bao-so-8-2441996.html" 
-                               title="Tin mới nhất về áp thấp nhiệt đới: Đổi hướng liên tục, Biển Đông có thể sắp đón bão số 8" 
-                               data-utm-source="">
+                            <a href="https://vietnamnet.vn/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-2441996.html" title="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" data-utm-source="">
                                 <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                                         class="lazy absolute inset-0 w-full h-full object-cover" 
-                                         data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/tin-moi-nhat-ve-ap-thap-nhiet-doi-doi-huong-lien-tuc-bien-dong-co-the-sap-don-bao-so-8-209.jpg?width=550&s=p9qqqqluFK6PtSEaj9i6zQ" 
-                                         alt="Tin mới nhất về áp thấp nhiệt đới: Đổi hướng liên tục, Biển Đông có thể sắp đón bão số 8" />
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-209.jpg?width=550&s=p9qqqqluFK6PtSEaj9i6zQ" alt="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" />
                                 </picture>
                             </a>
                         </div>
                         <div class="horizontalPost__main flex-1">
                             <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/thoi-su" title="Thời sự" class="text-vnn-blue font-bold text-sm">Thời sự</a>
+                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
                             </div>
                             <h3 data-id="2441996" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/tin-moi-ve-ap-thap-nhiet-doi-doi-huong-lien-tuc-bien-dong-co-the-don-bao-so-8-2441996.html" 
-                                   title="Tin mới nhất về áp thấp nhiệt đới: Đổi hướng liên tục, Biển Đông có thể sắp đón bão số 8" 
-                                   data-utm-source="" 
-                                   data-limit=""
-                                   class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Tin mới nhất về áp thấp nhiệt đới: Đổi hướng liên tục, Biển Đông có thể sắp đón bão số 8
+                                <a href="https://vietnamnet.vn/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-2441996.html" title="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
+                                    Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ
                                 </a>
                             </h3>
                             <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Áp thấp nhiệt đới đang trên vùng biển phía Đông đảo Lu-Dông (Philippines) giật cấp 9, đổi hướng liên tục và có khả năng mạnh lên thành bão, đi vào Biển Đông trong 24 giờ tới.</p>
+                                <p>Tàu biển mang tên Oriental Glory - sở hữu bởi một đơn vị Tổng công ty Hàng hải Việt Nam chiếm 49% vốn, sẽ được Agribank đưa ra bán đấu giá lần hai vào ngày 10/10 tới.</p>
                             </div>
                         </div>
                     </div>
@@ -275,58 +337,51 @@
                     <div class="pagination mx-auto">
                         <ul class="pagination__list flex items-center space-x-2.5">
                             <li class="pagination__list-item active">
-                                <a href="/tac-gia/bao-anh-0008UK-page0.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page0.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     1
                                 </a>
                             </li>
                             <li class="pagination__list-item">
-                                <a href="/tac-gia/bao-anh-0008UK-page1.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page1.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     2
                                 </a>
                             </li>
                             <li class="pagination__list-item">
-                                <a href="/tac-gia/bao-anh-0008UK-page2.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page2.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     3
                                 </a>
                             </li>
                             <li class="pagination__list-item">
-                                <a href="/tac-gia/bao-anh-0008UK-page3.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page3.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     4
                                 </a>
                             </li>
                             <li class="pagination__list-item">
-                                <a href="/tac-gia/bao-anh-0008UK-page4.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page4.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     5
                                 </a>
                             </li>
                             <li class="pagination__list-item">
-                                <a href="/tac-gia/bao-anh-0008UK-page5.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page5.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     6
                                 </a>
                             </li>
                             <li class="pagination__list-item pagination-next block">
-                                <a href="/tac-gia/bao-anh-0008UK-page1.html" 
-                                   class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <a href="/tac-gia/tuan-nguyen-00092D-page1.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
                                     <img src="https://static.vnncdn.net/v1/icon/icon-pagination.svg" alt="icon next" class="w-3.5 h-3.5">
                                 </a>
                             </li>
                         </ul>
 
                         <button class="btnSeeMoreArticle bg-white border border-gray-400 font-bold px-5 py-2 rounded-3xl text-vnn-blue uppercase text-xs flex items-center mx-auto gap-1.5 mt-4">
-                            Xem thêm
+                            View More
                             <img class="w-2.5 h-2.5 icon-loading hidden" src="https://static-images.vnncdn.net/files/loading.svg" alt="icon loading">
                         </button>
                     </div>
 
                     <div class="panination__calendar hidden">
                         <a href="/tin-tuc-24h?cate=" class="flex items-center gap-2">
-                            <span>Xem tin theo ngày</span>
+                            <span>View news by date</span>
                             <span><img src="https://static.vnncdn.net/v1/icon/calendar.svg" class="w-4 h-4"></span>
                         </a>
                     </div>
@@ -339,17 +394,14 @@
                 <div class="featured-author border border-vnn-light-gray rounded-lg p-5 sticky top-16 hidden lg:block">
                     <div class="featured-author__heading mb-4 text-center uppercase">
                         <a href="/tac-gia" class="text-vnn-dark-blue font-bold text-xl">
-                            Tác giả khác
+                            Other Authors
                         </a>
                     </div>
 
                     <form action="/tac-gia" class="featured-author__form h-9.5 leading-7 mb-5 relative w-full max-w-66">
-                        <input type="text" 
-                               name="q" 
-                               placeholder="Tìm kiếm theo tên tác giả"
-                               class="bg-vnn-bg-gray border-none rounded-lg text-vnn-gray font-normal text-sm h-full outline-none pl-2.5 pr-9 w-full">
+                        <input type="text" name="q" placeholder="Search by author name" class="bg-vnn-bg-gray border-none rounded-lg text-vnn-gray font-normal text-sm h-full outline-none pl-2.5 pr-9 w-full">
                         <button type="submit" class="absolute right-2.5 top-1/2 transform -translate-y-1/2">
-                            <img src="https://static.vnncdn.net/v1/icon/https://vietnamnet.vn/tac-gia/bao-anh-0008UK.html/search.png" alt="icon" class="w-4 h-4">
+                            <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon" class="w-4 h-4">
                         </button>
                     </form>
 
@@ -365,9 +417,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" 
-                                         alt="Thiên Bình" 
-                                         class="w-full h-full object-cover">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thiên Bình" class="w-full h-full object-cover">
                                 </a>
                             </div>
                             <div class="flex-1">
@@ -393,9 +443,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" 
-                                         alt="Trần Thường" 
-                                         class="w-full h-full object-cover">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Trần Thường" class="w-full h-full object-cover">
                                 </a>
                             </div>
                             <div class="flex-1">
@@ -421,9 +469,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" 
-                                         alt="Minh Thu" 
-                                         class="w-full h-full object-cover">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Minh Thu" class="w-full h-full object-cover">
                                 </a>
                             </div>
                             <div class="flex-1">
@@ -449,15 +495,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="https://static-images.vnncdn.net/files/2023/1/9/anhe.png?width=0&s=PpFFQ1ePYRWKUhA7Kl4p5A" 
-                                         alt="Phương Thuý " 
-                                         class="w-full h-full object-cover">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/9/anhe.png?width=0&s=PpFFQ1ePYRWKUhA7Kl4p5A" alt="Phương Thuý " class="w-full h-full object-cover">
                                 </a>
                             </div>
                             <div class="flex-1">
                                 <div class="featured-author__name mb-1">
                                     <a href="/tac-gia/phuong-thuy-000933.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Phương Thuý 
+                                        Phương Thuý
                                     </a>
                                 </div>
                                 <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
@@ -477,9 +521,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/7/7/avatar-1.png?width=0&s=GqEFtUM5YO4n-YeG849sSw" 
-                                         alt="Du Lam" 
-                                         class="w-full h-full object-cover">
+                                    <img src="https://static-images.vnncdn.net/files/2022/7/7/avatar-1.png?width=0&s=GqEFtUM5YO4n-YeG849sSw" alt="Du Lam" class="w-full h-full object-cover">
                                 </a>
                             </div>
                             <div class="flex-1">
@@ -495,10 +537,85 @@
                         </div>
                     </div>
                 </div>
-      
-                </div>
+
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-en bg-gray-100 py-6 sm:py-8 mt-6 sm:mt-8" style="font-family: 'Noto Sans', sans-serif;">
+        <div class="footer-en__bottom max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
+                <!-- Left Side - Logo and Copyright -->
+                <div class="footer-en__bottom-left flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-8 w-full lg:w-auto">
+                    <a class="footer-en__bottom-logo flex-shrink-0" href="/en">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet Global" class="h-12 sm:h-16">
+                    </a>
+                    <div class="footer-en__bottom-list text-sm text-gray-600 space-y-2">
+                        <div class="footer-en__bottom-item font-medium">© Copyright of VietNamNet Global</div>
+                        <div class="footer-en__bottom-item text-xs leading-relaxed">
+                            <span>Tel: 024 3772 7988 Fax: (024) 37722734</span>
+                            <span>, </span>
+                            <span>Email: evnn@vietnamnet.vn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Follow Us and Social Media -->
+                <div class="footer-en__bottom-follow flex flex-col items-end space-y-4">
+                    <div class="text-right">
+                        <div class="text-sm font-medium text-gray-700 mb-3">Follow us on</div>
+                        <div class="footer-en__bottom-social flex items-center space-x-2">
+                            <a title="facebook vietnamnet" target="_blank" href="https://www.facebook.com/vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/facebook-black.svg" alt="Facebook" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="youtube vietnamnet" target="_blank" href="https://www.youtube.com/c/B%C3%A1oVietNamNetTV" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/youtube-black.svg" alt="YouTube" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="tiktok vietnamnet" target="_blank" href="https://www.tiktok.com/@vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/tiktok-black.svg" alt="TikTok" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="twitter vietnamnet" target="_blank" href="https://twitter.com/vietnamnetvn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/twitter-black.svg" alt="Twitter" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="zalo vietnamnet" target="_blank" href="http://zalo.me/660139855964186242?src=qr" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/zalo-black.svg" alt="Zalo" class="w-4 h-4 filter invert">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/news_register.html">Độc giả gửi bài</a>
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/">Tuyển dụng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Pages List -->
+    <div class="bg-gray-100 py-4 px-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800">Project Pages (Demo)</h3>
+        <div class="flex flex-wrap gap-2">
+            <a href="index.html" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Home</a>
+            <a href="detail.html" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">Article Detail</a>
+            <a href="category.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm hover:bg-purple-600">Category</a>
+            <a href="author.html" class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Author</a>
+            <a href="search.html" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Search</a>
+            <a href="single.html" class="bg-indigo-500 text-white px-3 py-1 rounded text-sm hover:bg-indigo-600">Single Article</a>
+            <a href="single-video.html" class="bg-pink-500 text-white px-3 py-1 rounded text-sm hover:bg-pink-600">Single Video</a>
+            <a href="video.html" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600">Video</a>
+            <a href="postcast.html" class="bg-teal-500 text-white px-3 py-1 rounded text-sm hover:bg-teal-600">Podcast</a>
+            <a href="multimedia.html" class="bg-cyan-500 text-white px-3 py-1 rounded text-sm hover:bg-cyan-600">Multimedia</a>
+            <a href="news_register.html" class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600">News Register</a>
+            <a href="chitiethoso.html" class="bg-emerald-500 text-white px-3 py-1 rounded text-sm hover:bg-emerald-600">Profile Detail</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+
 </body>
+
 </html>

@@ -1,144 +1,181 @@
 <!DOCTYPE html>
-<html lang="vi" translate="no">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
-      <meta name="language" content="vietnamese" />
-      <meta name="google" content="notranslate"/>
-      <!-- Tailwind CSS CDN -->
-      <script src="https://cdn.tailwindcss.com"></script>
-      <!-- Custom Tailwind Config -->
-      <script>
-         tailwind.config = {
-             theme: {
-                 extend: {
-                     fontFamily: {
-                         'notosans': ['notosans-regular', 'Arial', 'sans-serif'],
-                         'notosans-bold': ['notosans-bold', 'Arial', 'sans-serif'],
-                         'notosans-medium': ['notosans-medium', 'Arial', 'sans-serif'],
-                         arial: ['Arial', 'sans-serif'],
-                         merriweather: ['Merriweather', 'serif'],
-                     },
-                     colors: {
-                         'primary' : '#fff',
-                         'blue-primary': '#2D67AD',
-                         'gray-h1': '#2A2A2A',
-                         'gray-h2': '#404040',
-                         'gray-h3': '#2A2A2A',
-                         'gray-p' : '#505050',
-                         'gray-figcaption' :'#6f6f6f',
-                         'gray-a' : '#2A2A2A',
-                         'gray-time' : '#555555',
-                         'gray-desc' : '#6C6C6C',
-         
-                     },
-                  
-                     backgroundColor: {
-                        // Thêm màu background riêng
-                        'gray-video' : '#f3f3f3',
-                    },
-                     fontSize: {
-                         base16: '16px',
-                     },
-                 }
-             }
-         }
-      </script>
-      <!-- Custom Fonts -->
-      <link rel="stylesheet" href="../css/initial-font-277.css">
-      <!-- Custom CSS for line-clamp and additional styling -->
-      <style>
-         .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-         }
-         
-         .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-         }
-         
-         /* Ensure images are responsive */
-         .lazy-loaded {
-            transition: opacity 0.3s ease;
-         }
-         
-         /* Hover effects for better UX */
-         .hover\:text-blue-primary:hover {
-            color: #2D67AD;
-         }
-         
-         /* Ensure proper spacing on mobile */
-         @media (max-width: 640px) {
-            .space-y-3 > * + * {
-               margin-top: 0.75rem;
-            }
-            
-            .space-y-4 > * + * {
-               margin-top: 1rem;
-            }
-         }
-      </style>
-   </head>
-   <body class=" font-notosans">
-      <!-- Main Container -->
-      <div class="min-h-screen bg-primary">
-         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
+    <meta name="language" content="vietnamese" />
+    <meta name="google" content="notranslate" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="../css/initial-font-277.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for line-clamp and additional styling -->
+
+</head>
+
+<body class=" font-notosans">
+    <!-- Main Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
+        <!-- Top Header Bar -->
+        <div class="bg-white border-b border-gray-200  ">
+            <div class=" mx-auto px-4">
+                <div class="flex items-center justify-between h-12">
+                    <!-- Left Side - Logo and Date -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Date -->
+                        <div class="text-sm text-gray-600 font-medium">
+                            <!-- Desktop: Goback link -->
+                            <a class="goback hidden lg:inline-flex items-center gap-2 px-2 py-0 border border-gray-300 rounded-full" href="/">
+                                <img src="https://static.vnncdn.net/v1/icon/return.png" class="w-3 h-3" alt="return icon">
+                                <span class="hidden sm:inline">Vietnamnet.vn</span>
+                            </a>
+
+                            <!-- Mobile: Hamburger menu icon -->
+                            <button class="lg:hidden inline-flex items-center justify-center w-7 h-7 text-gray-600 hover:text-gray-900" onclick="toggleMobileMenu()">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <!-- Vietnamnet Logo -->
+                        <div class="flex items-center space-x-2">
+                            <a href="index.html">
+                                <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Links and Login -->
+                    <div class="flex items-center space-x-4 md:w-[200px] justify-end">
+                        <!-- Search -->
+                        <div class="flex items-center space-x-3 relative">
+                            <!-- Desktop: Expandable search form -->
+                            <div class="hidden md:block relative">
+                                <form class="search-small__form  flex items-center" action="/search.html">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-3 h-3">
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Mobile: Search icon with dropdown -->
+                            <div class="md:hidden">
+                                <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.svg" class="w-5 h-5" alt="search icon">
+                                </button>
+
+                                <!-- Search Dropdown -->
+                                <div id="searchDropdown" class="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                    <form class="p-4" action="/search.html">
+                                        <div class="relative">
+                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-3 h-3">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block" id="mainBar">
+            <div class="flex items-center justify-center h-14">
+                <!-- Left Side - Home Icon and Navigation -->
+                <div class="flex items-center space-x-6">
+                    <!-- Home Icon -->
+                    <a href="/" class="text-blue-600 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Politics</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Current Affairs</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Business</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Ethnic & Religion</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sports</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Education</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">World</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Lifestyle</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Culture & Entertainment</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Health</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Technology</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Legal</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Automotive</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Real Estate</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container max-w-[1140px] mx-auto py-6 px-5 mt-12 lg:mt-24">
+
+        <div class="max-w-7xl mx-auto">
             <!-- Main Content Layout -->
             <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 pt-6">
-               <!-- Left Column - Main Content -->
-               <div class="flex-1 lg:w-2/3">
-                  <!-- Article Header -->
-                  <div class="mb-6">
-                     <!-- Breadcrumb Navigation Desktop -->
-                     <nav class="hidden lg:block flex flex-col sm:flex-row sm:items-center sm:justify-between  text-sm border-b border-gray-200 gap-2 sm:gap-0" aria-label="Breadcrumb">
-                        <!-- Left side: Breadcrumb path -->
-                        <div class="flex items-center space-x-2">
-                           <a href="/chinh-tri" class="text-blue-primary font-bold uppercase hover:text-blue-600 transition-colors text-sm sm:text-base">
-                           CHÍNH TRỊ
-                           </a>
-                           <span class="text-gray-400 text-sm sm:text-lg">></span>
-                           <span class="text-gray-500 uppercase text-sm sm:text-base">
-                           XÂY DỰNG ĐẢNG
-                           </span>
-                        </div>
-                        <!-- Right side: Date and time -->
-                        <div class="text-gray-500 text-xs sm:text-sm font-medium">
-                           Thứ năm, 18/09/2025 - 11:55
-                        </div>
-                     </nav>
-                     <!--*** Breadcrumb - Mobile Layout ***-->
-                     <div class="block md:hidden mb-6">
-                        <nav class="py-2 text-sm" aria-label="Article Breadcrumb">
-                           <!-- Mobile Breadcrumb Layout - Matches Image Design -->
-                           <div class="space-y-1">
-                              <!-- First Line: Home + Category + Dropdown + Separator + Subcategory -->
-                              <div class="flex items-center space-x-2">
-                                 <!-- Home Icon -->
-                                 <a href="/" class="flex items-center text-gray-500 hover:text-blue-600">
-                                 <img class="w-4 h-4" src="https://static.vnncdn.net/v1/icon/home_mobile.svg" alt="home icon">
-                                 </a>
-                                 <!-- Category with Dropdown -->
-                                 <div class="flex items-center">
-                                    <a href="/chinh-tri" class="text-blue-primary font-bold hover:text-blue-600">
-                                    Chính trị
-                                    </a>
-                                    <!-- Dropdown Menu -->
-                                    <div class="relative group ml-1">
-                                       <button class="flex items-center text-blue-primary hover:text-blue-600 focus:outline-none">
+                <!-- Left Column - Main Content -->
+                <div class="flex-1 lg:w-2/3">
+                    <!-- Article Header -->
+                    <div class="mb-6">
+                        <!-- Breadcrumb Navigation Desktop -->
+                        <nav class="hidden mb-4 lg:flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm  gap-2 sm:gap-0" aria-label="Breadcrumb">
+                            <!-- Left side: Breadcrumb path -->
+                            <div class="flex items-center space-x-2">
+                                <a href="/business" class="text-[#2d67ad] text-[16px] font-bold uppercase  transition-colors text-sm sm:text-base">
+                                    Business
+                                </a>
+
+                            </div>
+                            <!-- Right side: Date and time -->
+                            <div class="text-gray-500 text-xs sm:text-sm text-[12px]">
+                                22/09/2025 10:25 (GMT+07:00)
+                            </div>
+                        </nav>
+                        <!--*** Breadcrumb - Mobile Layout ***-->
+                        <div class="block md:hidden mb-6">
+                            <nav class="py-2 text-sm" aria-label="Article Breadcrumb">
+                                <!-- Mobile Breadcrumb Layout - Matches Image Design -->
+                                <div class="space-y-1">
+                                    <!-- First Line: Home + Category + Dropdown + Separator + Subcategory -->
+                                    <div class="flex items-center space-x-2">
+                                        <!-- Home Icon -->
+                                        <a href="/" class="flex items-center text-gray-500 hover:text-blue-600">
+                                            <img class="w-3 h-3" src="https://static.vnncdn.net/v1/icon/home_mobile.svg" alt="home icon">
+                                        </a>
+                                        <!-- Category with Dropdown -->
+                                        <div class="flex items-center">
+                                            <a href="/business" class="text-blue-primary font-bold hover:text-blue-600">
+                                                Business
+                                            </a>
+                                            <!-- Dropdown Menu -->
+                                            <div class="relative group ml-1">
+                                                <!-- <button class="flex items-center text-blue-primary hover:text-blue-600 focus:outline-none">
                                           <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                           </svg>
-                                       </button>
-                                       <!-- Dropdown Content -->
-                                       <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                                </button> -->
+                                                <!-- Dropdown Content -->
+                                                <!-- <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                           <ul class="py-2">
                                              <li>
                                                 <a title="Chính trị" href="/chinh-tri" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600">
@@ -221,433 +258,416 @@
                                                 </a>
                                              </li>
                                           </ul>
-                                       </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                        <!-- Vertical Separator -->
+                                        <span class="text-gray-300 text-lg">|</span>
+                                        <!-- Subcategory -->
+                                        <span class="text-gray-500">
+                                            Energy
+                                        </span>
                                     </div>
-                                 </div>
-                                 <!-- Vertical Separator -->
-                                 <span class="text-gray-300 text-lg">|</span>
-                                 <!-- Subcategory -->
-                                 <span class="text-gray-500">
-                                 Xây dựng Đảng
-                                 </span>
-                              </div>
-                              <!-- Second Line: Date and time -->
-                              <div class="text-gray-500 text-sm">
-                                 Thứ năm, 18/09/2025 - 11:55
-                              </div>
-                           </div>
-                        </nav>
-                     </div>
-                     <h1 class="merriweather-bold text-2xl sm:notosans-bold sm:text-3xl font-bold text-gray-h1 mb-4 leading-tight">
-                        Bộ Dân tộc và Tôn giáo được tặng bằng khen và giải thưởng 'Không gian trưng bày tiêu biểu'
-                     </h1>
-                     <!-- Tác giả -->
-                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4 border-b border-gray-200 gap-3 sm:gap-0">
-                        <!-- Author Main Info -->
+                                    <!-- Second Line: Date and time -->
+                                    <div class="text-gray-500 text-sm">
+                                        22/09/2025 10:25 (GMT+07:00)
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <h1 class="merriweather-bold text-2xl sm:notosans-bold sm:text-3xl font-bold text-gray-h1 mb-4 leading-tight">
+                            Billions on paper: Vietnam's LNG power ambitions stalled by policy bottlenecks
+                        </h1>
+                        <!-- Tác giả -->
+                        <!-- <
                         <div class="flex items-center space-x-3">
-                           <!-- Author Avatar -->
+                              
                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden flex-shrink-0">
                               <a href="/tac-gia/lan-anh-0008UF.html" title="Lan Anh" class="block w-full h-full">
-                              <img 
-                                 src="https://static-images.vnncdn.net/files/2022/7/8/lan-anh-1.jpeg?width=65&s=WCha6Ljbg9cBz-EAChys_Q" 
-                                 alt="Lan Anh"
-                                 class="w-full h-full object-cover"
-                                 onerror="this.src='https://res-files.vnncdn.net/files/2023/9/21/avatar-cay-but-mac-dinh.png'"
-                                 >
+                                        <img src="https://static-images.vnncdn.net/files/2022/7/8/lan-anh-1.jpeg?width=65&s=WCha6Ljbg9cBz-EAChys_Q" alt="Lan Anh" class="w-full h-full object-cover" onerror="this.src='https://res-files.vnncdn.net/files/2023/9/21/avatar-cay-but-mac-dinh.png'">
                               </a>
                            </div>
-                           <!-- Author Name -->
+                           
                            <div class="flex flex-col">
-                              <a href="/tac-gia/lan-anh-0008UF.html" 
-                                 title="Lan Anh" 
-                                 class="text-blue-primary font-medium text-base sm:text-lg hover:text-blue-600 transition-colors">
+                                    <a href="/tac-gia/lan-anh-0008UF.html" title="Lan Anh" class="text-blue-primary font-medium text-base sm:text-lg hover:text-blue-600 transition-colors">
                               Lan Anh
                               </a>
                               <span class="text-sm text-gray-500"></span>
                            </div>
                         </div>
-                        <!-- View Author Articles Link -->
-                        <div class="flex items-center space-x-2 self-start sm:self-auto">
-                           <img 
-                              class="w-4 h-4 sm:w-5 sm:h-5" 
-                              src="https://static.vnncdn.net/v1/icon/right-arrow-blue.svg" 
-                              alt="arrow icon"
-                              >
-                           <a href="/tac-gia/lan-anh-0008UF.html" 
-                              class="text-blue-primary text-sm font-medium hover:text-blue-600 transition-colors underline">
-                           Xem các bài viết của tác giả
-                           </a>
-                        </div>
-                     </div>
-                     <!-- Social Share & Meta Info -->
-                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 p-4 ">
-                        <div class="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-0">
-                           <!-- Share Buttons -->
-                           <button class="flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                              </svg>
-                           </button>
-                           <button class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                              </svg>
-                           </button>
-                           <button class="flex items-center justify-center w-8 h-8 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z"/>
-                              </svg>
-                           </button>
-                           <button class="flex items-center justify-center w-8 h-8 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92S19.61 16.08 18 16.08z"/>
-                              </svg>
-                           </button>
-                        </div>
-                     </div>
-                     <!-- Article Summary -->
-                     <h2 class="arial  text-gray-h2 mb-6 arial font-bold leading-relaxed">
-                        Tối 15/9, Thủ tướng Phạm Minh Chính dự lễ bế mạc Triển lãm thành tựu đất nước "80 năm Hành trình Độc lập - Tự do - Hạnh phúc". Bộ Dân tộc và Tôn giáo được tặng bằng khen và đạt giải thưởng "Không gian trưng bày tiêu biểu".
-                     </h2>
-                  </div>
-                  <!-- Article Content -->
-                  <div class="prose prose-lg max-w-none">
-                     <!-- Main Image -->
-                     <figure class="mb-6">
-                        <img class="w-full h-auto " 
-                           src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/trien-lam-1-756.jpg?width=0&s=V7oc0rioXF0BvJTaNk8jhw" 
-                           alt="Thủ tướng Phạm Minh Chính phát biểu tại lễ bế mạc triển lãm"
-                           loading="lazy">
-                        <figcaption class="text-sm text-gray-600 mt-2 italic text-center">
-                           Thủ tướng Phạm Minh Chính phát biểu tại lễ bế mạc triển lãm
-                        </figcaption>
-                     </figure>
-                     <!-- Article Text -->
-                     <div class="text-gray-p space-y-4 font-arial text-base leading-relaxed">
-                        <p>Tham dự chương trình có nguyên Ủy viên Bộ Chính trị, nguyên Thường trực Ban Bí thư Trần Quốc Vượng; Ủy viên Bộ Chính trị, Bí thư Trung ương Đảng, Trưởng ban Nội chính Trung ương Phan Đình Trạc; Ủy viên Bộ Chính trị, Bí thư Trung ương Đảng, Phó Thủ tướng Thường trực Nguyễn Hòa Bình; Đại tướng Lương Tam Quang, Ủy viên Bộ Chính trị, Bộ trưởng Công an; Bí thư Trung ương Đảng, Quyền Bộ trưởng Ngoại giao Lê Hoài Trung; các ủy viên Trung ương Đảng, lãnh đạo, nguyên lãnh đạo Đảng, Nhà nước, Mặt trận Tổ quốc Việt Nam, lãnh đạo các bộ ngành, địa phương; các vị khách quý đại diện các nước, tổ chức quốc tế cùng đông đảo người dân và bạn bè, du khách quốc tế.</p>
-                        <p>Triển lãm được khai mạc từ ngày 28/8 với sự tham gia của 28 bộ, cơ quan Trung ương, 34 địa phương cùng hơn 110 doanh nghiệp, tập đoàn, quy tụ trên 230 gian trưng bày.</p>
-                        <p>Không gian triển lãm đã tái hiện một cách hệ thống, toàn diện chặng đường phát triển của đất nước qua gần 180 ngành, lĩnh vực. Các tư liệu, hiện vật, hình ảnh, phim tài liệu và sản phẩm công nghệ hiện đại đã mang đến cho công chúng cái nhìn sinh động về thành tựu nổi bật trong kinh tế, chính trị, văn hóa, xã hội, khoa học - công nghệ, quốc phòng - an ninh và đối ngoại.</p>
-                        <p>Trong suốt 19 ngày diễn ra, triển lãm đã ghi nhận hơn 10 triệu lượt khách tham quan. Riêng ngày 13/9, số lượng khách đạt kỷ lục với gần 1,3 triệu lượt. Không chỉ người dân Thủ đô, đông đảo du khách từ các tỉnh, thành phố trong cả nước cũng đã về tham quan, trải nghiệm.</p>
-                        <p>Các không gian trưng bày hiện đại, kết hợp công nghệ số và trình chiếu 3D đã tạo nên sự hấp dẫn, giúp khách tham quan dễ dàng tiếp cận, hiểu rõ hơn về lịch sử và hiện tại của đất nước.</p>
-                     </div>
-                     <!-- ------------------- -->
-                     <!-- Info Box -->
-                     <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-                        <p class="text-sm text-gray-p italic">
-                           Tại lễ bế mạc, Ủy viên Trung ương Đảng, Thứ trưởng thường trực Bộ Dân tộc và Tôn giáo Hồ Văn Niên đại diện Bộ nhận Bằng khen của Thủ tướng cho tập thể có thành tích xuất sắc. Vụ trưởng Vụ Tuyên truyền công tác dân tộc, tôn giáo Lò Quang Tú đại diện Bộ nhận giải thưởng "Không gian trưng bày tiêu biểu" của các ban, bộ, ngành, cơ quan Trung ương.
-                        </p>
-                     </div>
-                     <!-- Author -->
-                     <a href="#" class="notosans-bold text-right mt-6">Hoàng Quý</a>
-                     <!-- Related Articles -->
-                     <div class="border border-gray-300 pt-4 mt-4 bg-gray-video">
-                        <h3 class="notosans-bold uppercase px-4 text-gray-h2">Bài viết liên quan</h3>
-                        <div class="space-y-4 p-4">
-                           <article class="flex space-x-4">
-                              <img class="w-[140px] h-[93px] object-cover " 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/trien-lam-thanh-tuu-dat-nuoc-the-hien-khat-vong-bay-cao-vuon-xa-trong-ky-nguyen-moi-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" 
-                                 alt="Triển lãm thành tựu đất nước">
-                              <div class="flex-1 ">
-                                 <h4 class="notosans-bold hover:text-blue-600 mb-2">
-                                    <a href="#" class="text-sm leading-tight text-gray-h2">Triển lãm thành tựu đất nước thể hiện khát vọng bay cao, vươn xa trong kỷ nguyên mới</a>
-                                 </h4>
-                                 <p class="text-gray-p  hidden sm:block">Hình ảnh Việt Nam đa sắc đồng lòng, hướng tới kỷ nguyên mới với những thành tựu nổi bật trong phát triển kinh tế, xã hội và văn hóa.</p>
-                              </div>
-                           </article>
-                           <article class="flex space-x-4">
-                              <img class="w-[140px] h-[93px] object-cover" 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/trien-lam-thanh-tuu-dat-nuoc-the-hien-khat-vong-bay-cao-vuon-xa-trong-ky-nguyen-moi-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" 
-                                 alt="Triển lãm thành tựu đất nước">
-                              <div class="flex-1">
-                                 <h4 class="notosans-bold hover:text-blue-600 mb-2">
-                                    <a href="#" class="text-sm leading-tight text-gray-h2">Triển lãm thành tựu đất nước thể hiện khát vọng bay cao, vươn xa trong kỷ nguyên mới</a>
-                                 </h4>
-                                 <p class="text-gray-p  hidden sm:block">Hình ảnh Việt Nam đa sắc đồng lòng, hướng tới kỷ nguyên mới với những thành tựu nổi bật trong phát triển kinh tế, xã hội và văn hóa.</p>
-                              </div>
-                           </article>
-                           <article class="flex space-x-4">
-                              <img class="w-[140px] h-[93px] object-cover " 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/trien-lam-thanh-tuu-dat-nuoc-the-hien-khat-vong-bay-cao-vuon-xa-trong-ky-nguyen-moi-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" 
-                                 alt="Triển lãm thành tựu đất nước">
-                              <div class="flex-1">
-                                 <h4 class="notosans-bold hover:text-blue-600 mb-2">
-                                    <a href="#" class="text-sm leading-tight text-gray-h2">Triển lãm thành tựu đất nước thể hiện khát vọng bay cao, vươn xa trong kỷ nguyên mới</a>
-                                 </h4>
-                                 <p class="text-gray-p  hidden sm:block">Hình ảnh Việt Nam đa sắc đồng lòng, hướng tới kỷ nguyên mới với những thành tựu nổi bật trong phát triển kinh tế, xã hội và văn hóa.</p>
-                              </div>
-                           </article>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Mobile Share Buttons -->
-                  <div class="lg:hidden p-4 mt-6 ">
-                     <div class="flex items-center  space-x-6">
-                        <button class="flex flex-col items-center space-y-1 text-blue-600 hover:text-blue-700 transition-colors">
-                           <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                              </svg>
-                           </div>
-                           <span class="text-xs font-medium">Facebook</span>
-                        </button>
-                        <button class="flex flex-col items-center space-y-1 text-blue-500 hover:text-blue-600 transition-colors">
-                           <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                              </svg>
-                           </div>
-                           <span class="text-xs font-medium">Twitter</span>
-                        </button>
-                        <button class="flex flex-col items-center space-y-1 text-gray-600 hover:text-gray-700 transition-colors">
-                           <div class="w-8 h-8 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                 <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92S19.61 16.08 18 16.08z"/>
-                              </svg>
-                           </div>
-                           <span class="text-xs font-medium">Share</span>
-                        </button>
-                     </div>
-                  </div>
-                  <!-- Tags -->
-                  <div class="mt-8 pt-6 border-t border-gray-200">
-                     <div class="flex flex-wrap items-center gap-2">
-                        <span class="text-sm text-gray-500 font-medium">Xem thêm về:</span>
-                        <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
-                        Triển lãm thành tựu đất nước
-                        </a>
-                        <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
-                        Bộ Dân tộc và Tôn giáo
-                        </a>
-                     </div>
-                  </div>
-                  <!-- Comment Section -->
-                  <div class="mt-8 pt-6 ">
-                     <h3 class="text-lg notosans-bold mb-4 text-gray-h3 uppercase">Bình luận</h3>
-                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <p class="text-gray-600 text-center">Hệ thống bình luận sẽ được tải ở đây</p>
-                     </div>
-                  </div>
-               </div>
-               <!-- Right Column - Sidebar -->
-               <div class="w-full lg:w-1/3 space-y-6  pt-10">
-                  <!-- Sticky Sidebar Content -->
-                  <div class="lg:sticky lg:top-6 space-y-6">
-                     <!-- Quick Links -->
-                     <div class="hidden lg:block space-y-4">
-                        <a href="/ho-so/dai-bieu-quoc-hoi" class="block">
-                        <img src="https://res-files.vnncdn.net/files/2022/7/7/quoc-hoi-300x100.jpg" 
-                           alt="Hồ sơ Đại biểu quốc hội" 
-                           class="w-full h-auto ">
-                        </a>
-                        <a href="/ho-so/uy-vien-trung-uong" class="block">
-                        <img src="https://res-files.vnncdn.net/files/2022/7/7/uy-vien-300x100.jpg" 
-                           alt="Hồ sơ Ủy viên trung ương" 
-                           class="w-full h-auto ">
-                        </a>
-                     </div>
-                     <!-- Section Có thể bạn quan tâm-->
-                     <div class="pt-4">
-                        <h2 class="text-lg notosans-bold text-blue-primary mb-4 uppercase">Có thể bạn quan tâm</h2>
-                        <div class="space-y-4">
-                           <article class="flex space-x-3">
-                              <img class="w-[135px] h-[90px] object-cover " 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/16/trien-lam-thanh-tuu-dat-nuoc-the-hien-khat-vong-bay-cao-vuon-xa-trong-ky-nguyen-moi-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" 
-                                 alt="Triển lãm thành tựu đất nước">
-                              <div class="flex-1">
-                                 <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
-                                    <a href="#">Triển lãm thành tựu đất nước thể hiện khát vọng bay cao, vươn xa trong kỷ nguyên mới</a>
-                                 </h3>
-                              </div>
-                           </article>
-                           <article class="flex space-x-3">
-                              <img class="w-[135px] h-[90px] object-cover " 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/8/28/tong-bi-thu-thu-tuong-du-khai-mac-trien-lam-80-nam-thanh-tuu-dat-nuoc-2656.jpeg?width=260&s=_vURFRo1naARuA7hNc9uMw" 
-                                 alt="Tổng Bí thư, Thủ tướng dự khai mạc triển lãm">
-                              <div class="flex-1">
-                                 <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
-                                    <a href="#">Tổng Bí thư, Thủ tướng dự khai mạc triển lãm 80 năm thành tựu đất nước</a>
-                                 </h3>
-                              </div>
-                           </article>
-                           <article class="flex space-x-3">
-                              <img class="w-[135px] h-[90px] object-cover" 
-                                 src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/8/28/36-chu-thu-tuong-duc-ket-tai-trien-lam-80-nam-thanh-tuu-dat-nuoc-1827.jpg?width=260&s=zQxibNNak9rsspbc7-7u4g" 
-                                 alt="36 chữ Thủ tướng đúc kết">
-                              <div class="flex-1">
-                                 <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
-                                    <a href="#">36 chữ Thủ tướng đúc kết tại triển lãm 80 năm thành tựu đất nước</a>
-                                 </h3>
-                              </div>
-                           </article>
-                        </div>
-                      
-                        <div class="text-center my-6">
-                           <a href="/"
-                              class="inline-flex items-center px-4 py-2 text-blue-primary border border-blue-primary text-xs uppercase font-bold rounded-full hover:bg-blue-primary hover:text-white transition-colors">
-                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                             </svg>
-                             QUAY LẠI TRANG CHỦ
-                           </a>
-                         </div>
                          
-                     </div>
-                  </div>
-               </div>
+                        <div class="flex items-center space-x-2 self-start sm:self-auto">
+                                <img class="w-3 h-3 sm:w-5 sm:h-5" src="https://static.vnncdn.net/v1/icon/right-arrow-blue.svg" alt="arrow icon">
+                                <a href="/tac-gia/lan-anh-0008UF.html" class="text-blue-primary text-sm font-medium hover:text-blue-600 transition-colors underline">
+                                    View author's articles
+                           </a>
+                        </div>
+                        </div> -->
+                        <!-- Social Share & Meta Info -->
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 ">
+                            <div class="flex items-center space-x-2 mb-3 sm:mb-0">
+                                <!-- Share Buttons -->
+                                <button class="flex items-center justify-center w-[30px] h-[30px] border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                    <svg width="16px" height="16px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <title>facebook [#757575]</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <defs> </defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#757575">
+                                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                        <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#757575]"> </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="flex items-center justify-center w-[30px] h-[30px] border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                    <img src="https://static.vnncdn.net/v1/icon/zalo-unactive-1.svg" alt="Zalo" class="w-[40px] h-[40px]">
+                                </button>
+                                <button class="flex items-center justify-center w-[30px] h-[30px] border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                    <svg class="w-[16px] h-3 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                    </svg>
+                                </button>
+                                <button class="flex items-center justify-center w-[30px] h-[30px] border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                    <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                    </svg>
+                                </button>
+                                <button class="flex items-center justify-center w-[30px] h-[30px] border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                    <img src="https://static.vnncdn.net/v1/icon/icon-share-link-bookmark.svg" alt="Twitter" class="w-[16px] h-[16px]">
+                                </button>
+                                <a class="flex items-center px-3 py-2 transition-colors" href="https://news.google.com/publications/CAAqBwgKMNi4kgswo_-nAw/sections/CAQqEAgAKgcICjDYuJILMKP_pwMw7pCTBw?ceid=VN:vi&oc=3&hl=vi&gl=VN" target="_blank" rel="noopener nofollow">
+
+                                    <img src="https://static.vnncdn.net/v1/icon/google-news-en.svg" alt="Google News" class="h-[30px]">
+                                </a>
+                            </div>
+                            <!-- Google News Button -->
+                            <div class="flex items-center">
+
+                            </div>
+                        </div>
+                        <!-- Article Summary -->
+                        <h2 class="arial  text-gray-h2 mb-6 arial font-bold leading-relaxed">
+                            Vietnam's Power Development Plan VIII placed strong emphasis on liquefied natural gas (LNG) as a transitional energy source to gradually replace coal-fired power and ensure energy security amid the shift to renewables. Yet many LNG projects worth billions of dollars remain stuck "on paper" due to persistent policy and administrative hurdles, including unresolved land clearance issues.
+                        </h2>
+                    </div>
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none">
+                        <!-- Main Image -->
+                        <figure class="mb-6">
+                            <img class="w-full h-auto " src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/billions-on-paper-vietnam-lng-power-ambitions-stalled-by-policy-bottlenecks-756.jpg?width=0&s=V7oc0rioXF0BvJTaNk8jhw" alt="Vietnam LNG power plant construction" loading="lazy">
+                            <figcaption class="text-sm text-gray-600 mt-2 italic text-center">
+                                Vietnam LNG power plant construction
+                            </figcaption>
+                        </figure>
+                        <!-- Article Text -->
+                        <div class="text-gray-p space-y-4 font-arial text-base leading-relaxed">
+                            <p><strong>Bureaucratic bottlenecks persist</strong></p>
+                            <p>According to the revised Power Development Plan VIII, Vietnam's LNG import-based power capacity is expected to rise from 0.8 GW to 22.5 GW by 2030, through the development of 15 projects. This would represent approximately 12.3% of the country's total power generation capacity - a critical share intended to replace coal and balance the rising share of renewables.</p>
+                            <p>In practice, however, many of these projects are moving slowly or remain stagnant. For instance, the USD 2.2 billion Quang Ninh LNG project is still facing land clearance obstacles. The provincial government has issued a final warning and threatened forced land acquisition if owners refuse to hand over the land.</p>
+                            <p>In Ca Na, a 1,500 MW LNG project received only one bid during its tender in July, with a proposed tariff of 12.83 US cents per kWh - an unusually high rate reflecting investor concerns over policy and financial risks.</p>
+                            <p>Projects that were once expected to lead Vietnam's LNG development - such as Son My I and II (in Lam Dong province) and the Son My LNG terminal - are still stuck in paperwork and financing limbo. The Nghi Son LNG project, valued at USD 2.2 billion (equivalent to about 57,000–58,000 billion VND) and with a 1,500 MW capacity, is considered a vital link in the revised national plan. But after two bidding rounds and two extensions, the project was cancelled due to lack of interest from investors.</p>
+                            <p>Another prominent example is the 3,200 MW Bac Lieu LNG power plant, which has been dormant for years. Despite receiving its investment certificate in January 2020 and being scheduled to begin phase one by late 2023, the project has not broken ground. Over five years later, unresolved land clearance and compensation issues have left the site idle.</p>
+                        </div>
+                        <!-- ------------------- -->
+                        <!-- Info Box -->
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+                            <p class="text-sm text-gray-p italic">
+                                One rare bright spot is the Nhon Trach 3 and 4 LNG projects. Earlier this year, Nhon Trach 3 was connected to the grid, and by the end of June, Nhon Trach 4 delivered its first power using imported LNG - marking the first time Vietnam generated electricity from LNG.
+                            </p>
+                        </div>
+                        <!-- Author -->
+                        <a href="#" class="notosans-bold text-right font-bold mt-6">Tien Phong</a>
+                        <!-- Related Articles -->
+                        <div class="border border-gray-300 pt-4 mt-4 bg-gray-video">
+                            <h3 class="notosans-bold uppercase px-4 text-gray-h2">Related Articles</h3>
+                            <div class="space-y-4 p-4">
+                                <article class="flex space-x-4">
+                                    <img class="w-[140px] h-[93px] object-cover " src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/vietnam-lam-dong-set-to-lead-power-production-with-lng-expansion-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" alt="Vietnam Lam Dong LNG expansion">
+                                    <div class="flex-1 ">
+                                        <h4 class="notosans-bold hover:text-blue-600 mb-2">
+                                            <a href="#" class="text-sm leading-tight text-gray-h2">Vietnam's Lam Dong set to lead power production with LNG expansion</a>
+                                        </h4>
+                                        <p class="text-gray-p  hidden sm:block">Lam Dong province is positioning itself as a key player in Vietnam's energy transition with ambitious LNG power projects.</p>
+                                    </div>
+                                </article>
+                                <article class="flex space-x-4">
+                                    <img class="w-[140px] h-[93px] object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/vietnam-lng-power-push-advances-with-nhon-trach-4-debut-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" alt="Vietnam LNG power push advances">
+                                    <div class="flex-1">
+                                        <h4 class="notosans-bold hover:text-blue-600 mb-2">
+                                            <a href="#" class="text-sm leading-tight text-gray-h2">Vietnam's LNG power push advances with Nhon Trach 4 debut</a>
+                                        </h4>
+                                        <p class="text-gray-p  hidden sm:block">Vietnam's energy sector reaches a milestone as Nhon Trach 4 LNG power plant begins operations, marking significant progress in the country's energy transition.</p>
+                                    </div>
+                                </article>
+                                <article class="flex space-x-4">
+                                    <img class="w-[140px] h-[93px] object-cover " src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/pm-calls-for-us-firm-cooperation-in-developing-lng-hub-in-vietnam-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" alt="PM calls for US firm cooperation">
+                                    <div class="flex-1">
+                                        <h4 class="notosans-bold hover:text-blue-600 mb-2">
+                                            <a href="#" class="text-sm leading-tight text-gray-h2">PM calls for US firm's cooperation in developing LNG hub in Vietnam</a>
+                                        </h4>
+                                        <p class="text-gray-p  hidden sm:block">Prime Minister emphasizes the importance of international cooperation in developing Vietnam's LNG infrastructure and energy sector.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Share Buttons -->
+                    <div class="lg:hidden p-4 mt-6 ">
+                        <div class="flex items-center  space-x-6">
+                            <button class="flex flex-col items-center space-y-1 text-blue-600 hover:text-blue-700 transition-colors">
+                                <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-medium">Facebook</span>
+                            </button>
+                            <button class="flex flex-col items-center space-y-1 text-blue-500 hover:text-blue-600 transition-colors">
+                                <div class="w-7 h-7 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-medium">Twitter</span>
+                            </button>
+                            <button class="flex flex-col items-center space-y-1 text-gray-600 hover:text-gray-700 transition-colors">
+                                <div class="w-7 h-7 bg-gray-600 text-white rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92S19.61 16.08 18 16.08z" />
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-medium">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Tags -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-sm text-gray-500 font-medium">See more about:</span>
+                            <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
+                                business news
+                            </a>
+                            <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
+                                LNG
+                            </a>
+                            <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
+                                features
+                            </a>
+                            <a href="#" class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors">
+                                vietnam's power industry
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Comment Section -->
+                    <div class="mt-8 pt-6 ">
+                        <h3 class="text-lg notosans-bold mb-4 text-gray-h3 uppercase">Comment</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <p class="text-gray-600 text-center">Comment system will be loaded here</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column - Sidebar -->
+                <div class="w-full lg:w-1/3 space-y-6  pt-10">
+                    <!-- Sticky Sidebar Content -->
+                    <div class="lg:sticky lg:top-6 space-y-6">
+                        <!-- Quick Links -->
+                        <div class="hidden lg:block space-y-4">
+                            <a href="/ho-so/dai-bieu-quoc-hoi" class="block">
+                                <img src="https://res-files.vnncdn.net/files/2022/7/7/quoc-hoi-300x100.jpg" alt="Hồ sơ Đại biểu quốc hội" class="w-full h-auto ">
+                            </a>
+                            <a href="/ho-so/uy-vien-trung-uong" class="block">
+                                <img src="https://res-files.vnncdn.net/files/2022/7/7/uy-vien-300x100.jpg" alt="Hồ sơ Ủy viên trung ương" class="w-full h-auto ">
+                            </a>
+                        </div>
+                        <!-- Section You might be interested in-->
+                        <div class="pt-4">
+                            <h2 class="text-lg notosans-bold text-blue-primary mb-4 uppercase">You might be interested in</h2>
+                            <div class="space-y-4">
+                                <article class="flex space-x-3">
+                                    <img class="w-[135px] h-[90px] object-cover " src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/vietnam-lam-dong-set-to-lead-power-production-with-lng-expansion-306.jpg?width=260&s=mdyAHmKP6_GKjmbXK2SoXw" alt="Vietnam Lam Dong LNG expansion">
+                                    <div class="flex-1">
+                                        <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
+                                            <a href="#">Vietnam's Lam Dong set to lead power production with LNG expansion</a>
+                                        </h3>
+                                    </div>
+                                </article>
+                                <article class="flex space-x-3">
+                                    <img class="w-[135px] h-[90px] object-cover " src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/vietnam-lng-power-push-advances-with-nhon-trach-4-debut-2656.jpeg?width=260&s=_vURFRo1naARuA7hNc9uMw" alt="Vietnam LNG power push advances">
+                                    <div class="flex-1">
+                                        <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
+                                            <a href="#">Vietnam's LNG power push advances with Nhon Trach 4 debut</a>
+                                        </h3>
+                                    </div>
+                                </article>
+                                <article class="flex space-x-3">
+                                    <img class="w-[135px] h-[90px] object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/pm-calls-for-us-firm-cooperation-in-developing-lng-hub-in-vietnam-1827.jpg?width=260&s=zQxibNNak9rsspbc7-7u4g" alt="PM calls for US firm cooperation">
+                                    <div class="flex-1">
+                                        <h3 class="text-sm font-medium text-gray-900 leading-tight hover:text-blue-600 transition-colors">
+                                            <a href="#">PM calls for US firm's cooperation in developing LNG hub in Vietnam</a>
+                                        </h3>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="text-center my-6">
+                                <a href="/" class="inline-flex items-center px-4 py-2 text-blue-primary border border-blue-primary text-xs uppercase font-bold rounded-full hover:bg-blue-primary hover:text-white transition-colors">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                                    </svg>
+                                    BACK TO HOME
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Main News Section -->
             <!-- Layout Component - Two Column Layout with Flexbox and Tailwind CSS -->
             <!-- Mobile: 1 column vertical (Main content first, Sidebar second) -->
             <!-- Desktop (≥1024px): 2 columns horizontal (Main content 2/3, Sidebar 1/3) -->
             <div class="flex flex-col lg:flex-row gap-6 lg:gap-8">
-               <!-- Main Content Column -->
-               <div class="flex-1 lg:w-2/3">
-                  <!-- Mobile Featured News Section -->
-                  <div class="block sm:hidden">
-                     <h2 class="text-xl notosans-bold text-blue-primary my-2">Tin nổi bật</h2>
-                     <div class="w-full h-0.5 bg-blue-200 mb-4"></div>
-                     <div class="space-y-4">
-                        <!-- Article 1 -->
-                        <article class="overflow-hidden">
-                           <div class="flex gap-3">
-                              <div class="w-32 flex-shrink-0">
-                                 <img class="w-full h-full object-cover" 
-                                    src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                    alt="">
-                              </div>
-                              <div class="flex-1 min-w-0">
-                                 <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                 <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
-                                    <a href="#">Tổng Bí thư: Triển khai chủ động, hiệu quả các nhiệm vụ đối ngoại và hội nhập</a>
-                                 </h3>
-                              </div>
-                           </div>
-                        </article>
-                        <!-- Article 2 -->
-                        <article class="overflow-hidden">
-                           <div class="flex gap-3">
-                              <div class="w-32 flex-shrink-0">
-                                 <img class="w-full h-full object-cover" 
-                                    src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                    alt="">
-                              </div>
-                              <div class="flex-1 min-w-0">
-                                 <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                 <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
-                                    <a href="#">Tổng Bí thư: Triển khai chủ động, hiệu quả các nhiệm vụ đối ngoại và hội nhập</a>
-                                 </h3>
-                              </div>
-                           </div>
-                        </article>
-                        <!-- Article 3 -->
-                        <article class="overflow-hidden">
-                           <div class="flex gap-3">
-                              <div class="w-32 flex-shrink-0">
-                                 <img class="w-full h-full object-cover" 
-                                    src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                    alt="">
-                              </div>
-                              <div class="flex-1 min-w-0">
-                                 <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                 <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
-                                    <a href="#">Tổng Bí thư: Triển khai chủ động, hiệu quả các nhiệm vụ đối ngoại và hội nhập</a>
-                                 </h3>
-                              </div>
-                           </div>
-                        </article>
-                        <!-- Article 4 -->
-                        <article class="overflow-hidden">
-                           <div class="flex gap-3">
-                              <div class="w-32 flex-shrink-0">
-                                 <img class="w-full h-full object-cover" 
-                                    src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                    alt="">
-                              </div>
-                              <div class="flex-1 min-w-0">
-                                 <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                 <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
-                                    <a href="#">Tổng Bí thư: Triển khai chủ động, hiệu quả các nhiệm vụ đối ngoại và hội nhập</a>
-                                 </h3>
-                              </div>
-                           </div>
-                        </article>
-                     </div>
-                  </div>
-                  <!-- Desktop Featured News Section -->
-                  <div class="hidden sm:block">
-                     <h2 class="text-2xl notosans-bold text-blue-primary pt-6 border-b border-blue-200">Tin nổi bật</h2>
-                     <!-- Main content ở đây -->
-                     <div class="mt-6">
+                <!-- Main Content Column -->
+                <div class="flex-1 lg:w-2/3">
+                    <!-- Mobile Featured News Section -->
+                    <div class="block sm:hidden">
+                        <h2 class="text-xl notosans-bold text-blue-primary my-2">Hot news</h2>
+                        <div class="w-full h-0.5 bg-blue-200 mb-4"></div>
                         <div class="space-y-4">
-                           <!-- Article 1 -->
-                           <article class="overflow-hidden">
-                              <div class="flex">
-                                 <div class="w-60 h-41 flex-shrink-0">
-                                    <img class="w-full h-full object-cover" 
-                                       src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                       alt="">
-                                 </div>
-                                 <div class="flex-1 pl-4 ">
-                                    <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                    <h3 class="notosans-bold mb-2 hover:text-blue-primary">
-                                       <a href="#">Chủ tịch Quốc hội Trần Thanh Mẫn gặp gỡ cộng đồng người Việt Nam tại Malaysia</a>
-                                    </h3>
-                                    <p class="text-sm text-gray-desc">
-                                       Trong khuôn khổ chuyến công tác tại Malaysia, chiều 16/9 theo giờ địa phương, Chủ tịch Quốc hội Trần Thanh Mẫn và Phu nhân đã gặp gỡ cán bộ, nhân viên Đại sứ quán và đại diện cộng đồng người Việt Nam tại Malaysia.
-                                    </p>
-                                 </div>
-                              </div>
-                           </article>
-                           <!-- Article 2 -->
-                           <article class=" overflow-hidden">
-                              <div class="flex">
-                                 <div class="w-60 h-41 flex-shrink-0">
-                                    <img class="w-full h-full object-cover" 
-                                       src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                       alt="">
-                                 </div>
-                                 <div class="flex-1 pl-4 ">
-                                    <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                    <h3 class="notosans-bold text-gray-a mb-2 hover:text-blue-primary">
-                                       <a href="#">Chủ tịch Quốc hội Trần Thanh Mẫn gặp gỡ cộng đồng người Việt Nam tại Malaysia</a>
-                                    </h3>
-                                    <p class="text-sm text-gray-desc">
-                                       Trong khuôn khổ chuyến công tác tại Malaysia, chiều 16/9 theo giờ địa phương, Chủ tịch Quốc hội Trần Thanh Mẫn và Phu nhân đã gặp gỡ cán bộ, nhân viên Đại sứ quán và đại diện cộng đồng người Việt Nam tại Malaysia.
-                                    </p>
-                                 </div>
-                              </div>
-                           </article>
-                           <!-- Article 3 -->
-                           <article class="overflow-hidden">
-                              <div class="flex">
-                                 <div class="w-60 h-41 flex-shrink-0">
-                                    <img class="w-full h-full object-cover" 
-                                       src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" 
-                                       alt="">
-                                 </div>
-                                 <div class="flex-1 pl-4 ">
-                                    <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">ĐỐI NGOẠI</div>
-                                    <h3 class="notosans-bold text-gray-a mb-2 hover:text-blue-primary">
-                                       <a href="#">Chủ tịch Quốc hội Trần Thanh Mẫn gặp gỡ cộng đồng người Việt Nam tại Malaysia</a>
-                                    </h3>
-                                    <p class="text-sm text-gray-desc">
-                                       Trong khuôn khổ chuyến công tác tại Malaysia, chiều 16/9 theo giờ địa phương, Chủ tịch Quốc hội Trần Thanh Mẫn và Phu nhân đã gặp gỡ cán bộ, nhân viên Đại sứ quán và đại diện cộng đồng người Việt Nam tại Malaysia.
-                                    </p>
-                                 </div>
-                              </div>
-                           </article>
+                            <!-- Article 1 -->
+                            <article class="overflow-hidden">
+                                <div class="flex gap-3">
+                                    <div class="w-32 flex-shrink-0">
+                                        <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                        <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
+                                            <a href="#">General Secretary: Proactively and effectively implement diplomatic and integration tasks</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Article 2 -->
+                            <article class="overflow-hidden">
+                                <div class="flex gap-3">
+                                    <div class="w-32 flex-shrink-0">
+                                        <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                        <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
+                                            <a href="#">General Secretary: Proactively and effectively implement diplomatic and integration tasks</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Article 3 -->
+                            <article class="overflow-hidden">
+                                <div class="flex gap-3">
+                                    <div class="w-32 flex-shrink-0">
+                                        <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                        <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
+                                            <a href="#">General Secretary: Proactively and effectively implement diplomatic and integration tasks</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Article 4 -->
+                            <article class="overflow-hidden">
+                                <div class="flex gap-3">
+                                    <div class="w-32 flex-shrink-0">
+                                        <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="text-xs notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                        <h3 class="text-sm notosans-bold text-gray-h3 leading-tight hover:text-blue-primary">
+                                            <a href="#">General Secretary: Proactively and effectively implement diplomatic and integration tasks</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                     </div>
-                  </div>
-                  <div class="my-12 text-center">
-                     <button class=" text-xs notosans-bold uppercase text-blue-primary mb-2 items-center border border-blue-primary px-4 py-1 rounded-full">
-                     Xem thêm tin
-                     </button>
-                  </div>
-               </div>
-               <!-- Cột phải -->
-               <div class="w-full lg:w-1/3">
-               </div>
+                    </div>
+                    <!-- Desktop Featured News Section -->
+                    <div class="hidden sm:block">
+                        <h2 class="text-2xl notosans-bold text-blue-primary pt-6 border-b border-blue-200">Hot news</h2>
+                        <!-- Main content ở đây -->
+                        <div class="mt-6">
+                            <div class="space-y-4">
+                                <!-- Article 1 -->
+                                <article class="overflow-hidden">
+                                    <div class="flex">
+                                        <div class="w-60 h-41 flex-shrink-0">
+                                            <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                        </div>
+                                        <div class="flex-1 pl-4 ">
+                                            <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                            <h3 class="notosans-bold mb-2 hover:text-blue-primary">
+                                                <a href="#">National Assembly Chairman Tran Thanh Man meets Vietnamese community in Malaysia</a>
+                                            </h3>
+                                            <p class="text-sm text-gray-desc">
+                                                As part of his working visit to Malaysia, on the afternoon of September 16 local time, National Assembly Chairman Tran Thanh Man and his wife met with embassy staff and representatives of the Vietnamese community in Malaysia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Article 2 -->
+                                <article class=" overflow-hidden">
+                                    <div class="flex">
+                                        <div class="w-60 h-41 flex-shrink-0">
+                                            <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                        </div>
+                                        <div class="flex-1 pl-4 ">
+                                            <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                            <h3 class="notosans-bold text-gray-a mb-2 hover:text-blue-primary">
+                                                <a href="#">National Assembly Chairman Tran Thanh Man meets Vietnamese community in Malaysia</a>
+                                            </h3>
+                                            <p class="text-sm text-gray-desc">
+                                                As part of his working visit to Malaysia, on the afternoon of September 16 local time, National Assembly Chairman Tran Thanh Man and his wife met with embassy staff and representatives of the Vietnamese community in Malaysia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <!-- Article 3 -->
+                                <article class="overflow-hidden">
+                                    <div class="flex">
+                                        <div class="w-60 h-41 flex-shrink-0">
+                                            <img class="w-full h-full object-cover" src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/chu-tich-quoc-hoi-tran-thanh-man-gap-go-cong-dong-nguoi-viet-nam-tai-malaysia-427.jpg?width=360&s=DsxaUCCfaGH3RCjr4b94zA" alt="">
+                                        </div>
+                                        <div class="flex-1 pl-4 ">
+                                            <div class="text-sm notosans-bold uppercase text-blue-primary mb-2">DIPLOMACY</div>
+                                            <h3 class="notosans-bold text-gray-a mb-2 hover:text-blue-primary">
+                                                <a href="#">National Assembly Chairman Tran Thanh Man meets Vietnamese community in Malaysia</a>
+                                            </h3>
+                                            <p class="text-sm text-gray-desc">
+                                                As part of his working visit to Malaysia, on the afternoon of September 16 local time, National Assembly Chairman Tran Thanh Man and his wife met with embassy staff and representatives of the Vietnamese community in Malaysia.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-12 text-center">
+                        <button class=" text-xs notosans-bold uppercase text-blue-primary mb-2 items-center border border-blue-primary px-4 py-1 rounded-full">
+                            View more news
+                        </button>
+                    </div>
+                </div>
+                <!-- Cột phải -->
+                <div class="w-full lg:w-1/3">
+                </div>
             </div>
             <!-- Video -->
             <!-- <div eventslug="video" class="mt-8 bg-gray-video rounded-lg shadow-sm border border-gray-200" templategroupid="00001O" data-vnn-utm-source="#vnn_source=chitiet&amp;vnn_medium=box_video" categoryid="000001" priority="1" pagesize="5" pageindex="0">
@@ -694,7 +714,7 @@
                                  </picture>
                                  <div class="absolute inset-0 flex items-center justify-center">
                                     <span class="bg-black bg-opacity-50 rounded-full p-1 group-hover:bg-opacity-70 transition-all">
-                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-4 h-4">
+                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-3 h-3">
                                     </span>
                                  </div>
                               </a>
@@ -717,7 +737,7 @@
                                  </picture>
                                  <div class="absolute inset-0 flex items-center justify-center">
                                     <span class="bg-black bg-opacity-50 rounded-full p-1 group-hover:bg-opacity-70 transition-all">
-                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-4 h-4">
+                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-3 h-3">
                                     </span>
                                  </div>
                               </a>
@@ -744,7 +764,7 @@
                                  </picture>
                                  <div class="absolute inset-0 flex items-center justify-center">
                                     <span class="bg-black bg-opacity-50 rounded-full p-1 group-hover:bg-opacity-70 transition-all">
-                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-4 h-4">
+                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-3 h-3">
                                     </span>
                                  </div>
                               </a>
@@ -767,7 +787,7 @@
                                  </picture>
                                  <div class="absolute inset-0 flex items-center justify-center">
                                     <span class="bg-black bg-opacity-50 rounded-full p-1 group-hover:bg-opacity-70 transition-all">
-                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-4 h-4">
+                                    <img src="https://static.vnncdn.net/v1/icon/video-icon-gray-v1.svg" alt="play icon" class="w-3 h-3">
                                     </span>
                                  </div>
                               </a>
@@ -789,254 +809,332 @@
             <!-- Mobile: 1 column vertical (Main content first, Sidebar second) -->
             <!-- Desktop (≥1024px): 2 columns horizontal (Main content 2/3, Sidebar 1/3) -->
             <div class="flex flex-col lg:flex-row gap-6 lg:gap-8">
-               <!-- Content Left Column -->
-               <!-- Related Articles Section -->
-               <div class="w-full grid grid-cols-1 sm:grid-cols-2">
-  
-                  <!-- Sự kiện Category -->
-                  <div class="mb-2 pr-4">
-                    <!-- Category Header -->
-                    <div class="py-4">
-                      <!-- Tab-style header with full width line -->
-                      <div class="relative">
-                        <!-- Full width line with blue and gray segments -->
-                        <div class="h-0.5 flex mb-2">
-                          <div class="bg-blue-primary w-12"></div>
-                          <div class="bg-gray-200 flex-1"></div>
+                <!-- Content Left Column -->
+                <!-- Related Articles Section -->
+                <div class="w-full grid grid-cols-1 sm:grid-cols-2">
+
+                    <!-- Events Category -->
+                    <div class="mb-2 pr-4">
+                        <!-- Category Header -->
+                        <div class="py-4">
+                            <!-- Tab-style header with full width line -->
+                            <div class="relative">
+                                <!-- Full width line with blue and gray segments -->
+                                <div class="h-0.5 flex mb-2">
+                                    <div class="bg-blue-primary w-12"></div>
+                                    <div class="bg-gray-200 flex-1"></div>
+                                </div>
+                                <!-- Text below -->
+                                <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
+                                    <a href="/chinh-tri/su-kien" title="Events" class="hover:text-blue-600 transition-colors">
+                                        Events
+                                    </a>
+                                </h2>
+                            </div>
                         </div>
-                        <!-- Text below -->
-                        <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
-                          <a href="/chinh-tri/su-kien" title="Sự kiện" class="hover:text-blue-600 transition-colors">
-                            Sự kiện
-                          </a>
-                        </h2>
-                      </div>
+                        <!-- Category Content -->
+                        <div class="space-y-4">
+                            <!-- Featured Article with Image -->
+                            <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
+                                <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
+                                    <a href="#" class="block w-full h-full">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
+                                    </a>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="mb-2 text-gray-h3 notosans-bold">
+                                        <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
+                                            Mr. Quan Minh Cuong re-elected as Cao Bang Provincial Party Secretary
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
+                                        The Cao Bang Provincial Party Committee for the 2025-2030 term elected a 15-member Standing Committee...
+                                    </p>
+                                </div>
+                            </article>
+                            <!-- Compact list -->
+                            <div class="space-y-2">
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Prime Minister requests handling of Tan Son Nhat, Long Thanh airport development plans
+                                        </a>
+                                    </h3>
+                                </article>
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
+                                        </a>
+                                    </h3>
+                                </article>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Category Content -->
-                    <div class="space-y-4">
-                      <!-- Featured Article with Image -->
-                      <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
-                        <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
-                          <a href="#" class="block w-full h-full">
-                            <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
-                          </a>
+
+                    <!-- Party Building Category -->
+                    <div class="mb-2 pr-4">
+                        <!-- Category Header -->
+                        <div class="py-4">
+                            <!-- Tab-style header with full width line -->
+                            <div class="relative">
+                                <!-- Full width line with blue and gray segments -->
+                                <div class="h-0.5 flex mb-2">
+                                    <div class="bg-blue-primary w-12"></div>
+                                    <div class="bg-gray-200 flex-1"></div>
+                                </div>
+                                <!-- Text below -->
+                                <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
+                                    <a href="/chinh-tri/su-kien" title="Events" class="hover:text-blue-600 transition-colors">
+                                        Events
+                                    </a>
+                                </h2>
+                            </div>
                         </div>
-                        <div class="flex-1 min-w-0">
-                          <h3 class="mb-2 text-gray-h3 notosans-bold">
-                            <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
-                              Ông Quản Minh Cường tái đắc cử Bí thư Tỉnh ủy Cao Bằng
-                            </a>
-                          </h3>
-                          <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
-                            Đảng bộ tỉnh Cao Bằng khóa 20, nhiệm kỳ 2025-2030 bầu ra Ban Thường vụ Tỉnh ủy gồm 15 người...
-                          </p>
+                        <!-- Category Content -->
+                        <div class="space-y-4">
+                            <!-- Featured Article with Image -->
+                            <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
+                                <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
+                                    <a href="#" class="block w-full h-full">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
+                                    </a>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="mb-2 text-gray-h3 notosans-bold">
+                                        <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
+                                            Mr. Quan Minh Cuong re-elected as Cao Bang Provincial Party Secretary
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
+                                        The Cao Bang Provincial Party Committee for the 2025-2030 term elected a 15-member Standing Committee...
+                                    </p>
+                                </div>
+                            </article>
+                            <!-- Compact list -->
+                            <div class="space-y-2">
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Prime Minister requests handling of Tan Son Nhat, Long Thanh airport development plans
+                                        </a>
+                                    </h3>
+                                </article>
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
+                                        </a>
+                                    </h3>
+                                </article>
+                            </div>
                         </div>
-                      </article>
-                      <!-- Compact list -->
-                      <div class="space-y-2">
-                        <article class="py-2">
-                          <h3>
-                            <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                              Thủ tướng yêu cầu xử lý phương án khai thác sân bay Tân Sơn Nhất, Long Thành
-                            </a>
-                          </h3>
-                        </article>
-                        <article class="py-2">
-                          <h3>
-                            <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                              Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
-                            </a>
-                          </h3>
-                        </article>
-                      </div>
                     </div>
-                  </div>
-                
-                  <!-- Xây dựng Đảng Category -->
-                  <div class="mb-2 pr-4">
-                     <!-- Category Header -->
-                     <div class="py-4">
-                       <!-- Tab-style header with full width line -->
-                       <div class="relative">
-                         <!-- Full width line with blue and gray segments -->
-                         <div class="h-0.5 flex mb-2">
-                           <div class="bg-blue-primary w-12"></div>
-                           <div class="bg-gray-200 flex-1"></div>
-                         </div>
-                         <!-- Text below -->
-                         <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
-                           <a href="/chinh-tri/su-kien" title="Sự kiện" class="hover:text-blue-600 transition-colors">
-                             Sự kiện
-                           </a>
-                         </h2>
-                       </div>
-                     </div>
-                     <!-- Category Content -->
-                     <div class="space-y-4">
-                       <!-- Featured Article with Image -->
-                       <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
-                         <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
-                           <a href="#" class="block w-full h-full">
-                             <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
-                           </a>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                           <h3 class="mb-2 text-gray-h3 notosans-bold">
-                             <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
-                               Ông Quản Minh Cường tái đắc cử Bí thư Tỉnh ủy Cao Bằng
-                             </a>
-                           </h3>
-                           <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
-                             Đảng bộ tỉnh Cao Bằng khóa 20, nhiệm kỳ 2025-2030 bầu ra Ban Thường vụ Tỉnh ủy gồm 15 người...
-                           </p>
-                         </div>
-                       </article>
-                       <!-- Compact list -->
-                       <div class="space-y-2">
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Thủ tướng yêu cầu xử lý phương án khai thác sân bay Tân Sơn Nhất, Long Thành
-                             </a>
-                           </h3>
-                         </article>
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
-                             </a>
-                           </h3>
-                         </article>
-                       </div>
-                     </div>
-                   </div>
-                
-                  <!-- Đối ngoại Category -->
-                  <div class="mb-2 pr-4">
-                     <!-- Category Header -->
-                     <div class="py-4">
-                       <!-- Tab-style header with full width line -->
-                       <div class="relative">
-                         <!-- Full width line with blue and gray segments -->
-                         <div class="h-0.5 flex mb-2">
-                           <div class="bg-blue-primary w-12"></div>
-                           <div class="bg-gray-200 flex-1"></div>
-                         </div>
-                         <!-- Text below -->
-                         <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
-                           <a href="/chinh-tri/su-kien" title="Sự kiện" class="hover:text-blue-600 transition-colors">
-                             Sự kiện
-                           </a>
-                         </h2>
-                       </div>
-                     </div>
-                     <!-- Category Content -->
-                     <div class="space-y-4">
-                       <!-- Featured Article with Image -->
-                       <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
-                         <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
-                           <a href="#" class="block w-full h-full">
-                             <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
-                           </a>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                           <h3 class="mb-2 text-gray-h3 notosans-bold">
-                             <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
-                               Ông Quản Minh Cường tái đắc cử Bí thư Tỉnh ủy Cao Bằng
-                             </a>
-                           </h3>
-                           <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
-                             Đảng bộ tỉnh Cao Bằng khóa 20, nhiệm kỳ 2025-2030 bầu ra Ban Thường vụ Tỉnh ủy gồm 15 người...
-                           </p>
-                         </div>
-                       </article>
-                       <!-- Compact list -->
-                       <div class="space-y-2">
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Thủ tướng yêu cầu xử lý phương án khai thác sân bay Tân Sơn Nhất, Long Thành
-                             </a>
-                           </h3>
-                         </article>
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
-                             </a>
-                           </h3>
-                         </article>
-                       </div>
-                     </div>
-                   </div>
-                
-                  <!-- Bàn luận Category -->
-                  <div class="mb-2 pr-4">
-                     <!-- Category Header -->
-                     <div class="py-4">
-                       <!-- Tab-style header with full width line -->
-                       <div class="relative">
-                         <!-- Full width line with blue and gray segments -->
-                         <div class="h-0.5 flex mb-2">
-                           <div class="bg-blue-primary w-12"></div>
-                           <div class="bg-gray-200 flex-1"></div>
-                         </div>
-                         <!-- Text below -->
-                         <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
-                           <a href="/chinh-tri/su-kien" title="Sự kiện" class="hover:text-blue-600 transition-colors">
-                             Sự kiện
-                           </a>
-                         </h2>
-                       </div>
-                     </div>
-                     <!-- Category Content -->
-                     <div class="space-y-4">
-                       <!-- Featured Article with Image -->
-                       <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
-                         <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
-                           <a href="#" class="block w-full h-full">
-                             <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
-                           </a>
-                         </div>
-                         <div class="flex-1 min-w-0">
-                           <h3 class="mb-2 text-gray-h3 notosans-bold">
-                             <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
-                               Ông Quản Minh Cường tái đắc cử Bí thư Tỉnh ủy Cao Bằng
-                             </a>
-                           </h3>
-                           <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
-                             Đảng bộ tỉnh Cao Bằng khóa 20, nhiệm kỳ 2025-2030 bầu ra Ban Thường vụ Tỉnh ủy gồm 15 người...
-                           </p>
-                         </div>
-                       </article>
-                       <!-- Compact list -->
-                       <div class="space-y-2">
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Thủ tướng yêu cầu xử lý phương án khai thác sân bay Tân Sơn Nhất, Long Thành
-                             </a>
-                           </h3>
-                         </article>
-                         <article class="py-2">
-                           <h3>
-                             <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
-                               Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
-                             </a>
-                           </h3>
-                         </article>
-                       </div>
-                     </div>
-                   </div>
-                
+
+                    <!-- Diplomacy Category -->
+                    <div class="mb-2 pr-4">
+                        <!-- Category Header -->
+                        <div class="py-4">
+                            <!-- Tab-style header with full width line -->
+                            <div class="relative">
+                                <!-- Full width line with blue and gray segments -->
+                                <div class="h-0.5 flex mb-2">
+                                    <div class="bg-blue-primary w-12"></div>
+                                    <div class="bg-gray-200 flex-1"></div>
+                                </div>
+                                <!-- Text below -->
+                                <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
+                                    <a href="/chinh-tri/su-kien" title="Events" class="hover:text-blue-600 transition-colors">
+                                        Events
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- Category Content -->
+                        <div class="space-y-4">
+                            <!-- Featured Article with Image -->
+                            <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
+                                <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
+                                    <a href="#" class="block w-full h-full">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
+                                    </a>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="mb-2 text-gray-h3 notosans-bold">
+                                        <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
+                                            Mr. Quan Minh Cuong re-elected as Cao Bang Provincial Party Secretary
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
+                                        The Cao Bang Provincial Party Committee for the 2025-2030 term elected a 15-member Standing Committee...
+                                    </p>
+                                </div>
+                            </article>
+                            <!-- Compact list -->
+                            <div class="space-y-2">
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Prime Minister requests handling of Tan Son Nhat, Long Thanh airport development plans
+                                        </a>
+                                    </h3>
+                                </article>
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
+                                        </a>
+                                    </h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discussion Category -->
+                    <div class="mb-2 pr-4">
+                        <!-- Category Header -->
+                        <div class="py-4">
+                            <!-- Tab-style header with full width line -->
+                            <div class="relative">
+                                <!-- Full width line with blue and gray segments -->
+                                <div class="h-0.5 flex mb-2">
+                                    <div class="bg-blue-primary w-12"></div>
+                                    <div class="bg-gray-200 flex-1"></div>
+                                </div>
+                                <!-- Text below -->
+                                <h2 class="text-lg font-bold text-gray-h2 uppercase inline-block">
+                                    <a href="/chinh-tri/su-kien" title="Events" class="hover:text-blue-600 transition-colors">
+                                        Events
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- Category Content -->
+                        <div class="space-y-4">
+                            <!-- Featured Article with Image -->
+                            <article class="flex flex-col sm:flex-row gap-4  border-b border-gray-100">
+                                <div class="flex-shrink-0 w-full sm:w-36 h-48 sm:h-24">
+                                    <a href="#" class="block w-full h-full">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/20/quy-dinh-ve-kiem-diem-xep-loai-can-bo-tu-trung-uong-den-co-so-1167.jpg" class="w-full h-full object-cover" alt="ảnh demo" loading="lazy" decoding="async">
+                                    </a>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="mb-2 text-gray-h3 notosans-bold">
+                                        <a href="#" class=" hover:text-blue-primary transition-colors leading-tight line-clamp-3">
+                                            Mr. Quan Minh Cuong re-elected as Cao Bang Provincial Party Secretary
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-desc text-sm leading-relaxed line-clamp-2 block sm:hidden">
+                                        The Cao Bang Provincial Party Committee for the 2025-2030 term elected a 15-member Standing Committee...
+                                    </p>
+                                </div>
+                            </article>
+                            <!-- Compact list -->
+                            <div class="space-y-2">
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Prime Minister requests handling of Tan Son Nhat, Long Thanh airport development plans
+                                        </a>
+                                    </h3>
+                                </article>
+                                <article class="py-2">
+                                    <h3>
+                                        <a href="#" class="text-gray-h1 hover:text-blue-primary font-medium text-sm leading-tight line-clamp-2">
+                                            Chủ tịch nước và Phu nhân sắp có chuyến công tác tới Mỹ
+                                        </a>
+                                    </h3>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                
-               <!--Content Right Column -->
-               <div class="w-full lg:w-1/3">
-                  <!-- Right content ở đây -->
-               </div>
+
+                <!--Content Right Column -->
+                <div class="w-full lg:w-1/3">
+                    <!-- Right content ở đây -->
+                </div>
             </div>
-         </div>
-      </div>
-   </body>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-en bg-gray-100 py-6 sm:py-8 mt-6 sm:mt-8" style="font-family: 'Noto Sans', sans-serif;">
+        <div class="footer-en__bottom max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
+                <!-- Left Side - Logo and Copyright -->
+                <div class="footer-en__bottom-left flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-8 w-full lg:w-auto">
+                    <a class="footer-en__bottom-logo flex-shrink-0" href="/en">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet Global" class="h-12 sm:h-16">
+                    </a>
+                    <div class="footer-en__bottom-list text-sm text-gray-600 space-y-2">
+                        <div class="footer-en__bottom-item font-medium">© Copyright of VietNamNet Global</div>
+                        <div class="footer-en__bottom-item text-xs leading-relaxed">
+                            <span>Tel: 024 3772 7988 Fax: (024) 37722734</span>
+                            <span>, </span>
+                            <span>Email: evnn@vietnamnet.vn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Follow Us and Social Media -->
+                <div class="footer-en__bottom-follow flex flex-col items-end space-y-4">
+                    <div class="text-right">
+                        <div class="text-sm font-medium text-gray-700 mb-3">Follow us on</div>
+                        <div class="footer-en__bottom-social flex items-center space-x-2">
+                            <a title="facebook vietnamnet" target="_blank" href="https://www.facebook.com/vietnamnet.vn" class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/facebook-black.svg" alt="Facebook" class="w-3 h-3 filter invert">
+                            </a>
+                            <a title="youtube vietnamnet" target="_blank" href="https://www.youtube.com/c/B%C3%A1oVietNamNetTV" class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/youtube-black.svg" alt="YouTube" class="w-3 h-3 filter invert">
+                            </a>
+                            <a title="tiktok vietnamnet" target="_blank" href="https://www.tiktok.com/@vietnamnet.vn" class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/tiktok-black.svg" alt="TikTok" class="w-3 h-3 filter invert">
+                            </a>
+                            <a title="twitter vietnamnet" target="_blank" href="https://twitter.com/vietnamnetvn" class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/twitter-black.svg" alt="Twitter" class="w-3 h-3 filter invert">
+                            </a>
+                            <a title="zalo vietnamnet" target="_blank" href="http://zalo.me/660139855964186242?src=qr" class="w-7 h-7 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/zalo-black.svg" alt="Zalo" class="w-3 h-3 filter invert">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/news_register.html">Send to editor</a>
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/">Tuyển dụng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Pages List -->
+    <div class="bg-gray-100 py-4 px-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800">Project Pages (Demo)</h3>
+        <div class="flex flex-wrap gap-2">
+            <a href="index.html" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Home</a>
+            <a href="detail.html" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">Article Detail</a>
+            <a href="category.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm hover:bg-purple-600">Category</a>
+            <a href="author.html" class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Author</a>
+            <a href="search.html" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Search</a>
+            <a href="single.html" class="bg-indigo-500 text-white px-3 py-1 rounded text-sm hover:bg-indigo-600">Single Article</a>
+            <a href="single-video.html" class="bg-pink-500 text-white px-3 py-1 rounded text-sm hover:bg-pink-600">Single Video</a>
+            <a href="video.html" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600">Video</a>
+            <a href="postcast.html" class="bg-teal-500 text-white px-3 py-1 rounded text-sm hover:bg-teal-600">Podcast</a>
+            <a href="multimedia.html" class="bg-cyan-500 text-white px-3 py-1 rounded text-sm hover:bg-cyan-600">Multimedia</a>
+            <a href="news_register.html" class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600">News Register</a>
+            <a href="chitiethoso.html" class="bg-emerald-500 text-white px-3 py-1 rounded text-sm hover:bg-emerald-600">Profile Detail</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
+</body>
+
 </html>
