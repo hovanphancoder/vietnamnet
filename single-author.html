@@ -1,50 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
-    <meta name="language" content="vietnamese" />
-    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnamnet Global - Latest News from Vietnam</title>
+    <meta name="description" content="Stay updated with the latest news from Vietnam. Vietnamnet Global brings you breaking news, politics, business, and culture from Vietnam.">
+    <meta name="keywords" content="Vietnam news, Vietnamnet, Vietnamese news, politics, business, culture">
+    <meta property="og:title" content="Vietnamnet Global - Latest News from Vietnam">
+    <meta property="og:description" content="Stay updated with the latest news from Vietnam">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vietnamnet.vn/en">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'notosans': ['Noto Sans', 'sans-serif'],
-                        'arial': ['Arial', 'sans-serif'],
-                    },
-                    colors: {
-                        'vnn-blue': '#447ec5',
-                        'vnn-dark-blue': '#2d67ad',
-                        'vnn-gray': '#6c6c6c',
-                        'vnn-light-gray': '#e2e2e2',
-                        'vnn-bg-gray': '#f7f7f7',
-                    },
-                    maxWidth: {
-                        '1140': '1140px',
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- <link rel="stylesheet" href="../css/initial-font-277.css">
-    <link rel="stylesheet" href="../css/tailwind-custom.css"> -->
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
+
+
     <!-- Main Navigation Bar -->
     <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
         <!-- Top Header Bar -->
         <div class="bg-white border-b border-gray-200  ">
-            <div class="container max-w-[1140px] mx-auto px-4">
+            <div class=" mx-auto px-4">
                 <div class="flex items-center justify-between h-12">
                     <!-- Left Side - Logo and Date -->
                     <div class="flex items-center space-x-4">
+
+
                         <!-- Date -->
                         <div class="text-sm text-gray-600 font-medium">
                             <!-- Desktop: Goback link -->
@@ -66,20 +52,21 @@
                         <!-- Vietnamnet Logo -->
                         <div class="flex items-center space-x-2">
                             <a href="index.html">
-                                <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                                <img class="w-[140px]" src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietNamGlobal">
                             </a>
                         </div>
                     </div>
 
                     <!-- Right Side - Links and Login -->
                     <div class="flex items-center space-x-4 md:w-[200px] justify-end">
+
                         <!-- Search -->
                         <div class="flex items-center space-x-3 relative">
                             <!-- Desktop: Expandable search form -->
                             <div class="hidden md:block relative">
                                 <form class="search-small__form  flex items-center" action="/search.html">
-                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
-                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-[28px] border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[3px] top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
                                         <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
                                     </button>
                                 </form>
@@ -95,7 +82,7 @@
                                 <div id="searchDropdown" class="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
                                     <form class="p-4" action="/search.html">
                                         <div class="relative">
-                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;">
                                             <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
                                                 <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
                                             </button>
@@ -109,39 +96,7 @@
             </div>
         </div>
 
-        <div class="hidden lg:block" id="mainBar">
-            <div class="flex items-center justify-center h-14">
-                <!-- Left Side - Home Icon and Navigation -->
-                <div class="flex items-center space-x-6">
-                    <!-- Home Icon -->
-                    <a href="/" class="text-blue-600 hover:text-blue-700">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-                        </svg>
-                    </a>
 
-                    <!-- Navigation Menu -->
-                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Politics</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Current Affairs</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Business</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Ethnic & Religion</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sports</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Education</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">World</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Lifestyle</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Culture & Entertainment</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Health</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Technology</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Legal</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Automotive</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Real Estate</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
-                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
     </header>
 
     <main class="container max-w-[1140px] mx-auto py-6 px-5 mt-12 lg:mt-24">
@@ -625,7 +580,7 @@
         <h3 class="text-lg font-semibold mb-3 text-gray-800">Project Pages (Demo)</h3>
         <div class="flex flex-wrap gap-2">
             <a href="index.html" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Home</a>
-            <a href="detail.html" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">single</a>
+            <a href="single.html" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">single</a>
             <a href="search.html" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Search</a>
             <a href="category.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm hover:bg-purple-600">Category</a>
             <a href="author.html" class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Author</a>
