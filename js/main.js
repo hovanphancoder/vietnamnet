@@ -327,7 +327,7 @@ function scrollToTop() {
 // }
 
 // Initialize scroll to top button
-addScrollToTopButton();
+// addScrollToTopButton();
 
 // Mobile Menu Toggle Function
 function toggleMobileMenu() {

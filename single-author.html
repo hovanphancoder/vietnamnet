@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
+    <meta name="language" content="vietnamese" />
+    <meta name="google" content="notranslate" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'notosans': ['Noto Sans', 'sans-serif'],
+                        'arial': ['Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        'vnn-blue': '#447ec5',
+                        'vnn-dark-blue': '#2d67ad',
+                        'vnn-gray': '#6c6c6c',
+                        'vnn-light-gray': '#e2e2e2',
+                        'vnn-bg-gray': '#f7f7f7',
+                    },
+                    maxWidth: {
+                        '1140': '1140px',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- <link rel="stylesheet" href="../css/initial-font-277.css">
+    <link rel="stylesheet" href="../css/tailwind-custom.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
+        <!-- Top Header Bar -->
+        <div class="bg-white border-b border-gray-200  ">
+            <div class="container max-w-[1140px] mx-auto px-4">
+                <div class="flex items-center justify-between h-12">
+                    <!-- Left Side - Logo and Date -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Date -->
+                        <div class="text-sm text-gray-600 font-medium">
+                            <!-- Desktop: Goback link -->
+                            <a class="goback hidden lg:inline-flex items-center gap-2 px-2 py-0 border border-gray-300 rounded-full" href="/">
+                                <img src="https://static.vnncdn.net/v1/icon/return.png" class="w-4 h-4" alt="return icon">
+                                <span class="hidden sm:inline">Vietnamnet.vn</span>
+                            </a>
+
+                            <!-- Mobile: Hamburger menu icon -->
+                            <button class="lg:hidden inline-flex items-center justify-center w-8 h-8 text-gray-600 hover:text-gray-900" onclick="toggleMobileMenu()">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <!-- Vietnamnet Logo -->
+                        <div class="flex items-center space-x-2">
+                            <a href="index.html">
+                                <img class="w-[140px]" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Links and Login -->
+                    <div class="flex items-center space-x-4 md:w-[200px] justify-end">
+                        <!-- Search -->
+                        <div class="flex items-center space-x-3 relative">
+                            <!-- Desktop: Expandable search form -->
+                            <div class="hidden md:block relative">
+                                <form class="search-small__form  flex items-center" action="/search.html">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Mobile: Search icon with dropdown -->
+                            <div class="md:hidden">
+                                <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.svg" class="w-5 h-5" alt="search icon">
+                                </button>
+
+                                <!-- Search Dropdown -->
+                                <div id="searchDropdown" class="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                    <form class="p-4" action="/search.html">
+                                        <div class="relative">
+                                            <input class="w-full h-10 px-4 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords....">
+                                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block" id="mainBar">
+            <div class="flex items-center justify-center h-14">
+                <!-- Left Side - Home Icon and Navigation -->
+                <div class="flex items-center space-x-6">
+                    <!-- Home Icon -->
+                    <a href="/" class="text-blue-600 hover:text-blue-700">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                        </svg>
+                    </a>
+
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Politics</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Current Affairs</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Business</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Ethnic & Religion</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Sports</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Education</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">World</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Lifestyle</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Culture & Entertainment</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Health</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Technology</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Legal</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Automotive</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Real Estate</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
+                        <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container max-w-[1140px] mx-auto py-6 px-5 mt-12 lg:mt-24">
+
+        <div class="max-w-7xl mx-auto">
+            <div class="main bg-white mx-auto">
+                <div class=" flex flex-col lg:flex-row gap-0 lg:gap-10">
+                    <!-- Left Column -->
+                    <div class="container__left flex-1 w-full lg:w-[760px]">
+                        <!-- Breadcrumb -->
+                        <div class="bread-crumb-detail flex items-center justify-between mb-5 pt-5 lg:pt-0">
+                            <ul class="flex items-center space-x-2 text-sm">
+                                <li class="hidden lg:hidden">
+                                    <a href="/" class="flex items-center">
+                                        <img class="w-4" src="https://static.vnncdn.net/v1/icon/home_mobile.svg" alt="Home">
+                                    </a>
+                                </li>
+                                <li class="text-gray-500 hidden lg:hidden">></li>
+                                <li>
+                                    <a href="/tac-gia" title="Author" class="text-[#2d67ad] font-bold text-[14px] lg:text-[16px]  uppercase">
+                                        Author
+                                    </a>
+                                </li>
+                                <li class="text-gray-400">></li>
+                                <li>
+                                    <a href="/tac-gia/tuan-nguyen-00092D.html" title="MS.Huyen" class="text-[#868686] text-[14px] uppercase">
+                                        MS.Huyen
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="info-author mb-2.5 px-0 sm:px-4">
+                            <div class="flex flex-row items-start sm:items-start">
+                                <div class="info-author__image float-left mb-5 sm:mb-0 mr-5 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="MS.Huyen" class="w-[100px] h-[100px] lg:w-[170px] lg:h-[170px] rounded-full object-cover block">
+
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <span class="icon w-3 h-3 mr-2 flex items-center justify-center">
+                                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="text text-xs font-medium">Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="info-author__text flex-1">
+                                    <h1 class="info-author__name text-[18px] lg:text-[20px]  font-bold text-[#2d67ad] mb-2" title="MS.Huyen">
+                                        MS.Huyen
+                                    </h1>
+
+                                    <div class="info-author__position mb-2">
+                                        <!-- Position content if any -->
+                                    </div>
+
+                                    <div class="info-author__desc">
+                                        <!-- Description content if any -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Author Heading -->
+                        <div class="article-author flex justify-between items-center border-b border-vnn-light-gray mb-5 pb-1.5 sm:px-4">
+                            <div class="text-[20px] font-bold mt-4">
+                                1822 articles by author MS.Huyen
+                            </div>
+                        </div>
+
+                        <!-- Articles List -->
+                        <div class="space-y-4 sm:space-y-6">
+                            <!-- Article 3 -->
+                            <div class="flex gap-4 ">
+                                <div class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 flex-shrink-0">
+                                    <a href="/single.html" two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html"="" title="Two TikTokers arrested in HCM City for staging offensive livestreams">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/two-tiktokers-arrested-in-hcm-city-for-staging-offensive-livestreams-3b53f60a389a464aa7b50d307a31d81a-94.png?width=360&amp;s=HzyBbElIc-cePtrOPTt0VQ" alt="Two TikTokers arrested in HCM City for staging offensive livestreams" class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 object-cover">
+                                    </a>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <div class="text-xs sm:text-sm font-bold mb-2 text-[#2d67ad] order-2 sm:order-1">VIETNAMNET GLOBAL</div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-3 leading-tight order-1 sm:order-2">
+                                        <a href="/single.html" two-tiktokers-arrested-in-hcmc-for-staging-offensive-livestreams-2443285.html"="" title="Two TikTokers arrested in HCM City for staging offensive livestreams" class="hover:text-[#2d67ad]">
+                                            Two TikTokers arrested in HCM City for staging offensive livestreams
+                                        </a>
+                                    </h3>
+                                    <p class="hidden sm:block text-gray-600 leading-relaxed order-3">
+                                        Ho Chi Minh City police have arrested two TikTokers for producing and spreading offensive, staged videos online aimed at attracting views.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Article 4 -->
+                            <div class="flex gap-4 ">
+                                <div class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 flex-shrink-0">
+                                    <a href="/single.html" iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html"="" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-bd447a73097246e587ddb895220b10d0-1351.png?width=360&amp;s=s9mCvu2ANl4bdiUuSJ1mkg" alt="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 object-cover">
+                                    </a>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <div class="text-xs sm:text-sm font-bold mb-2 text-[#2d67ad] order-2 sm:order-1">VIETNAMNET GLOBAL</div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-3 leading-tight order-1 sm:order-2">
+                                        <a href="/single.html" iphone-18-rumors-point-to-slimmer-dynamic-island-not-under-display-face-id-2443073.html"="" title="iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID" class="hover:text-[#2d67ad]">
+                                            iPhone 18 rumors point to slimmer Dynamic Island, not under-display Face ID
+                                        </a>
+                                    </h3>
+                                    <p class="hidden sm:block text-gray-600 leading-relaxed order-3">
+                                        iPhone 18 rumors say Apple will refine the notch design, but under-display Face ID won't arrive until 2026.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Article 5 -->
+                            <div class="flex gap-4 ">
+                                <div class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 flex-shrink-0">
+                                    <a href="/single.html" vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html"="" title="$6.3 billion proposed to widen 18 North-South expressway segments">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/63-billion-proposed-to-widen-18-north-south-expressway-segments-4f4ac77654ae4d91aff82c39e5621652-3149.png?width=360&amp;s=16x9sWRJH_f5qPmHMcS6VA" alt="$6.3 billion proposed to widen 18 North-South expressway segments" class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 object-cover">
+                                    </a>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <div class="text-xs sm:text-sm font-bold mb-2 text-[#2d67ad] order-2 sm:order-1">VIETNAMNET GLOBAL</div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-3 leading-tight order-1 sm:order-2">
+                                        <a href="/single.html" vietnam-plans-6-3-billion-upgrade-to-key-north-south-expressway-routes-2443268.html"="" title="$6.3 billion proposed to widen 18 North-South expressway segments" class="hover:text-[#2d67ad]">
+                                            $6.3 billion proposed to widen 18 North-South expressway segments
+                                        </a>
+                                    </h3>
+                                    <p class="hidden sm:block text-gray-600 leading-relaxed order-3">
+                                        The Ministry of Construction has proposed widening 18 expressway sections to six lanes, aiming to ease traffic and boost economic connectivity.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Article 6 -->
+                            <div class="flex gap-4 ">
+                                <div class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 flex-shrink-0">
+                                    <a href="/single.html" hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html"="" title="Hanoi CDC shuts fanpage comments amid child abuse scandal">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-70a3b59bfac54a7d9ed02f03d302d1ce-3147.jpg?width=360&amp;s=ZUQktaRVicGeRgG9jDgckg" alt="Hanoi CDC shuts fanpage comments amid child abuse scandal" class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 object-cover">
+                                    </a>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <div class="text-xs sm:text-sm font-bold mb-2 text-[#2d67ad] order-2 sm:order-1">VIETNAMNET GLOBAL</div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-3 leading-tight order-1 sm:order-2">
+                                        <a href="/single.html" hanoi-cdc-shuts-fanpage-comments-amid-child-abuse-scandal-2443267.html"="" title="Hanoi CDC shuts fanpage comments amid child abuse scandal" class="hover:text-[#2d67ad]">
+                                            Hanoi CDC shuts fanpage comments amid child abuse scandal
+                                        </a>
+                                    </h3>
+                                    <p class="hidden sm:block text-gray-600 leading-relaxed order-3">
+                                        Hanoi CDC has disabled comments on its Facebook page after a staff member was accused of violently abusing her stepson, sparking public outrage.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Article 7 -->
+                            <div class="flex gap-4 ">
+                                <div class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 flex-shrink-0">
+                                    <a href="/single.html" fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html"="" title="FPT CEO: Vietnamese businesses must unite to succeed">
+                                        <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/16/fpt-ceo-vietnamese-businesses-must-unite-to-succeed-af2be71520fb4280adcacdb5fb0639a0-3137.jpg?width=360&amp;s=W4KZRT6rDusoQIi73OwVcg" alt="FPT CEO: Vietnamese businesses must unite to succeed" class="w-[130px] sm:w-[240px] h-[86px] sm:h-40 object-cover">
+                                    </a>
+                                </div>
+                                <div class="flex-1 flex flex-col">
+                                    <div class="text-xs sm:text-sm font-bold mb-2 text-[#2d67ad] order-2 sm:order-1">VIETNAMNET GLOBAL</div>
+                                    <h3 class="text-base font-bold text-gray-900 mb-3 leading-tight order-1 sm:order-2">
+                                        <a href="/single.html" fpt-ceo-vietnamese-businesses-must-unite-to-succeed-2443266.html"="" title="FPT CEO: Vietnamese businesses must unite to succeed" class="hover:text-[#2d67ad]">
+                                            FPT CEO: Vietnamese businesses must unite to succeed
+                                        </a>
+                                    </h3>
+                                    <p class="hidden sm:block text-gray-600 leading-relaxed order-3">
+                                        At the Vietnam Private Sector Forum 2025, FPT CEO called for unity, collaboration, and digital skills to drive national transformation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination - Desktop -->
+                        <div class="hidden sm:flex justify-center items-center w-full mt-5 mb-10">
+                            <div class="flex items-center space-x-2">
+                                <!-- Page 1 - Active -->
+                                <a href="/en-page0" class="w-10 h-10 bg-blue-600 text-white rounded-md flex items-center justify-center text-sm font-medium hover:bg-blue-700 transition-colors">
+                                    1
+                                </a>
+
+                                <!-- Page 2 -->
+                                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    2
+                                </a>
+
+                                <!-- Page 3 -->
+                                <a href="/en-page2" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    3
+                                </a>
+
+                                <!-- Page 4 -->
+                                <a href="/en-page3" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    4
+                                </a>
+
+                                <!-- Page 5 -->
+                                <a href="/en-page4" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    5
+                                </a>
+
+                                <!-- Page 6 -->
+                                <a href="/en-page5" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    6
+                                </a>
+
+                                <!-- Next Button -->
+                                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- SEE MORE - Mobile -->
+                        <div class="sm:hidden flex justify-center items-center w-full mt-5 mb-10">
+                            <a href="/en-more" class="text-[#2d67ad] text-sm font-medium hover:text-[#1e4a7a] transition-colors">
+                                SEE MORE
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="container__right w-[300px] flex-shrink-0">
+                        <!-- Featured Authors -->
+                        <div class="featured-author border border-vnn-light-gray rounded-lg p-5 sticky top-16 hidden lg:block">
+                            <div class="featured-author__heading mb-4 text-center uppercase">
+                                <a href="/tac-gia" class="text-vnn-dark-blue font-bold text-xl">
+                                    Other Authors
+                                </a>
+                            </div>
+
+                            <form action="/tac-gia" class="featured-author__form h-9.5 leading-7 mb-5 relative w-full h-[40px] max-w-66">
+                                <input type="text" name="q" placeholder="Search by author name" class="bg-[#efefef] border-none rounded-lg text-vnn-gray font-normal text-sm h-full outline-none pl-2.5 pr-9 w-full">
+                                <button type="submit" class="absolute right-2.5 top-1/2 transform -translate-y-1/2">
+                                    <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon" class="w-4 h-4">
+                                </button>
+                            </form>
+
+                            <div class="space-y-4">
+                                <!-- Author 1 -->
+                                <div class="featured-author__article flex items-start gap-3">
+                                    <div class="featured-author__image relative overflow-hidden w-[88px] h-[88px] flex-shrink-0">
+                                        <a href="/tac-gia/thien-binh-0008OH.html" title="Thiên Bình">
+                                            <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thiên Bình" class="w-full h-full object-cover rounded-full">
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="featured-author__name mb-1">
+                                            <a href="/tac-gia/thien-binh-0008OH.html" class="text-gray-700 font-bold text-base hover:underline">
+                                                Thiên Bình
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Author 2 -->
+                                <div class="featured-author__article flex items-start gap-3">
+                                    <div class="featured-author__image relative overflow-hidden w-[88px] h-[88px] flex-shrink-0">
+                                        <a href="/tac-gia/tran-thuong-0008UB.html" title="Trần Thường">
+                                            <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Trần Thường" class="w-full h-full object-cover rounded-full">
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="featured-author__name mb-1">
+                                            <a href="/tac-gia/tran-thuong-0008UB.html" class="text-gray-700 font-bold text-base hover:underline">
+                                                Trần Thường
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Author 3 -->
+                                <div class="featured-author__article flex items-start gap-3">
+                                    <div class="featured-author__image relative overflow-hidden w-[88px] h-[88px] flex-shrink-0">
+                                        <a href="/tac-gia/minh-thu-00093R.html" title="Minh Thu">
+                                            <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Minh Thu" class="w-full h-full object-cover rounded-full">
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="featured-author__name mb-1">
+                                            <a href="/tac-gia/minh-thu-00093R.html" class="text-gray-700 font-bold text-base hover:underline">
+                                                Minh Thu
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Author 4 -->
+                                <div class="featured-author__article flex items-start gap-3">
+                                    <div class="featured-author__image relative overflow-hidden w-[88px] h-[88px] flex-shrink-0">
+                                        <a href="/tac-gia/phuong-thuy-000933.html" title="Phương Thuý ">
+                                            <img src="https://static-images.vnncdn.net/files/2023/1/9/anhe.png?width=0&s=PpFFQ1ePYRWKUhA7Kl4p5A" alt="Phương Thuý " class="w-full h-full object-cover rounded-full">
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="featured-author__name mb-1">
+                                            <a href="/tac-gia/phuong-thuy-000933.html" class="text-gray-700 font-bold text-base hover:underline">
+                                                Phương Thuý
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Author 5 -->
+                                <div class="featured-author__article flex items-start gap-3">
+                                    <div class="featured-author__image relative overflow-hidden w-[88px] h-[88px] flex-shrink-0">
+                                        <a href="/tac-gia/du-lam-0008PN.html" title="Du Lam">
+                                            <img src="https://static-images.vnncdn.net/files/2022/7/7/avatar-1.png?width=0&s=GqEFtUM5YO4n-YeG849sSw" alt="Du Lam" class="w-full h-full object-cover rounded-full">
+                                        </a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="featured-author__name mb-1">
+                                            <a href="/tac-gia/du-lam-0008PN.html" class="text-gray-700 font-bold text-base hover:underline">
+                                                Du Lam
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- Main content -->
+
+
+    <!-- Footer -->
+    <footer class="footer-en bg-gray-100 py-6 sm:py-8 mt-6 sm:mt-8" style="font-family: 'Noto Sans', sans-serif;">
+        <div class="footer-en__bottom max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
+                <!-- Left Side - Logo and Copyright -->
+                <div class="footer-en__bottom-left flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-8 w-full lg:w-auto">
+                    <a class="footer-en__bottom-logo flex-shrink-0" href="/en">
+                        <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet Global" class="h-12 sm:h-16">
+                    </a>
+                    <div class="footer-en__bottom-list text-sm text-gray-600 space-y-2">
+                        <div class="footer-en__bottom-item font-medium">© Copyright of VietNamNet Global</div>
+                        <div class="footer-en__bottom-item text-xs leading-relaxed">
+                            <span>Tel: 024 3772 7988 Fax: (024) 37722734</span>
+                            <span>, </span>
+                            <span>Email: evnn@vietnamnet.vn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Follow Us and Social Media -->
+                <div class="footer-en__bottom-follow flex flex-col items-end space-y-4">
+                    <div class="text-right">
+                        <div class="text-sm font-medium text-gray-700 mb-3">Follow us on</div>
+                        <div class="footer-en__bottom-social flex items-center space-x-2">
+                            <a title="facebook vietnamnet" target="_blank" href="https://www.facebook.com/vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/facebook-black.svg" alt="Facebook" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="youtube vietnamnet" target="_blank" href="https://www.youtube.com/c/B%C3%A1oVietNamNetTV" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/youtube-black.svg" alt="YouTube" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="tiktok vietnamnet" target="_blank" href="https://www.tiktok.com/@vietnamnet.vn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/tiktok-black.svg" alt="TikTok" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="twitter vietnamnet" target="_blank" href="https://twitter.com/vietnamnetvn" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/twitter-black.svg" alt="Twitter" class="w-4 h-4 filter invert">
+                            </a>
+                            <a title="zalo vietnamnet" target="_blank" href="http://zalo.me/660139855964186242?src=qr" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                <img src="https://static.vnncdn.net/v1/icon/zalo-black.svg" alt="Zalo" class="w-4 h-4 filter invert">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/news_register.html">Độc giả gửi bài</a>
+                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/">Tuyển dụng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Pages List -->
+    <div class="bg-gray-100 py-4 px-6">
+        <h3 class="text-lg font-semibold mb-3 text-gray-800">Project Pages (Demo)</h3>
+        <div class="flex flex-wrap gap-2">
+            <a href="index.html" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Home</a>
+            <a href="detail.html" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">Article Detail</a>
+            <a href="category.html" class="bg-purple-500 text-white px-3 py-1 rounded text-sm hover:bg-purple-600">Category</a>
+            <a href="author.html" class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Author</a>
+            <a href="search.html" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Search</a>
+            <a href="single.html" class="bg-indigo-500 text-white px-3 py-1 rounded text-sm hover:bg-indigo-600">Single Article</a>
+            <a href="single-video.html" class="bg-pink-500 text-white px-3 py-1 rounded text-sm hover:bg-pink-600">Single Video</a>
+            <a href="video.html" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600">Video</a>
+            <a href="postcast.html" class="bg-teal-500 text-white px-3 py-1 rounded text-sm hover:bg-teal-600">Podcast</a>
+            <a href="multimedia.html" class="bg-cyan-500 text-white px-3 py-1 rounded text-sm hover:bg-cyan-600">Multimedia</a>
+            <a href="news_register.html" class="bg-gray-500 text-white px-3 py-1 rounded text-sm hover:bg-gray-600">News Register</a>
+            <a href="chitiethoso.html" class="bg-emerald-500 text-white px-3 py-1 rounded text-sm hover:bg-emerald-600">Profile Detail</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,38 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1">
-    <meta name="language" content="vietnamese" />
-    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnamnet Global - Latest News from Vietnam</title>
+    <meta name="description" content="Stay updated with the latest news from Vietnam. Vietnamnet Global brings you breaking news, politics, business, and culture from Vietnam.">
+    <meta name="keywords" content="Vietnam news, Vietnamnet, Vietnamese news, politics, business, culture">
+    <meta property="og:title" content="Vietnamnet Global - Latest News from Vietnam">
+    <meta property="og:description" content="Stay updated with the latest news from Vietnam">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vietnamnet.vn/en">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'notosans': ['Noto Sans', 'sans-serif'],
-                        'arial': ['Arial', 'sans-serif'],
-                    },
-                    colors: {
-                        'vnn-blue': '#447ec5',
-                        'vnn-dark-blue': '#2d67ad',
-                        'vnn-gray': '#6c6c6c',
-                        'vnn-light-gray': '#e2e2e2',
-                        'vnn-bg-gray': '#f7f7f7',
-                    },
-                    maxWidth: {
-                        '1140': '1140px',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../css/initial-font-277.css">
-    <link rel="stylesheet" href="../css/tailwind-custom.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -41,10 +22,12 @@
     <header class="bg-white border-b border-gray-200 fixed left-0 top-0 w-full z-40">
         <!-- Top Header Bar -->
         <div class="bg-white border-b border-gray-200  ">
-            <div class="container max-w-[1140px] mx-auto px-4">
+            <div class=" mx-auto px-4">
                 <div class="flex items-center justify-between h-12">
                     <!-- Left Side - Logo and Date -->
                     <div class="flex items-center space-x-4">
+
+
                         <!-- Date -->
                         <div class="text-sm text-gray-600 font-medium">
                             <!-- Desktop: Goback link -->
@@ -73,13 +56,14 @@
 
                     <!-- Right Side - Links and Login -->
                     <div class="flex items-center space-x-4 md:w-[200px] justify-end">
+
                         <!-- Search -->
                         <div class="flex items-center space-x-3 relative">
                             <!-- Desktop: Expandable search form -->
                             <div class="hidden md:block relative">
                                 <form class="search-small__form  flex items-center" action="/search.html">
-                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
-                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-[28px] border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[3px] top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
                                         <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
                                     </button>
                                 </form>
@@ -109,18 +93,17 @@
             </div>
         </div>
 
-        <div class="hidden lg:block" id="mainBar">
+        <!-- <div class="hidden lg:block" id="mainBar">
             <div class="flex items-center justify-center h-14">
-                <!-- Left Side - Home Icon and Navigation -->
+          
                 <div class="flex items-center space-x-6">
-                    <!-- Home Icon -->
+                  
                     <a href="/" class="text-blue-600 hover:text-blue-700">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                         </svg>
                     </a>
 
-                    <!-- Navigation Menu -->
                     <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium whitespace-nowrap overflow-x-auto">
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2d67ad] whitespace-nowrap text-sm font-bold">Politics</a>
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Current Affairs</a>
@@ -139,409 +122,442 @@
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
                     </nav>
-                </div>
-            </div>
-        </div>
+                  
+                        </div>
+
+              
+                            </div>
+        </div> -->
+
+
     </header>
 
-    <!-- Main content -->
-    <div class="main bg-white mx-auto max-w-1140 pt-20 mt-10">
-        <div class="container flex flex-col lg:flex-row gap-5 px-4 lg:px-0">
-            <!-- Left Column -->
-            <div class="container__left flex-1">
-                <!-- Breadcrumb -->
-                <div class="bread-crumb-detail flex items-center justify-between mb-5 pt-5 lg:pt-0">
-                    <ul class="flex items-center space-x-2 text-sm">
-                        <li>
-                            <a href="/" class="flex items-center">
-                                <img class="w-4 h-4" src="https://static.vnncdn.net/v1/icon/home_mobile.svg" alt="Home">
-                            </a>
-                        </li>
-                        <li class="text-gray-500">|</li>
-                        <li>
-                            <a href="/tac-gia" title="Author" class="text-vnn-gray hover:text-vnn-blue">
-                                Author
-                            </a>
-                        </li>
-                        <li class="text-gray-500">|</li>
-                        <li>
-                            <a href="/tac-gia/tuan-nguyen-00092D.html" title="Tuân Nguyễn" class="text-vnn-gray hover:text-vnn-blue">
-                                Tuân Nguyễn
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <main class="container max-w-[1140px] mx-auto py-6 px-5 mt-12 lg:mt-24">
 
-                <!-- Author Info -->
-                <div class="info-author mb-2.5 px-0 sm:px-4">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-start">
-                        <div class="info-author__image float-left mb-5 sm:mb-0 mr-5 relative">
-                            <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tuân Nguyễn" class="w-42 h-42 sm:w-25 sm:h-25 rounded-full object-cover block">
-
-                            <button class="info-author__btn absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-vnn-bg-gray border border-vnn-light-gray rounded-lg text-gray-700 cursor-pointer h-7 w-25 sm:w-22.5 z-100 flex items-center justify-center">
-                                <span class="icon w-2.5 h-2.5 bg-center bg-no-repeat bg-cover mr-1" style="background-image: url('https://static.vnncdn.net/v1/pictures/cay-but/add_v2.svg');"></span>
-                                <span class="text text-xs">Follow</span>
-                            </button>
-                        </div>
-
-                        <div class="info-author__text flex-1">
-                            <h1 class="info-author__name text-2xl sm:text-xl font-bold text-black mb-2" title="Tuân Nguyễn">
-                                Tuân Nguyễn
-                            </h1>
-
-                            <div class="info-author__position mb-2">
-                                <!-- Position content if any -->
-                            </div>
-
-                            <div class="info-author__desc">
-                                <!-- Description content if any -->
+        <div class="max-w-7xl mx-auto">
+            <div class="main bg-white mx-auto">
+                <div class=" flex flex-col lg:flex-row gap-10  lg:px-0">
+                    <!-- Left Column -->
+                    <div class="flex-1">
+                        <div class="text-center">
+                            <div class="heading-box">
+                                <h1 class="heading-box__title text-2xl font-bold text-[#2d67ad] uppercase mb-6">
+                                    Author
+                                </h1>
+                                <form action="/tac-gia" class="heading-box__form flex items-center justify-center gap-3 mx-auto">
+                                    <input name="q" type="text" placeholder="Enter author name" class="border border-[#d9d9d9] rounded-[10px] text-[#555] notosans-regular text-sm font-normal h-10 leading-10 outline-none px-[10px] w-[540px]">
+                                    <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors flex items-center gap-2 whitespace-nowrap">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        </svg>
+                                        <span>Search</span>
+                                    </button>
+                                </form>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Article Author Heading -->
-                <div class="article-author flex justify-between items-center border-b border-vnn-light-gray mb-5 pb-1.5 px-0 sm:px-4">
-                    <div class="article-author__heading text-vnn-blue font-bold text-xl leading-8 sm:text-base sm:leading-6 sm:text-vnn-dark-blue sm:font-bold">
-                        1822 articles by author Tuân Nguyễn
-                    </div>
-                </div>
+                        <!-- Authors List -->
+                        <div class="authors-grid grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[30px] mt-8">
+                            <!-- Author 1 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thái An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
 
-                <!-- Articles List -->
-                <div class="seeMoreArticle" websiteid="000003" pageid="09447377614048138e1b64bd324f1aed" componentid="COMPONENT002570" pseudonymid="0008UK" pagesize="5" pageindex="1">
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Thái An</a>
+                                </div>
+                            </div>
 
-                    <!-- Article 1 -->
-                    <div class="horizontalPost mb-5 flex flex-col sm:flex-row gap-4">
-                        <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-2441993.html" title="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" data-utm-source="">
-                                <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/22/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-3039.jpg?width=550&s=uZEz28QCzGn80CLWL7x-Rg" alt="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="horizontalPost__main flex-1">
-                            <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
-                            </div>
-                            <h3 data-id="2441993" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/lai-suat-ngan-hang-hom-nay-22-9-2025-gui-5-ty-dong-nhan-lai-6-5-2441993.html" title="Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Lãi suất ngân hàng hôm nay 22/9/2025: Gửi 5 tỷ đồng nhận lãi 6,5%
-                                </a>
-                            </h3>
-                            <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Lãi suất ngân hàng hôm nay 22/9/2025, nhiều ngân hàng tiếp tục duy trì mức lãi suất huy động cao, trong đó có ngân hàng trả lãi suất lên đến 6,5%/năm cho kỳ hạn 12 tháng, trở thành một kênh đầu tư an toàn và dài hạn cho các nhà đầu tư.</p>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- Author 2 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tâm An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
 
-                    <!-- Article 2 -->
-                    <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
-                        <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-2440809.html" title="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" data-utm-source="">
-                                <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/18/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-195.jpg?width=550&s=EuWE_s5MugA95qv2EycGow" alt="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="horizontalPost__main flex-1">
-                            <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Tâm An</a>
+                                </div>
                             </div>
-                            <h3 data-id="2440809" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/dai-gia-van-tai-bien-mot-thoi-ngap-trong-thua-lo-hon-5500-ty-dong-2440809.html" title="'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    'Đại gia' vận tải biển một thời ngập trong thua lỗ hơn 5.500 tỷ đồng
-                                </a>
-                            </h3>
-                            <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Từng là tên tuổi lớn trong ngành vận tải đường biển, CTCP Vận tải biển và thương mại Phương Đông - đơn vị mà Tổng công ty Hàng hải Việt Nam nắm 49% vốn giờ đây ngập trong thua lỗ. Kiểm toán viên cũng nghi ngờ khả năng hoạt động liên tục.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Article 3 -->
-                    <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
-                        <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2441998.html" title="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" data-utm-source="">
-                                <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2630.jpg?width=550&s=NybOf2FyFrd4c0lYGcQzlg" alt="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="horizontalPost__main flex-1">
-                            <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
-                            </div>
-                            <h3 data-id="2441998" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/agribank-len-tieng-viec-cuu-chu-tich-nguyen-the-binh-bi-truy-na-2441998.html" title="Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Agribank lên tiếng việc cựu Chủ tịch Nguyễn Thế Bình bị truy nã
-                                </a>
-                            </h3>
-                            <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam (Agribank) vừa chính thức lên tiếng về việc ông Nguyễn Thế Bình, cựu Chủ tịch HĐTV Agribank bị cơ quan công an phát lệnh truy nã.</p>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- Author 3 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Xuân An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
 
-                    <!-- Article 4 -->
-                    <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
-                        <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-2441997.html" title="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" data-utm-source="">
-                                <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-1728.jpg?width=550&s=uYtybL4rKRvbuaSHtKGkaA" alt="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="horizontalPost__main flex-1">
-                            <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/kinh-doanh" title="Tư vấn tài chính" class="text-vnn-blue font-bold text-sm">Tư vấn tài chính</a>
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Xuân An</a>
+                                </div>
                             </div>
-                            <h3 data-id="2441997" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/tiet-kiem-tich-luy-la-gi-nen-gui-tich-luy-hay-gui-thuong-2441997.html" title="Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Tiết kiệm tích lũy là gì? Nên gửi tích lũy hay gửi thường?
-                                </a>
-                            </h3>
-                            <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Bên cạnh sản phẩm tiết kiệm thông thường, các ngân hàng còn đa dạng hoá các sản phẩm tiết kiệm, trong đó có tiết kiệm tích luỹ nhằm hướng đến những cá nhân có nhu cầu tiết kiệm đều đặn theo định kỳ.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Article 5 -->
-                    <div class="horizontalPost sm:border-t sm:border-vnn-light-gray mb-5 flex flex-col sm:flex-row gap-4 pt-5">
-                        <div class="horizontalPost__avt w-full sm:w-60 sm:max-w-60 flex-shrink-0">
-                            <a href="https://vietnamnet.vn/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-2441996.html" title="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" data-utm-source="">
-                                <picture class="block relative w-full" style="padding-bottom: 66.5%;">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy absolute inset-0 w-full h-full object-cover" data-srcset="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/9/17/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-209.jpg?width=550&s=p9qqqqluFK6PtSEaj9i6zQ" alt="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" />
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="horizontalPost__main flex-1">
-                            <div class="horizontalPost__main-cate block mb-2.5">
-                                <a href="/kinh-doanh" title="Tài chính" class="text-vnn-blue font-bold text-sm">Tài chính</a>
-                            </div>
-                            <h3 data-id="2441996" class="horizontalPost__main-title text-lg font-bold leading-6 mb-2.5">
-                                <a href="https://vietnamnet.vn/nang-ganh-no-nan-don-vi-lien-quan-tong-cong-ty-hang-hai-bi-rao-ban-tau-hon-100-ty-2441996.html" title="Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ" data-utm-source="" data-limit="" class="text-gray-800 hover:text-vnn-dark-blue no-underline">
-                                    Nặng gánh nợ nần, đơn vị liên quan Tổng công ty Hàng hải bị rao bán tàu hơn 100 tỷ
-                                </a>
-                            </h3>
-                            <div class="horizontalPost__main-desc text-gray-600 text-sm leading-5" data-limit="">
-                                <p>Tàu biển mang tên Oriental Glory - sở hữu bởi một đơn vị Tổng công ty Hàng hải Việt Nam chiếm 49% vốn, sẽ được Agribank đưa ra bán đấu giá lần hai vào ngày 10/10 tới.</p>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- Author 4 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Diệu An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
 
-                </div>
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Diệu An</a>
+                                </div>
+                            </div>
+                            <!-- Author 1 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thái An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
 
-                <!-- Pagination -->
-                <div class="flex justify-between items-center w-full">
-                    <div class="pagination mx-auto">
-                        <ul class="pagination__list flex items-center space-x-2.5">
-                            <li class="pagination__list-item active">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page0.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Thái An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 2 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tâm An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Tâm An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 3 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Xuân An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Xuân An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 4 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Diệu An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Diệu An</a>
+                                </div>
+                            </div>
+                            <!-- Author 1 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thái An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Thái An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 2 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tâm An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Tâm An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 3 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Xuân An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Xuân An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 4 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Diệu An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Diệu An</a>
+                                </div>
+                            </div>
+                            <!-- Author 1 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thái An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Thái An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 2 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tâm An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Tâm An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 3 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Xuân An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Xuân An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 4 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Diệu An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Diệu An</a>
+                                </div>
+                            </div>
+                            <!-- Author 1 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thái An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Thái An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 2 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/anh-vms-4.jpg?width=0&s=JWvqWU4w-aOB6omZIuGItw" alt="Tâm An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Tâm An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 3 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Xuân An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Xuân An</a>
+                                </div>
+                            </div>
+
+                            <!-- Author 4 -->
+                            <div class="author-card text-center border border-gray-200  p-4  h-auto sm:min-h-[320px]">
+                                <div class="author-image mb-3 relative">
+                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Diệu An" class="w-[100px] h-[100px] sm:w-[170px] sm:h-[170px] rounded-full object-cover mx-auto">
+                                    <button class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-100 border border-[#ccc] rounded-[10px] text-gray-800 cursor-pointer h-6 px-2 z-100 flex items-center text-[12px]  justify-center transition-colors">
+                                        <svg class="w-3 h-3 mr-2 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                                        </svg>
+                                        <span>Follow</span>
+                                    </button>
+                                </div>
+
+                                <div class="author-name mt-4">
+                                    <a href="#" class="text-[#2d67ad] notosans-bold text-base leading-[22px] mt-4 font-bold">Diệu An</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Pagination - Desktop -->
+                        <div class="hidden sm:flex justify-center items-center w-full mt-5 mb-10">
+                            <div class="flex items-center space-x-2">
+                                <!-- Page 1 - Active -->
+                                <a href="/en-page0" class="w-10 h-10 bg-blue-600 text-white rounded-md flex items-center justify-center text-sm font-medium hover:bg-blue-700 transition-colors">
                                     1
                                 </a>
-                            </li>
-                            <li class="pagination__list-item">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page1.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+
+                                <!-- Page 2 -->
+                                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
                                     2
                                 </a>
-                            </li>
-                            <li class="pagination__list-item">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page2.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+
+                                <!-- Page 3 -->
+                                <a href="/en-page2" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
                                     3
                                 </a>
-                            </li>
-                            <li class="pagination__list-item">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page3.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+
+                                <!-- Page 4 -->
+                                <a href="/en-page3" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
                                     4
                                 </a>
-                            </li>
-                            <li class="pagination__list-item">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page4.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+
+                                <!-- Page 5 -->
+                                <a href="/en-page4" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
                                     5
                                 </a>
-                            </li>
-                            <li class="pagination__list-item">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page5.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
+
+                                <!-- Page 6 -->
+                                <a href="/en-page5" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
                                     6
                                 </a>
-                            </li>
-                            <li class="pagination__list-item pagination-next block">
-                                <a href="/tac-gia/tuan-nguyen-00092D-page1.html" class="inline-flex items-center justify-center border border-gray-400 rounded text-gray-700 font-normal text-sm h-7.5 w-7.5 hover:text-vnn-blue hover:border-vnn-blue">
-                                    <img src="https://static.vnncdn.net/v1/icon/icon-pagination.svg" alt="icon next" class="w-3.5 h-3.5">
+
+                                <!-- Next Button -->
+                                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
 
-                        <button class="btnSeeMoreArticle bg-white border border-gray-400 font-bold px-5 py-2 rounded-3xl text-vnn-blue uppercase text-xs flex items-center mx-auto gap-1.5 mt-4">
-                            View More
-                            <img class="w-2.5 h-2.5 icon-loading hidden" src="https://static-images.vnncdn.net/files/loading.svg" alt="icon loading">
-                        </button>
+
+                        <!-- SEE MORE - Mobile -->
+                        <div class="sm:hidden flex justify-center items-center w-full mt-5 mb-10">
+                            <a href="/en-more" class="text-[#2d67ad] text-sm font-medium hover:text-[#1e4a7a] transition-colors">
+                                SEE MORE
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="panination__calendar hidden">
-                        <a href="/tin-tuc-24h?cate=" class="flex items-center gap-2">
-                            <span>View news by date</span>
-                            <span><img src="https://static.vnncdn.net/v1/icon/calendar.svg" class="w-4 h-4"></span>
-                        </a>
-                    </div>
+
                 </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="container__right w-full lg:w-80 flex-shrink-0">
-                <!-- Featured Authors -->
-                <div class="featured-author border border-vnn-light-gray rounded-lg p-5 sticky top-16 hidden lg:block">
-                    <div class="featured-author__heading mb-4 text-center uppercase">
-                        <a href="/tac-gia" class="text-vnn-dark-blue font-bold text-xl">
-                            Other Authors
-                        </a>
-                    </div>
-
-                    <form action="/tac-gia" class="featured-author__form h-9.5 leading-7 mb-5 relative w-full max-w-66">
-                        <input type="text" name="q" placeholder="Search by author name" class="bg-vnn-bg-gray border-none rounded-lg text-vnn-gray font-normal text-sm h-full outline-none pl-2.5 pr-9 w-full">
-                        <button type="submit" class="absolute right-2.5 top-1/2 transform -translate-y-1/2">
-                            <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon" class="w-4 h-4">
-                        </button>
-                    </form>
-
-                    <div class="space-y-4">
-                        <!-- Author 1 -->
-                        <div class="featured-author__article flex items-start gap-3">
-                            <div class="featured-author__image relative overflow-hidden w-16 h-16 flex-shrink-0">
-                                <a href="/tac-gia/thien-binh-0008OH.html" title="Thiên Bình">
-                                    <div class="card-skeleton absolute inset-0">
-                                        <div class="animated-background">
-                                            <div class="skel-mask-container">
-                                                <div class="skel-mask skel-mask-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/6/30/tac-gia-van-hung.jpg?width=0&s=YJE-whMIfcslKqw4Bo_qUA" alt="Thiên Bình" class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="featured-author__name mb-1">
-                                    <a href="/tac-gia/thien-binh-0008OH.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Thiên Bình
-                                    </a>
-                                </div>
-                                <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
-                                    <!-- Description if any -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Author 2 -->
-                        <div class="featured-author__article flex items-start gap-3">
-                            <div class="featured-author__image relative overflow-hidden w-16 h-16 flex-shrink-0">
-                                <a href="/tac-gia/tran-thuong-0008UB.html" title="Trần Thường">
-                                    <div class="card-skeleton absolute inset-0">
-                                        <div class="animated-background">
-                                            <div class="skel-mask-container">
-                                                <div class="skel-mask skel-mask-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/6/27/1-5.jpg?width=0&s=l5xrRW7lOHjzbUSBhSi9Yg" alt="Trần Thường" class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="featured-author__name mb-1">
-                                    <a href="/tac-gia/tran-thuong-0008UB.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Trần Thường
-                                    </a>
-                                </div>
-                                <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
-                                    <!-- Description if any -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Author 3 -->
-                        <div class="featured-author__article flex items-start gap-3">
-                            <div class="featured-author__image relative overflow-hidden w-16 h-16 flex-shrink-0">
-                                <a href="/tac-gia/minh-thu-00093R.html" title="Minh Thu">
-                                    <div class="card-skeleton absolute inset-0">
-                                        <div class="animated-background">
-                                            <div class="skel-mask-container">
-                                                <div class="skel-mask skel-mask-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="https://static-images.vnncdn.net/files/2023/1/18/unnamed-4.jpg?width=0&s=xCC0ijhcDIxtui0gnOso2g" alt="Minh Thu" class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="featured-author__name mb-1">
-                                    <a href="/tac-gia/minh-thu-00093R.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Minh Thu
-                                    </a>
-                                </div>
-                                <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
-                                    <!-- Description if any -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Author 4 -->
-                        <div class="featured-author__article flex items-start gap-3">
-                            <div class="featured-author__image relative overflow-hidden w-16 h-16 flex-shrink-0">
-                                <a href="/tac-gia/phuong-thuy-000933.html" title="Phương Thuý ">
-                                    <div class="card-skeleton absolute inset-0">
-                                        <div class="animated-background">
-                                            <div class="skel-mask-container">
-                                                <div class="skel-mask skel-mask-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="https://static-images.vnncdn.net/files/2023/1/9/anhe.png?width=0&s=PpFFQ1ePYRWKUhA7Kl4p5A" alt="Phương Thuý " class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="featured-author__name mb-1">
-                                    <a href="/tac-gia/phuong-thuy-000933.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Phương Thuý
-                                    </a>
-                                </div>
-                                <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
-                                    <!-- Description if any -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Author 5 -->
-                        <div class="featured-author__article flex items-start gap-3">
-                            <div class="featured-author__image relative overflow-hidden w-16 h-16 flex-shrink-0">
-                                <a href="/tac-gia/du-lam-0008PN.html" title="Du Lam">
-                                    <div class="card-skeleton absolute inset-0">
-                                        <div class="animated-background">
-                                            <div class="skel-mask-container">
-                                                <div class="skel-mask skel-mask-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="https://static-images.vnncdn.net/files/2022/7/7/avatar-1.png?width=0&s=GqEFtUM5YO4n-YeG849sSw" alt="Du Lam" class="w-full h-full object-cover">
-                                </a>
-                            </div>
-                            <div class="flex-1">
-                                <div class="featured-author__name mb-1">
-                                    <a href="/tac-gia/du-lam-0008PN.html" class="text-vnn-dark-blue font-bold text-sm hover:underline">
-                                        Du Lam
-                                    </a>
-                                </div>
-                                <div class="featured-author__desc text-vnn-gray text-xs" data-limit="60">
-                                    <!-- Description if any -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-    </div>
+        </div>
+    </main>
+
+    <!-- Main content -->
+
 
     <!-- Footer -->
     <footer class="footer-en bg-gray-100 py-6 sm:py-8 mt-6 sm:mt-8" style="font-family: 'Noto Sans', sans-serif;">
@@ -585,8 +601,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-4">
-                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/news_register.html">Độc giả gửi bài</a>
-                        <a class=" text-gray-800  text-sm font-medium hover:bg-gray-50  border-gray-300 " href="/">Tuyển dụng</a>
+                        <a class="footer-en__bottom-send self-end bg-white rounded-[25px] text-[#222] inline-block text-[13px] px-[25px] py-[5px]" href="/">Send to editor</a>
                     </div>
                 </div>
             </div>
