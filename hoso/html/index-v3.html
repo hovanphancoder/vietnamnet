@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate"/>
+    <title>Hồ sơ - Tư liệu, thông tin về các nhân vật, sự kiện</title>
+    <meta name="description" content="Hồ sơ - Tư liệu, thông tin về các nhân vật, sự kiện nóng tại Việt Nam và quốc tế được cập nhật đầy đủ trên VietNamNet" />
+    <meta name="keywords" content="Hồ sơ, tư liệu về người nổi tiếng, hồ sơ chính trị gia, tư liệu các sự kiện lớn" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vnn-blue': '#2d67ad',
+                        'vnn-gray': '#8f8f8f',
+                        'vnn-light-blue': '#e9f0f7',
+                    },
+                    fontFamily: {
+                        'noto-bold': ['Noto Sans', 'sans-serif'],
+                        'noto-regular': ['Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for specific components -->
+    <style>
+        .icon-hamburger::before {
+            content: "☰";
+            font-size: 20px;
+        }
+        .icon-seemore::before {
+            content: "→";
+            font-size: 14px;
+        }
+        .icon-search::before {
+            content: "🔍";
+            font-size: 16px;
+        }
+        
+        /* Mobile header logo styling */
+        .mobile-logo {
+            color: #dc2626; /* Red color matching Vietnamnet brand */
+        }
+        
+        /* Mobile navigation active state */
+        .mobile-nav-active {
+            color: #2d67ad;
+            border-bottom: 2px solid #2d67ad;
+        }
+        
+        /* Ensure mobile navigation is scrollable */
+        .mobile-nav-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .mobile-nav-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Tablet header logo styling */
+        .tablet-logo {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        
+        /* Tablet navigation active state */
+        .tablet-nav-active {
+            color: #2d67ad;
+            border-bottom: 2px solid #2d67ad;
+        }
+        
+        /* Ensure tablet navigation is scrollable */
+        .tablet-nav-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .tablet-nav-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Tracking info -->
+    <input class="hidden" 
+        data-pageid="3978b60a682a4e549592a96e450c94b1" 
+        data-pagetype='' 
+        data-pageTitle='Hồ sơ - Tư liệu, thông tin về các nhân vật, sự kiện'
+        data-pageAvatar='https://res-files.vnncdn.net/files/2024/1/2/thumb-share-muc.jpg'
+        data-pageTitleTracking=''
+        data-detailpage='' 
+        data-async-zone=""
+        data-response-status="200"
+        type="hidden" 
+    />
+
+    <div class="min-h-screen">
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <!-- Profile Filter Section Component -->
+        <div id="profile-filter-component"></div>
+
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <!-- Profile Groups -->
+            <div class="space-y-10">
+                <!-- Chính trị gia Group -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center mb-6 pb-4 border-b border-vnn-blue/50">
+                        <h2 class="text-xl font-bold text-white bg-vnn-blue px-5 py-2 rounded-t-md">
+                            <a href="/ho-so/chinh-tri" class="text-white hover:text-white">Chính trị gia</a>
+                        </h2>
+                        <a href="/ho-so/chinh-tri" class="hidden lg:flex items-center gap-2 text-vnn-gray hover:text-vnn-blue">
+                            <span>Xem thêm</span>
+                            <span class="icon-seemore"></span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Profile Items using ProfileCard component -->
+                        <div id="profile-card-1"></div>
+                        <div id="profile-card-2"></div>
+                        <div id="profile-card-3"></div>
+                        <div id="profile-card-4"></div>
+                        <div id="profile-card-5"></div>
+                        <div id="profile-card-6"></div>
+                    </div>
+                </div>
+
+                <!-- Đại biểu quốc hội Group -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center mb-6 pb-4 border-b border-vnn-blue/50">
+                        <h2 class="text-xl font-bold text-white bg-vnn-blue px-5 py-2 rounded-t-md">
+                            <a href="/ho-so/dai-bieu-quoc-hoi" class="text-white hover:text-white">Đại biểu quốc hội</a>
+                        </h2>
+                        <a href="/ho-so/dai-bieu-quoc-hoi" class="hidden lg:flex items-center gap-2 text-vnn-gray hover:text-vnn-blue">
+                            <span>Xem thêm</span>
+                            <span class="icon-seemore"></span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div id="profile-card-7"></div>
+                    </div>
+                </div>
+
+                <!-- Ủy viên trung ương Group -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center mb-6 pb-4 border-b border-vnn-blue/50">
+                        <h2 class="text-xl font-bold text-white bg-vnn-blue px-5 py-2 rounded-t-md">
+                            <a href="/ho-so/uy-vien-trung-uong" class="text-white hover:text-white">Ủy viên trung ương</a>
+                        </h2>
+                        <a href="/ho-so/uy-vien-trung-uong" class="hidden lg:flex items-center gap-2 text-vnn-gray hover:text-vnn-blue">
+                            <span>Xem thêm</span>
+                            <span class="icon-seemore"></span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Similar profile items as above -->
+                    </div>
+                </div>
+
+                <!-- Nghệ sĩ Group -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center mb-6 pb-4 border-b border-vnn-blue/50">
+                        <h2 class="text-xl font-bold text-white bg-vnn-blue px-5 py-2 rounded-t-md">
+                            <a href="/ho-so/nghe-si" class="text-white hover:text-white">Nghệ sĩ</a>
+                        </h2>
+                        <a href="/ho-so/nghe-si" class="hidden lg:flex items-center gap-2 text-vnn-gray hover:text-vnn-blue">
+                            <span>Xem thêm</span>
+                            <span class="icon-seemore"></span>
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div id="profile-card-8"></div>
+                        <div id="profile-card-9"></div>
+                        <div id="profile-card-10"></div>
+                        <div id="profile-card-11"></div>
+                        <div id="profile-card-12"></div>
+                        <div id="profile-card-13"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Back to top button component -->
+        <div id="back-to-top-component"></div>
+    </div>
+
+    <!-- JavaScript for component loading and functionality -->
+    <script>
+        // Component data
+        const profileData = [
+            {
+                id: 1,
+                name: "Ông Tô Lâm",
+                title: "Tổng Bí thư",
+                url: "/ho-so/ong-to-lam-C000725.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2024/5/22/to-lam-thumb-314.jpg?width=400&s=vmfzRGRJxCw8_ER4rILUCA"
+            },
+            {
+                id: 2,
+                name: "Ông Lương Cường",
+                title: "Chủ tịch nước",
+                url: "/ho-so/ong-luong-cuong-C001088.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2024/10/21/luong-cuong-thump-18308.jpg?width=400&s=EvJtI6BHpdB6tWlvsfcupQ"
+            },
+            {
+                id: 3,
+                name: "Ông Phạm Minh Chính",
+                title: "Thủ tướng Chính phủ",
+                url: "/ho-so/ong-pham-minh-chinh-C001128.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2021/01/31/19/20210131192810-ttxvn_pham_minh_chinh-(1).jpg?width=400&s=hDfgCdgE02ym1nBmBZmbBg"
+            },
+            {
+                id: 4,
+                name: "Ông Trần Thanh Mẫn",
+                title: "Chủ tịch Quốc hội",
+                url: "/ho-so/ong-tran-thanh-man-C000657.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2025/2/10/ong-tran-thanh-man-thumb-77306.jpg?width=400&s=aGd_wV61oZ3z6r9N64QzwQ"
+            },
+            {
+                id: 5,
+                name: "Ông Trần Cẩm Tú",
+                title: "Thường trực Ban Bí thư",
+                url: "/ho-so/ong-tran-cam-tu-C000151.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2021/01/31/19/20210131191448-ttxvn_tran_cam_tu-(1).jpg?width=400&s=0wiOWfhfRABwa_uGhY7qjg"
+            },
+            {
+                id: 6,
+                name: "Ông Nguyễn Hòa Bình",
+                title: "Phó Thủ tướng thường trực Chính phủ",
+                url: "/ho-so/ong-nguyen-hoa-binh-C001188.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2024/8/26/nguyen-hoa-binh-thumb-2139.jpg?width=400&s=wDYy3c0v0BfGg_WOXEmTGA"
+            },
+            {
+                id: 7,
+                name: "Ông Tô Lâm",
+                title: "Tổng Bí thư",
+                url: "/ho-so/ong-to-lam-C000725.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2024/5/22/to-lam-thumb-314.jpg?width=400&s=vmfzRGRJxCw8_ER4rILUCA"
+            },
+            {
+                id: 8,
+                name: "365Daband",
+                title: "",
+                url: "/ho-so/-365daband-SA002088.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2016/03/02/15/20160302154356-ava.jpg?width=400&s=1b-UVlCvtuzGBlgscLW6Ew"
+            },
+            {
+                id: 9,
+                name: "Bảo Anh",
+                title: "",
+                url: "/ho-so/bao-anh-SA002087.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2016/03/04/15/20160304152811-ava.jpg?width=400&s=gggxIMVTO7lXg5BDCh88qw"
+            },
+            {
+                id: 10,
+                name: "Dương Domic",
+                title: "",
+                url: "/ho-so/duong-domic-00011W.html",
+                image: "https://static-images.vnncdn.net/vps_images/000001/000003/2024/12/10/channels4-profile-17973.jpg?width=400&s=HR5Kw09gnANlF2ri3ayUuQ"
+            },
+            {
+                id: 11,
+                name: "Penelope Cruz",
+                title: "",
+                url: "/ho-so/penelope-cruz-SA002081.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2016/02/22/14/20160222141656-3.jpg?width=400&s=KhVnVWp8GXE_fcAH742cjw"
+            },
+            {
+                id: 12,
+                name: "Emilia Clarke",
+                title: "",
+                url: "/ho-so/emilia-clarke-SA002083.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2016/03/02/15/20160302152820-5.jpg?width=400&s=C4TIEruIYz_LLVdqKwJPDg"
+            },
+            {
+                id: 13,
+                name: "Mỹ Tâm",
+                title: "Ca sĩ",
+                url: "/ho-so/my-tam-SA001977.html",
+                image: "https://prof-imgs.vgcloud.vn/Images/v-profile/2016/02/21/12/20160221122349-tieu-su-ca-si-my-tam.JPG?width=400&s=fYA4_cI4aj-Fc5Bv6pF1xA"
+            }
+        ];
+
+        // Profile Card Component Template
+        function createProfileCard(profile) {
+            return `
+                <div class="flex gap-5 p-4 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
+                    <div class="flex-shrink-0">
+                        <a href="${profile.url}" class="block">
+                            <img src="${profile.image}" 
+                                 alt="${profile.name}" 
+                                 class="w-32 h-32 object-cover rounded-full border-2 border-transparent group-hover:border-vnn-blue transition-colors">
+                        </a>
+                    </div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-vnn-blue transition-colors">
+                            <a href="${profile.url}">${profile.name}</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-3">${profile.title}</p>
+                        <div class="flex ">
+                            <a href="${profile.url}" 
+                               class="w-8 h-8 bg-gray-200 group-hover:bg-vnn-blue rounded-full flex items-center justify-center transition-colors">
+                                <span class="icon-seemore text-gray-600 group-hover:text-white"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load components when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load profile cards
+            profileData.forEach((profile, index) => {
+                const container = document.getElementById(`profile-card-${profile.id}`);
+                if (container) {
+                    container.innerHTML = createProfileCard(profile);
+                }
+            });
+
+            // Load header component
+            const headerContainer = document.getElementById('header-component');
+            if (headerContainer) {
+                fetch('../components/Header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        headerContainer.innerHTML = data;
+                    });
+            }
+
+            // Load profile filter component
+            const filterContainer = document.getElementById('profile-filter-component');
+            if (filterContainer) {
+                fetch('../components/ProfileFilterSection.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        filterContainer.innerHTML = data;
+                    });
+            }
+
+            // Load back to top component
+            const backToTopContainer = document.getElementById('back-to-top-component');
+            if (backToTopContainer) {
+                fetch('../components/BackToTopButton.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        backToTopContainer.innerHTML = data;
+                    });
+            }
+        });
+
+        // Back to top functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTopId');
+            
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    console.log('Mobile menu clicked');
+                });
+            }
+
+            // Tablet menu toggle
+            const tabletMenuToggle = document.getElementById('tablet-menu-toggle');
+            
+            if (tabletMenuToggle) {
+                tabletMenuToggle.addEventListener('click', () => {
+                    console.log('Tablet menu clicked');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
