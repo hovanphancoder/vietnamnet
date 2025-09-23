@@ -389,14 +389,14 @@ function initializeSearchDropdown() {
 
             if (!isExpanded) {
                 // Expand input
-                searchInput.classList.remove('w-12', 'px-0');
-                searchInput.classList.add('w-60', 'px-4');
+                searchInput.classList.remove('w-12', 'px-0', 'pr-12');
+                searchInput.classList.add('w-60', 'px-4', 'pr-10');
                 searchInput.focus();
                 isExpanded = true;
             } else {
                 // Collapse input
-                searchInput.classList.remove('w-60', 'px-4');
-                searchInput.classList.add('w-12', 'px-0');
+                searchInput.classList.remove('w-60', 'px-4', 'pr-10');
+                searchInput.classList.add('w-12', 'px-0', 'pr-12');
                 searchInput.value = '';
                 isExpanded = false;
             }
@@ -406,8 +406,8 @@ function initializeSearchDropdown() {
         document.addEventListener('click', function(e) {
             if (!searchToggleDesktop.contains(e.target) && !searchInput.contains(e.target)) {
                 if (isExpanded) {
-                    searchInput.classList.remove('w-60', 'px-4');
-                    searchInput.classList.add('w-12', 'px-0');
+                    searchInput.classList.remove('w-60', 'px-4', 'pr-10');
+                    searchInput.classList.add('w-12', 'px-0', 'pr-12');
                     searchInput.value = '';
                     isExpanded = false;
                 }
