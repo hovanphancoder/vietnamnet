@@ -61,10 +61,10 @@
                         <div class="flex items-center space-x-3 relative">
                             <!-- Desktop: Expandable search form -->
                             <div class="hidden md:block relative">
-                                <form class="search-small__form  flex items-center" action="/search.html">
-                                    <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-[28px] border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;">
-                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[3px] top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">
-                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                                <form class="search-small__form flex items-center" action="/search.html">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-10 px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-1 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button" aria-label="Search button">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="Search" class="w-5 h-5">
                                     </button>
                                 </form>
                             </div>
@@ -154,9 +154,9 @@
                     <!-- Right Side - Search Form -->
                     <div class="search-small">
                         <form class="search-small__form relative" action="/search.html">
-                            <input class="search-small__form-input w-60 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="q" type="text" placeholder="Type keywords...." style="font-style: italic;">
-                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
-                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="icon search" class="w-4 h-4">
+                            <input class="search-small__form-input w-60 h-10 px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="q" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
+                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit" aria-label="Search button">
+                                <img src="https://static.vnncdn.net/v1/icon/search.png" alt="Search" class="w-5 h-5">
                             </button>
                         </form>
                     </div>
@@ -420,38 +420,38 @@
         <div class="hidden sm:flex justify-center items-center w-full mt-5 mb-10">
             <div class="flex items-center space-x-2">
                 <!-- Page 1 - Active -->
-                <a href="/en-page0" class="w-10 h-10 bg-blue-600 text-white rounded-md flex items-center justify-center text-sm font-medium hover:bg-blue-700 transition-colors">
+                <a href="/en-page0" class="w-10 h-10 bg-blue-600 text-white rounded-md flex items-center justify-center text-sm font-medium hover:bg-blue-700 transition-colors" aria-label="Go to page 1">
                     1
                 </a>
 
                 <!-- Page 2 -->
-                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to page 2">
                     2
                 </a>
 
                 <!-- Page 3 -->
-                <a href="/en-page2" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                <a href="/en-page2" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to page 3">
                     3
                 </a>
 
                 <!-- Page 4 -->
-                <a href="/en-page3" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                <a href="/en-page3" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to page 4">
                     4
                 </a>
 
                 <!-- Page 5 -->
-                <a href="/en-page4" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                <a href="/en-page4" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to page 5">
                     5
                 </a>
 
                 <!-- Page 6 -->
-                <a href="/en-page5" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
+                <a href="/en-page5" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to page 6">
                     6
                 </a>
 
                 <!-- Next Button -->
-                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="/en-page1" class="w-10 h-10 bg-white text-gray-700 border border-gray-300 rounded-md flex items-center justify-center text-sm font-medium hover:bg-gray-50 transition-colors" aria-label="Go to next page">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </a>
