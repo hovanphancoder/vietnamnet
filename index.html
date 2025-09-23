@@ -15,6 +15,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
 </head>
 
 <body class="bg-white">
@@ -62,9 +76,9 @@
                             <!-- Desktop: Expandable search form -->
                             <div class="hidden md:block relative">
                                 <form class="search-small__form flex items-center" action="/search.html">
-                                    <input id="searchInput" class="search-small__form-input w-0 h-10 px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
-                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-1 top-1/2 transform -translate-y-1/2 w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button" aria-label="Search button">
-                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="Search" class="w-5 h-5">
+                                    <input id="searchInput" class="search-small__form-input w-0 h-12 px-4 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
+                                    <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button" aria-label="Search button">
+                                        <img src="https://static.vnncdn.net/v1/icon/search.png" alt="Search" class="w-6 h-6">
                                     </button>
                                 </form>
                             </div>
@@ -166,6 +180,7 @@
         <!-- Main News Section -->
         <section class="bg-white">
             <div class="max-w-7xl mx-auto pt-0 lg:pt-4  ">
+                <h2 class="sr-only">Latest News</h2>
                 <div class="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
                     <!-- Left Column - Main Content -->
                     <div class="flex-1">
@@ -176,11 +191,11 @@
                                 <a href="/single.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision">
                                     <img src="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/free-checkups-hospital-care-by-2030-vietnams-bold-new-healthcare-vision-551ef314a29b4800b5625e3e87070fd7-44.jpg?width=550&s=H7rye5Abl2PKSon-r0oqtQ" alt="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="w-full h-48 sm:h-64 md:h-80 object-cover mb-4 scale-110 sm:scale-100">
                                 </a>
-                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                                <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-tight">
                                     <a href="/single.html" title="Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision" class="hover:text-[#2d67ad]">
                                         Free checkups, hospital care by 2030: Vietnam's bold new healthcare vision
                                     </a>
-                                </h3>
+                                </h2>
                                 <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                                     Deputy Prime Minister Le Thanh Long outlines a groundbreaking healthcare plan that will see the national insurance fund cover $5.6 billion annually.
                                 </p>
