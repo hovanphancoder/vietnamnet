@@ -12,14 +12,106 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vietnamnet.vn/en">
     
-    <!-- Preload LCP image FIRST for maximum priority -->
+    <!-- Preload critical resources FIRST -->
+    <link rel="preload" as="style" href="css/style.css">
     <link rel="preload" as="image" href="https://static-images.vnncdn.net/vps_images_publish/000001/00000Q/2025/9/17/free-checkups-hospital-care-by-2030-vietnams-bold-new-healthcare-vision-551ef314a29b4800b5625e3e87070fd7-44.jpg?width=550&s=H7rye5Abl2PKSon-r0oqtQ">
     
-    <!-- Critical CSS for LCP image -->
+    <!-- Critical CSS inline for above-the-fold content -->
     <style>
+        /* Critical CSS for LCP image */
         .lcp-image {
             content-visibility: auto;
             contain-intrinsic-size: 550px 320px;
+        }
+        
+        /* Critical CSS for header and navigation */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #2d67ad;
+        }
+        
+        /* Critical CSS for search */
+        .search-small__form-input {
+            border: 1px solid #d1d5db;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .search-small__form-btn {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+        
+        .search-small__form-btn:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* Critical CSS for main content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .article-card {
+            background: #fff;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s;
+        }
+        
+        .article-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .article-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-title:hover {
+            color: #2d67ad;
+        }
+        
+        /* Critical CSS for responsive layout */
+        @media (min-width: 768px) {
+            .main-content {
+                padding: 2rem;
+            }
+            
+            .article-title {
+                font-size: 1.25rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .article-title {
+                font-size: 1.5rem;
+            }
         }
     </style>
     
@@ -29,10 +121,17 @@
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://static-images.vnncdn.net" crossorigin>
     
+    <!-- Preload critical JavaScript -->
+    <link rel="preload" as="script" href="js/main.js">
+    <link rel="preload" as="script" href="js/index.js">
+    
+    <!-- Preload Tailwind CSS -->
+    <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
     
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="css/style.css" rel="stylesheet"></noscript>
     
 </head>
 
