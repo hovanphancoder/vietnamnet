@@ -388,8 +388,8 @@ function initializeSearchDropdown() {
             e.preventDefault();
 
             if (!isExpanded) {
-                // Expand input
-                searchInput.classList.remove('w-0', 'px-4', 'pr-12');
+                // Expand input sang trái
+                searchInput.classList.remove('w-0', 'px-0', 'pr-10');
                 searchInput.classList.add('w-60', 'px-4', 'pr-10');
                 searchInput.focus();
                 isExpanded = true;

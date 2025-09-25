@@ -39,6 +39,9 @@
     font-display: swap;
 }
 
+/* Touch targets optimization - Chỉ dùng cho accessibility, không ảnh hưởng giao diện */
+/* Loại bỏ CSS touch targets để giữ giao diện nguyên vẹn */
+
 /* Specific font weights */
 .font-light { font-weight: 300; }
 .font-normal { font-weight: 400; }
