@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (popup && !popup.classList.contains('hidden') &&
             !sidebar.contains(event.target) &&
-            !event.target.closest('button[onclick="toggleMobileMenu()"]')) {
+            !event.target.closest('button[onclick="toggleMobileMenu()"]') &&
+            !event.target.closest('#mobile-menu')) {
             closeMobileMenu();
         }
     });
@@ -332,7 +333,8 @@ function scrollToTop() {
 // Mobile Menu Toggle Function
 function toggleMobileMenu() {
     const popup = document.getElementById('mobileMenuPopup');
-    const sidebar = document.getElementById('mobileMenuSidebar');
+    const sidebar = document.getElementById('mobile-menu');
+    const toggleBtn = document.querySelector('button[onclick="toggleMobileMenu()"]');
 
     if (popup && sidebar) {
         popup.classList.remove('hidden');
@@ -340,13 +342,19 @@ function toggleMobileMenu() {
         setTimeout(() => {
             sidebar.classList.remove('-translate-x-full');
         }, 10);
+        
+        // Update aria-expanded for accessibility
+        if (toggleBtn) {
+            toggleBtn.setAttribute('aria-expanded', 'true');
+        }
     }
 }
 
 // Close Mobile Menu Function
 function closeMobileMenu() {
     const popup = document.getElementById('mobileMenuPopup');
-    const sidebar = document.getElementById('mobileMenuSidebar');
+    const sidebar = document.getElementById('mobile-menu');
+    const toggleBtn = document.querySelector('button[onclick="toggleMobileMenu()"]');
 
     if (popup && sidebar) {
         sidebar.classList.add('-translate-x-full');
@@ -354,6 +362,11 @@ function closeMobileMenu() {
         setTimeout(() => {
             popup.classList.add('hidden');
         }, 300);
+        
+        // Update aria-expanded for accessibility
+        if (toggleBtn) {
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
     }
 }
 
