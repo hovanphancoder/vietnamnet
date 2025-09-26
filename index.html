@@ -58,41 +58,7 @@
         }
         
         /* Critical CSS for search - Original design */
-        .search-small__form-input {
-            border: 1px solid #d1d5db;
-            border-radius: 9999px;
-            padding: 0.75rem 1rem;
-            font-size: 0.875rem;
-        }
-        
-        .search-small__form-btn {
-            position: absolute;
-            right: 0.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1.5rem;
-            height: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: background-color 0.2s;
-        }
-        
-        .search-small__form-btn svg {
-            width: 1rem;
-            height: 1rem;
-        }
-        
-        .search-small__form-btn:hover {
-            background-color: #f3f4f6;
-        }
-        
-        /* Ensure search container has proper spacing */
-        .search-small__form {
-            position: relative;
-            min-height: 48px; /* Ensure container is tall enough - 48px required */
-        }
+      
         
         /* Critical CSS for main content */
         .main-content {
@@ -212,9 +178,9 @@
                                 <form class="search-small__form flex items-center" action="/search.html">
                                     <!-- Touch area 48px cho input - align right để expand sang trái -->
                                     <div class="relative w-12 h-12 flex items-center justify-end">
-                                        <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
-                                        <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[0.5rem] top-1/2 transform -translate-y-1/2 flex items-center justify-center hover:bg-transparent rounded-full transition-colors" type="button" aria-label="Search button">
-                                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    
+                                        <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords....">
+                                        <button id="searchToggleDesktop" class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="button">                                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                             </svg>
                                         </button>
@@ -311,11 +277,11 @@
                     <!-- Right Side - Search Form -->
                     <div class="search-small">
                         <form class="search-small__form relative" action="/search.html">
-                            <input class="search-small__form-input w-60 h-12 px-4 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
-                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit" aria-label="Search button">
+                            <input class="search-small__form-input w-60 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
+                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
                                 <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                </svg>
+                                </svg>                         
                             </button>
                         </form>
                     </div>
