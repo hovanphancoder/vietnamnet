@@ -7,17 +7,37 @@
     <title>Vietnamnet Global - Latest News from Vietnam</title>
     <meta name="description" content="Stay updated with the latest news from Vietnam. Vietnamnet Global brings you breaking news, politics, business, and culture from Vietnam.">
     <meta name="keywords" content="Vietnam news, Vietnamnet, Vietnamese news, politics, business, culture">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Vietnamnet Global - Latest News from Vietnam">
     <meta property="og:description" content="Stay updated with the latest news from Vietnam">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vietnamnet.vn/en">
+    <meta property="og:image" content="https://vietnamnet.vn/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vietnamnet.vn/en">
+    <meta property="twitter:title" content="Vietnamnet Global - Latest News from Vietnam">
+    <meta property="twitter:description" content="Stay updated with the latest news from Vietnam">
+    <meta property="twitter:image" content="https://vietnamnet.vn/images/og-image.jpg">
+    
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#2d67ad">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
     
     <!-- Preload critical resources FIRST -->
     <link rel="preload" as="style" href="css/style.css">
     <link rel="preload" as="image" href="images/final-optimized/lcp/vpsf-2025-mobile.jpg" fetchpriority="high">
     
-    <!-- Additional preload for different screen sizes -->
-    <link rel="preload" as="image" href="images/final-optimized/lcp/vpsf-2025-mobile.jpg" media="(min-width: 768px)" fetchpriority="high">
+    <!-- Preload critical fonts -->
+    <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"></noscript> -->
+    
+    <!-- Preload critical JavaScript -->
+    <link rel="preload" as="script" href="js/main.js">
+    <link rel="preload" as="script" href="js/index.js">
     
     <!-- Critical CSS inline for above-the-fold content -->
     <style>
@@ -139,7 +159,7 @@
     
     <!-- Preload Tailwind CSS -->
     <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
     
     <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -196,7 +216,9 @@
                                     <div class="relative w-12 h-12 flex items-center justify-end">
                                         <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
                                         <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[0.5rem] top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-transparent rounded-full transition-colors" type="button" aria-label="Search button">
-                                            <img src="images/final-optimized/icons/search.jpg" alt="Search" class="w-4 h-4" width="16" height="16">
+                                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
                                         </button>
                                     </div>
                                 </form>
@@ -205,7 +227,9 @@
                             <!-- Mobile: Search icon with dropdown -->
                             <div class="md:hidden">
                                 <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
-                                    <img src="images/final-optimized/icons/search.jpg" class="w-5 h-5" alt="search icon" width="20" height="20">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
                                 </button>
 
                                 <!-- Search Dropdown -->
@@ -214,7 +238,9 @@
                                         <div class="relative">
                                             <input class="w-full h-12 px-4 pr-12 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
                                             <button class="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit" aria-label="Search button">
-                                                <img src="images/final-optimized/icons/search.jpg" alt="icon search" class="w-5 h-5" width="20" height="20">
+                                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                                </svg>
                                             </button>
                                         </div>
                                     </form>
@@ -255,14 +281,9 @@
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
                     </nav>
-                  
                 </div>
-
-              
             </div>
         </div> -->
-
-
     </header>
 
     <!-- Main Content -->
@@ -289,7 +310,9 @@
                         <form class="search-small__form relative" action="/search.html">
                             <input class="search-small__form-input w-60 h-12 px-4 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="q" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
                             <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit" aria-label="Search button">
-                                <img src="images/final-optimized/icons/search.jpg" alt="Search" class="w-5 h-5" width="20" height="20">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
                             </button>
                         </form>
                     </div> -->
@@ -297,7 +320,9 @@
                         <form class="search-small__form relative" action="/search.html">
                             <input class="search-small__form-input w-60 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
                             <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
-                                <img src="images/final-optimized/icons/search.jpg" alt="icon search" class="w-4 h-4" width="16" height="16">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
                             </button>
                         </form>
                     </div>
@@ -764,9 +789,9 @@
         </div>
     </div> -->
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/index.js"></script>
+    <!-- JavaScript Files - Optimized with defer -->
+    <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
     
     <!-- LCP optimization script -->
     <script>
