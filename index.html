@@ -57,55 +57,36 @@
             color: #2d67ad;
         }
         
-        /* Critical CSS for search - Modern design with proper touch targets */
+        /* Critical CSS for search - Original design */
         .search-small__form-input {
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 9999px;
+            padding: 0.75rem 1rem;
             font-size: 0.875rem;
-            min-height: 48px;
-            width: 100%;
-            transition: all 0.3s ease;
-            background: #f9fafb;
-        }
-        
-        .search-small__form-input:focus {
-            border-color: #3b82f6;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-            outline: none;
         }
         
         .search-small__form-btn {
             position: absolute;
-            right: 8px;
+            right: 0.5rem;
             top: 50%;
             transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            min-width: 48px;
-            min-height: 48px;
+            width: 1.5rem;
+            height: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
-            background: #3b82f6;
-            color: white;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .search-small__form-btn:hover {
-            background: #2563eb;
-            transform: translateY(-50%) scale(1.05);
+            border-radius: 50%;
+            transition: background-color 0.2s;
         }
         
         .search-small__form-btn svg {
-            width: 20px;
-            height: 20px;
+            width: 1rem;
+            height: 1rem;
         }
         
+        .search-small__form-btn:hover {
+            background-color: #f3f4f6;
+        }
         
         /* Ensure search container has proper spacing */
         .search-small__form {
@@ -231,8 +212,8 @@
                                 <form class="search-small__form flex items-center" action="/search.html">
                                     <!-- Touch area 48px cho input - align right để expand sang trái -->
                                     <div class="relative w-12 h-12 flex items-center justify-end">
-                                        <input id="searchInput" class="search-small__form-input w-0 px-0 pr-12" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
-                                        <button id="searchToggleDesktop" class="search-small__form-btn" type="button" aria-label="Search button">
+                                        <input id="searchInput" class="search-small__form-input w-0 h-[28px] px-0 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent transition-all duration-300 ease-in-out" name="key" type="text" placeholder="Type keywords...." style="font-style: italic;" aria-label="Search input">
+                                        <button id="searchToggleDesktop" class="search-small__form-btn absolute right-[0.5rem] top-1/2 transform -translate-y-1/2 flex items-center justify-center hover:bg-transparent rounded-full transition-colors" type="button" aria-label="Search button">
                                             <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                             </svg>
