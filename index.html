@@ -16,6 +16,10 @@
     <link rel="preload" as="style" href="css/style.css">
     <link rel="preload" as="image" href="images/final-optimized/lcp/vpsf-2025-mobile.jpg" fetchpriority="high">
     
+    <!-- Preload LCP image with different sizes -->
+    <link rel="preload" as="image" href="images/final-optimized/lcp/vpsf-2025-mobile.jpg" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/final-optimized/lcp/vpsf-2025-mobile.jpg" media="(min-width: 769px)" fetchpriority="high">
+    
     <!-- Preload critical fonts -->
     <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"></noscript> -->
@@ -104,6 +108,23 @@
             padding: 1rem;
         }
         
+        /* Prevent layout shift */
+        .bg-white {
+            min-height: 100vh;
+        }
+        
+        /* Fix layout shift for images */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Fix layout shift for text elements */
+        .text-xs.font-bold.mb-2 {
+            min-height: 1.5rem;
+        }
+        
         .article-card {
             background: #fff;
             border-radius: 0.5rem;
@@ -156,13 +177,20 @@
     <link rel="preload" as="script" href="js/main.js">
     <link rel="preload" as="script" href="js/index.js">
     
-    <!-- Preload Tailwind CSS -->
-    <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- Load CSS first -->
+    <link href="css/style.css" rel="stylesheet">
     
-    <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="css/style.css" rel="stylesheet"></noscript>
+    <!-- Load Tailwind CSS asynchronously -->
+    <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
+    <script>
+        // Load Tailwind CSS asynchronously to reduce blocking
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.tailwindcss.com';
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
     
 </head>
 
@@ -651,7 +679,7 @@
                     </svg>
                 </button>
                 <div class="flex-1 flex justify-center">
-                    <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet" class="h-10">
+                    <img src="https://static.vnncdn.net/v1/icon/VietnamNet-bridge-vien-trang.svg" alt="VietnamNet" class="h-10 w-auto" width="120" height="40">
                 </div>
                 <div class="w-6"></div>
             </div>
@@ -799,10 +827,10 @@
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
     
-    <!-- LCP optimization script -->
+    <!-- LCP optimization script - Immediate execution -->
     <script>
-        // Force LCP image to load immediately
-        document.addEventListener('DOMContentLoaded', function() {
+        // Force LCP image to load immediately - no DOMContentLoaded wait
+        (function() {
             const lcpImage = document.querySelector('.lcp-image');
             if (lcpImage) {
                 // Force image to load if not already loaded
@@ -815,7 +843,19 @@
                     this.classList.add('lcp-loaded');
                 });
             }
-        });
+            
+            // Preload critical images
+            const criticalImages = [
+                'images/final-optimized/lcp/vpsf-2025-mobile.jpg',
+                'images/final-optimized/articles/classical-concert.jpg',
+                'images/final-optimized/articles/energy-market.jpg'
+            ];
+            
+            criticalImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        })();
     </script>
 
 </body>
