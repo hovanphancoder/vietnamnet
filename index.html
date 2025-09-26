@@ -7,25 +7,10 @@
     <title>Vietnamnet Global - Latest News from Vietnam</title>
     <meta name="description" content="Stay updated with the latest news from Vietnam. Vietnamnet Global brings you breaking news, politics, business, and culture from Vietnam.">
     <meta name="keywords" content="Vietnam news, Vietnamnet, Vietnamese news, politics, business, culture">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Vietnamnet Global - Latest News from Vietnam">
     <meta property="og:description" content="Stay updated with the latest news from Vietnam">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vietnamnet.vn/en">
-    <meta property="og:image" content="https://vietnamnet.vn/images/og-image.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vietnamnet.vn/en">
-    <meta property="twitter:title" content="Vietnamnet Global - Latest News from Vietnam">
-    <meta property="twitter:description" content="Stay updated with the latest news from Vietnam">
-    <meta property="twitter:image" content="https://vietnamnet.vn/images/og-image.jpg">
-    
-    <!-- Performance optimizations -->
-    <meta name="theme-color" content="#2d67ad">
-    <meta name="color-scheme" content="light">
-    <meta name="format-detection" content="telephone=no">
     
     <!-- Preload critical resources FIRST -->
     <link rel="preload" as="style" href="css/style.css">
@@ -72,12 +57,13 @@
             color: #2d67ad;
         }
         
-        /* Critical CSS for search */
+        /* Critical CSS for search - Touch target optimized */
         .search-small__form-input {
             border: 1px solid #d1d5db;
             border-radius: 9999px;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             font-size: 0.875rem;
+            min-height: 48px; /* Minimum touch target size */
         }
         
         .search-small__form-btn {
@@ -85,17 +71,26 @@
             right: 0.5rem;
             top: 50%;
             transform: translateY(-50%);
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 48px; /* Minimum touch target size */
+            height: 48px; /* Minimum touch target size */
+            min-width: 48px; /* Ensure minimum size */
+            min-height: 48px; /* Ensure minimum size */
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             transition: background-color 0.2s;
+            padding: 0; /* Remove any padding that might reduce touch area */
         }
         
         .search-small__form-btn:hover {
             background-color: #f3f4f6;
+        }
+        
+        /* Ensure search container has proper spacing */
+        .search-small__form {
+            position: relative;
+            min-height: 48px; /* Ensure container is tall enough */
         }
         
         /* Critical CSS for main content */
@@ -159,7 +154,7 @@
     
     <!-- Preload Tailwind CSS -->
     <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
     
     <link href="css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -226,7 +221,7 @@
 
                             <!-- Mobile: Search icon with dropdown -->
                             <div class="md:hidden">
-                                <button id="searchToggle" class="flex items-center space-x-1 text-gray-700 hover:text-[#2d67ad]">
+                                <button id="searchToggle" class="flex items-center justify-center w-12 h-12 text-gray-700 hover:text-[#2d67ad] rounded-full hover:bg-gray-100 transition-colors" aria-label="Search">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                     </svg>
@@ -281,9 +276,14 @@
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Travel</a>
                         <a href="/category.html" class="text-gray-800 hover:text-[#447ec5] color-[#2a2a2a] whitespace-nowrap text-sm font-bold">Readers</a>
                     </nav>
+                  
                 </div>
+
+              
             </div>
         </div> -->
+
+
     </header>
 
     <!-- Main Content -->
@@ -318,8 +318,8 @@
                     </div> -->
                     <div class="search-small">
                         <form class="search-small__form relative" action="/search.html">
-                            <input class="search-small__form-input w-60 h-[28px] px-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
-                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
+                            <input class="search-small__form-input w-60 h-12 px-4 pr-12 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#2d67ad] focus:border-transparent" name="q" type="text" placeholder="Type keywords....">
+                            <button class="search-small__form-btn absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors" type="submit">
                                 <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                 </svg>
@@ -789,9 +789,9 @@
         </div>
     </div> -->
 
-    <!-- JavaScript Files - Optimized with defer -->
-    <script src="js/main.js" defer></script>
-    <script src="js/index.js" defer></script>
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
     
     <!-- LCP optimization script -->
     <script>
